@@ -32,8 +32,8 @@ export function SiteFooter() {
               src="/logo-white.png"
               alt="Americurial"
               width={140}
-              height={28}
-              className="h-6 w-auto opacity-80 mb-4"
+              height={48}
+              className="h-10 w-auto opacity-80 mb-4"
             />
             <p className="text-xs text-stone-500 leading-relaxed mb-4">
               Veteran-owned digital agency building software that wins.

@@ -24,9 +24,9 @@ export function SiteNav() {
           <Image
             src="/logo-white.png"
             alt="Americurial"
-            width={160}
-            height={32}
-            className="h-7 w-auto opacity-90 group-hover:opacity-100 transition-opacity"
+            width={240}
+            height={48}
+            className="h-10 w-auto opacity-90 group-hover:opacity-100 transition-opacity"
             priority
           />
         </Link>
