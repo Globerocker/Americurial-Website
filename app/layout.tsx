@@ -81,6 +81,14 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(orgJsonLd) }}
         />
+        {/* HubSpot Tracking Code — Portal 245197783 */}
+        <script
+          type="text/javascript"
+          id="hs-script-loader"
+          async
+          defer
+          src="//js.hs-scripts.com/245197783.js"
+        />
       </head>
       <body className="min-h-full flex flex-col font-sans bg-stone-950 text-stone-200 dot-grid-bg">
         <SiteNav />
