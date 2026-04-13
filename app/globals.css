@@ -19,41 +19,191 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Dark dot-grid background */
+/* ── Dark dot-grid background ── */
 .dot-grid-bg {
   background-image: radial-gradient(circle, rgba(16, 185, 129, 0.04) 1px, transparent 1px);
   background-size: 24px 24px;
 }
 
-/* Line grid background */
+/* ── Line grid background ── */
 .line-grid-bg {
   background-image: linear-gradient(rgba(16, 185, 129, 0.03) 1px, transparent 1px),
     linear-gradient(90deg, rgba(16, 185, 129, 0.03) 1px, transparent 1px);
   background-size: 48px 48px;
 }
 
-/* Emerald glow */
+/* ── Emerald glow ── */
 .glow-emerald {
   box-shadow: 0 0 30px rgba(16, 185, 129, 0.15), 0 0 60px rgba(16, 185, 129, 0.05);
 }
 
-/* Selection style */
+/* ── Selection ── */
 ::selection {
   background: #10b981;
   color: #0c0a09;
 }
 
-/* Scrollbar */
-::-webkit-scrollbar {
-  width: 6px;
+/* ── Scrollbar ── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #1c1917; }
+::-webkit-scrollbar-thumb { background: #44403c; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #57534e; }
+
+/* ═══════════════════════════════════════════════
+   ANIMATIONS & EFFECTS
+   ═══════════════════════════════════════════════ */
+
+/* ── fadeInUp keyframes ── */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(32px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
-::-webkit-scrollbar-track {
-  background: #1c1917;
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.7s ease forwards;
 }
-::-webkit-scrollbar-thumb {
-  background: #44403c;
-  border-radius: 3px;
+.animate-fade-in-up-100 {
+  animation: fadeInUp 0.7s ease 100ms forwards;
+  opacity: 0;
 }
-::-webkit-scrollbar-thumb:hover {
-  background: #57534e;
+.animate-fade-in-up-200 {
+  animation: fadeInUp 0.7s ease 200ms forwards;
+  opacity: 0;
+}
+.animate-fade-in-up-300 {
+  animation: fadeInUp 0.7s ease 300ms forwards;
+  opacity: 0;
+}
+.animate-fade-in-up-400 {
+  animation: fadeInUp 0.7s ease 400ms forwards;
+  opacity: 0;
+}
+.animate-fade-in-up-500 {
+  animation: fadeInUp 0.7s ease 500ms forwards;
+  opacity: 0;
+}
+
+/* ── Floating orb animation ── */
+@keyframes orbFloat {
+  0%, 100% { transform: translateY(0) translateX(0); }
+  25% { transform: translateY(-20px) translateX(10px); }
+  50% { transform: translateY(-10px) translateX(-10px); }
+  75% { transform: translateY(-25px) translateX(5px); }
+}
+
+.animate-orb-float {
+  animation: orbFloat 10s ease-in-out infinite;
+}
+.animate-orb-float-slow {
+  animation: orbFloat 14s ease-in-out infinite;
+}
+.animate-orb-float-fast {
+  animation: orbFloat 7s ease-in-out infinite;
+}
+
+/* ── Shimmer overlay ── */
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.shimmer-bg {
+  position: relative;
+  overflow: hidden;
+}
+.shimmer-bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(16, 185, 129, 0.03) 25%,
+    rgba(16, 185, 129, 0.06) 50%,
+    rgba(16, 185, 129, 0.03) 75%,
+    transparent 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 6s ease-in-out infinite;
+  pointer-events: none;
+}
+
+/* ── Hover lift ── */
+.hover-lift {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.hover-lift:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 40px rgba(16, 185, 129, 0.1), 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* ── Gradient text ── */
+.gradient-text {
+  background: linear-gradient(135deg, #10b981 0%, #34d399 50%, #6ee7b7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ── Contour circles (decorative rings) ── */
+@keyframes contourPulse {
+  0%, 100% { opacity: 0.03; transform: translate(-50%, -50%) scale(1); }
+  50% { opacity: 0.06; transform: translate(-50%, -50%) scale(1.05); }
+}
+
+.contour-circle {
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid rgba(16, 185, 129, 0.04);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: contourPulse 8s ease-in-out infinite;
+}
+
+/* ── Pulse glow ── */
+@keyframes pulseGlow {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.3); }
+  50% { box-shadow: 0 0 0 12px rgba(16, 185, 129, 0); }
+}
+
+.pulse-glow {
+  animation: pulseGlow 3s ease-in-out infinite;
+}
+
+/* ── Hero float (for decorative elements) ── */
+@keyframes heroFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+
+.animate-hero-float {
+  animation: heroFloat 4s ease-in-out infinite;
+}
+
+/* ── Scale in ── */
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.85); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.animate-scale-in {
+  animation: scaleIn 0.6s ease forwards;
+}
+
+/* ── Staggered card entry (for use with Reveal) ── */
+.stagger-card {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.stagger-card.visible {
+  opacity: 1;
+  transform: translateY(0);
 }

@@ -4,14 +4,18 @@ import Image from "next/image";
 const FOOTER_LINKS = {
   Agency: [
     { href: "/services", label: "Services" },
+    { href: "/services/saas", label: "SaaS Development" },
+    { href: "/services/govtech", label: "GovTech Solutions" },
     { href: "/about", label: "About" },
     { href: "/pricing", label: "Pricing" },
     { href: "/contact", label: "Contact" },
   ],
-  Products: [
+  "Who We Serve": [
+    { href: "/for/agencies", label: "For Agencies" },
+    { href: "/for/startups", label: "For Startups" },
+    { href: "/for/veterans", label: "For Veterans" },
+    { href: "/for/smb", label: "For Small Business" },
     { href: "/capturepilot", label: "CapturePilot" },
-    { href: "https://app.capturepilot.com/check", label: "Quick Checker" },
-    { href: "https://www.capturepilot.com/pricing", label: "CP Pricing" },
   ],
   Insights: [
     { href: "/blog/ai-content-marketing", label: "AI Content Marketing" },

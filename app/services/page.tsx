@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import {
   ArrowRight,
@@ -10,11 +12,13 @@ import {
   CheckCircle2,
   Zap,
 } from "lucide-react";
+import { Reveal } from "@/components/Reveal";
 
 const SERVICES = [
   {
     icon: Code2,
     title: "SaaS Development",
+    href: "/services/saas",
     desc: "Full-stack product builds from zero to launch. We architect, design, and ship subscription software with the infrastructure to scale from day one.",
     bullets: [
       "Multi-tenant architecture with role-based access",
@@ -26,6 +30,7 @@ const SERVICES = [
   {
     icon: Globe,
     title: "Web & Digital Products",
+    href: "/services/web",
     desc: "High-performance marketing sites, client portals, and internal tools. Conversion-focused design backed by bulletproof engineering.",
     bullets: [
       "SEO-optimized Next.js sites with sub-second load times",
@@ -37,6 +42,7 @@ const SERVICES = [
   {
     icon: Shield,
     title: "GovTech Solutions",
+    href: "/services/govtech",
     desc: "Federal-grade platforms for government contractors and agencies. Compliance-ready, data-rich, and built to handle mission-critical workloads.",
     bullets: [
       "SAM.gov, USASpending, and FPDS data integration",
@@ -48,6 +54,7 @@ const SERVICES = [
   {
     icon: BarChart3,
     title: "AI & Data Platforms",
+    href: "/services/ai",
     desc: "Machine learning pipelines, intelligent matching engines, and AI-powered automation embedded directly into production-grade systems.",
     bullets: [
       "OpenAI and custom model integration",
@@ -59,6 +66,7 @@ const SERVICES = [
   {
     icon: Palette,
     title: "Branding & Design Systems",
+    href: null,
     desc: "Cohesive visual identities and component libraries that scale across products. Every pixel intentional, every interaction considered.",
     bullets: [
       "Brand identity, logo, and visual language",
@@ -70,6 +78,7 @@ const SERVICES = [
   {
     icon: RefreshCw,
     title: "Ongoing Support & Iteration",
+    href: null,
     desc: "Software is never finished. We provide dedicated engineering support, feature iteration, and performance optimization on a retainer basis.",
     bullets: [
       "Weekly sprint cycles with priority backlog",
@@ -98,21 +107,22 @@ export default function ServicesPage() {
       {/* Hero */}
       <section className="relative overflow-hidden py-24 md:py-32">
         <div className="absolute inset-0 bg-gradient-to-b from-emerald-950/20 via-stone-950 to-stone-950" />
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[700px] h-[700px] rounded-full bg-emerald-500/5 blur-[120px]" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full border border-emerald-500/[0.04]" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full border border-emerald-500/[0.03]" />
+        <div className="absolute top-[-5%] left-[20%] w-[500px] h-[500px] rounded-full bg-emerald-500/[0.06] blur-[120px] animate-orb-float" />
+        <div className="absolute bottom-[-10%] right-[15%] w-[400px] h-[400px] rounded-full bg-emerald-500/[0.04] blur-[120px] animate-orb-float-slow" />
+        <div className="contour-circle w-[500px] h-[500px]" />
+        <div className="contour-circle w-[800px] h-[800px]" />
 
         <div className="relative max-w-7xl mx-auto px-6 text-center">
-          <div className="inline-flex items-center gap-2 bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-[10px] font-bold uppercase tracking-[0.3em] px-4 py-2 rounded-full mb-8">
+          <div className="animate-fade-in-up inline-flex items-center gap-2 bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-[10px] font-bold uppercase tracking-[0.3em] px-4 py-2 rounded-full mb-8">
             <Code2 className="w-3 h-3" />
             Services
           </div>
 
-          <h1 className="text-5xl sm:text-6xl md:text-7xl font-black tracking-tighter text-white leading-[0.9] mb-8">
-            What We <span className="text-emerald-400">Build</span>
+          <h1 className="animate-fade-in-up-100 text-5xl sm:text-6xl md:text-7xl font-black tracking-tighter text-white leading-[0.9] mb-8">
+            What We <span className="gradient-text">Build</span>
           </h1>
 
-          <p className="text-lg md:text-xl text-stone-400 max-w-2xl mx-auto leading-relaxed">
+          <p className="animate-fade-in-up-200 text-lg md:text-xl text-stone-400 max-w-2xl mx-auto leading-relaxed">
             End-to-end software engineering for companies that need to ship
             fast, scale smart, and stay ahead. From SaaS platforms to
             federal-grade GovTech &mdash; we handle the full stack.
@@ -121,44 +131,53 @@ export default function ServicesPage() {
       </section>
 
       {/* Service Cards */}
-      <section className="py-24 md:py-32">
-        <div className="max-w-7xl mx-auto px-6">
+      <section className="py-24 md:py-32 relative overflow-hidden">
+        <div className="absolute top-[50%] left-[-5%] w-[300px] h-[300px] rounded-full bg-emerald-500/[0.03] blur-[120px] animate-orb-float" />
+        <div className="max-w-7xl mx-auto px-6 relative">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {SERVICES.map((svc) => (
-              <div
-                key={svc.title}
-                className="group bg-stone-900/40 border border-white/5 hover:border-emerald-500/20 rounded-2xl p-8 transition-all hover:bg-stone-900/60"
-              >
-                <div className="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400 mb-6 group-hover:bg-emerald-500/20 transition-colors">
-                  <svc.icon className="w-6 h-6" />
-                </div>
-                <h3 className="text-xl font-bold text-white mb-3">
-                  {svc.title}
-                </h3>
-                <p className="text-sm text-stone-400 leading-relaxed mb-6">
-                  {svc.desc}
-                </p>
-                <ul className="space-y-2.5">
-                  {svc.bullets.map((bullet) => (
-                    <li
-                      key={bullet}
-                      className="flex items-start gap-2.5 text-sm text-stone-300"
+            {SERVICES.map((svc, i) => (
+              <Reveal key={svc.title} delay={i * 80}>
+                <div className="group bg-stone-900/40 border border-white/5 hover:border-emerald-500/20 rounded-2xl p-8 transition-all hover-lift h-full flex flex-col">
+                  <div className="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400 mb-6 group-hover:bg-emerald-500/20 transition-colors">
+                    <svc.icon className="w-6 h-6" />
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-3">
+                    {svc.title}
+                  </h3>
+                  <p className="text-sm text-stone-400 leading-relaxed mb-6">
+                    {svc.desc}
+                  </p>
+                  <ul className="space-y-2.5 mb-6 flex-1">
+                    {svc.bullets.map((bullet) => (
+                      <li
+                        key={bullet}
+                        className="flex items-start gap-2.5 text-sm text-stone-300"
+                      >
+                        <CheckCircle2 className="w-4 h-4 text-emerald-500 flex-shrink-0 mt-0.5" />
+                        {bullet}
+                      </li>
+                    ))}
+                  </ul>
+                  {svc.href && (
+                    <Link
+                      href={svc.href}
+                      className="inline-flex items-center gap-2 text-sm font-bold text-emerald-400 hover:text-emerald-300 transition-colors mt-auto"
                     >
-                      <CheckCircle2 className="w-4 h-4 text-emerald-500 flex-shrink-0 mt-0.5" />
-                      {bullet}
-                    </li>
-                  ))}
-                </ul>
-              </div>
+                      View details <ArrowRight className="w-4 h-4" />
+                    </Link>
+                  )}
+                </div>
+              </Reveal>
             ))}
           </div>
         </div>
       </section>
 
       {/* Tech Stack */}
-      <section className="py-24 md:py-32 border-y border-white/5 bg-gradient-to-b from-stone-950 via-emerald-950/10 to-stone-950">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-16">
+      <section className="py-24 md:py-32 border-y border-white/5 bg-gradient-to-b from-stone-950 via-emerald-950/10 to-stone-950 relative overflow-hidden">
+        <div className="absolute top-[30%] right-[-5%] w-[350px] h-[350px] rounded-full bg-emerald-500/[0.03] blur-[120px] animate-orb-float-slow" />
+        <div className="max-w-7xl mx-auto px-6 relative">
+          <Reveal className="text-center mb-16">
             <div className="flex items-center justify-center gap-3 mb-6">
               <div className="h-px w-8 bg-emerald-500/40" />
               <span className="text-[10px] font-bold tracking-[0.3em] uppercase text-emerald-500">
@@ -167,35 +186,35 @@ export default function ServicesPage() {
               <div className="h-px w-8 bg-emerald-500/40" />
             </div>
             <h2 className="text-4xl md:text-5xl font-black tracking-tighter text-white mb-6">
-              Battle-Tested <span className="text-emerald-400">Tools</span>
+              Battle-Tested <span className="gradient-text">Tools</span>
             </h2>
             <p className="text-stone-400 max-w-2xl mx-auto">
               We pick the stack that ships fastest and scales best. No resume-driven development &mdash; every tool earns its place.
             </p>
-          </div>
+          </Reveal>
 
           <div className="grid grid-cols-3 sm:grid-cols-5 lg:grid-cols-9 gap-4">
-            {TECH_STACK.map((tech) => (
-              <div
-                key={tech.name}
-                className="bg-stone-900/40 border border-white/5 hover:border-emerald-500/20 rounded-2xl p-4 text-center transition-all hover:bg-stone-900/60 group"
-              >
-                <p className="text-sm font-bold text-white group-hover:text-emerald-400 transition-colors">
-                  {tech.name}
-                </p>
-                <p className="text-[10px] text-stone-500 uppercase tracking-widest mt-1">
-                  {tech.category}
-                </p>
-              </div>
+            {TECH_STACK.map((tech, i) => (
+              <Reveal key={tech.name} delay={i * 50}>
+                <div className="bg-stone-900/40 border border-white/5 hover:border-emerald-500/20 rounded-2xl p-4 text-center transition-all hover-lift group">
+                  <p className="text-sm font-bold text-white group-hover:text-emerald-400 transition-colors">
+                    {tech.name}
+                  </p>
+                  <p className="text-[10px] text-stone-500 uppercase tracking-widest mt-1">
+                    {tech.category}
+                  </p>
+                </div>
+              </Reveal>
             ))}
           </div>
         </div>
       </section>
 
       {/* CTA */}
-      <section className="py-24 md:py-32 bg-gradient-to-b from-stone-950 to-emerald-950/20">
-        <div className="max-w-3xl mx-auto px-6 text-center">
-          <Zap className="w-10 h-10 text-emerald-400 mx-auto mb-6" />
+      <section className="py-24 md:py-32 bg-gradient-to-b from-stone-950 to-emerald-950/20 relative overflow-hidden">
+        <div className="absolute top-[20%] left-[30%] w-[500px] h-[500px] rounded-full bg-emerald-500/[0.04] blur-[120px] animate-orb-float-slow" />
+        <Reveal className="max-w-3xl mx-auto px-6 text-center relative">
+          <Zap className="w-10 h-10 text-emerald-400 mx-auto mb-6 animate-hero-float" />
           <h2 className="text-4xl md:text-5xl font-black tracking-tighter text-white mb-6">
             Have a Project in Mind?
           </h2>
@@ -219,7 +238,7 @@ export default function ServicesPage() {
               Send a Message
             </Link>
           </div>
-        </div>
+        </Reveal>
       </section>
     </>
   );

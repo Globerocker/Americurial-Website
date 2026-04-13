@@ -13,6 +13,13 @@ const NAV_LINKS = [
   { href: "/pricing", label: "Pricing" },
 ];
 
+const AUDIENCE_LINKS = [
+  { href: "/for/agencies", label: "For Agencies" },
+  { href: "/for/startups", label: "For Startups" },
+  { href: "/for/veterans", label: "For Veterans" },
+  { href: "/for/smb", label: "For Small Business" },
+];
+
 export function SiteNav() {
   const [open, setOpen] = useState(false);
 
@@ -75,6 +82,19 @@ export function SiteNav() {
               {link.label}
             </Link>
           ))}
+          <div className="border-t border-white/5 pt-4">
+            <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-stone-500 mb-2">Who We Serve</p>
+            {AUDIENCE_LINKS.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                onClick={() => setOpen(false)}
+                className="block text-sm font-bold text-stone-300 hover:text-white transition-colors py-2"
+              >
+                {link.label}
+              </Link>
+            ))}
+          </div>
           <a
             href="https://meetings-na2.hubspot.com/americurial/intro-call"
             target="_blank"
