@@ -2,26 +2,29 @@ import Link from "next/link";
 import Image from "next/image";
 
 const FOOTER_LINKS = {
-  Agency: [
-    { href: "/services", label: "Services" },
+  Services: [
+    { href: "/services", label: "All Services" },
     { href: "/services/saas", label: "SaaS Development" },
     { href: "/services/govtech", label: "GovTech Solutions" },
-    { href: "/about", label: "About" },
-    { href: "/pricing", label: "Pricing" },
-    { href: "/contact", label: "Contact" },
+    { href: "/services/ai", label: "AI Integration" },
+    { href: "/services/web", label: "Web Development" },
   ],
   "Who We Serve": [
     { href: "/for/agencies", label: "For Agencies" },
     { href: "/for/startups", label: "For Startups" },
     { href: "/for/veterans", label: "For Veterans" },
     { href: "/for/smb", label: "For Small Business" },
-    { href: "/capturepilot", label: "CapturePilot" },
+    { href: "/capturepilot", label: "CapturePilot Case Study" },
   ],
   Insights: [
+    { href: "/blog", label: "All Articles" },
     { href: "/blog/ai-content-marketing", label: "AI Content Marketing" },
     { href: "/blog/govtech-trends-2026", label: "GovTech Trends" },
     { href: "/blog/veteran-owned-business-growth", label: "Veteran Growth" },
     { href: "/blog/saas-mvp-launch-guide", label: "SaaS MVP Guide" },
+    { href: "/about", label: "About Us" },
+    { href: "/pricing", label: "Pricing" },
+    { href: "/contact", label: "Contact" },
   ],
 };
 

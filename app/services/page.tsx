@@ -14,6 +14,36 @@ import {
 } from "lucide-react";
 import { Reveal } from "@/components/Reveal";
 
+const BASE = "https://www.americurial.com";
+const servicesCollectionJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  name: "Americurial Services",
+  description: "SaaS Development, Web & Digital Products, GovTech Solutions, and AI & Data Platforms — from a veteran-owned digital agency.",
+  url: `${BASE}/services`,
+  about: { "@type": "Organization", name: "Americurial", url: BASE },
+  mainEntity: {
+    "@type": "ItemList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, item: { "@type": "Service", name: "SaaS Development", url: `${BASE}/services/saas` } },
+      { "@type": "ListItem", position: 2, item: { "@type": "Service", name: "Web & Digital Products", url: `${BASE}/services/web` } },
+      { "@type": "ListItem", position: 3, item: { "@type": "Service", name: "GovTech Solutions", url: `${BASE}/services/govtech` } },
+      { "@type": "ListItem", position: 4, item: { "@type": "Service", name: "AI & Data Platforms", url: `${BASE}/services/ai` } },
+    ],
+  },
+};
+const servicesFaqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    { "@type": "Question", name: "What services does Americurial offer?", acceptedAnswer: { "@type": "Answer", text: "Americurial offers four core service lines: SaaS Development (multi-tenant subscription software with Stripe billing), Web & Digital Products (high-performance Next.js sites and portals), GovTech Solutions (SAM.gov-integrated contractor platforms), and AI & Data Platforms (production ML pipelines and scoring engines). We also provide branding/design systems and ongoing engineering support on a retainer basis." } },
+    { "@type": "Question", name: "What tech stack does Americurial use?", acceptedAnswer: { "@type": "Answer", text: "We standardize on Next.js, React, TypeScript, and Tailwind CSS on the frontend, with Supabase (Postgres) for data and auth, Stripe for billing, Vercel for hosting, Python for data engineering, and OpenAI for AI features." } },
+    { "@type": "Question", name: "How long does a typical project take?", acceptedAnswer: { "@type": "Answer", text: "SaaS MVPs ship in roughly 12 weeks. Marketing websites take 6-8 weeks. GovTech platforms run 16 weeks due to federal data integration. AI builds run 12 weeks from data audit to production monitoring." } },
+    { "@type": "Question", name: "Does Americurial build GovTech platforms?", acceptedAnswer: { "@type": "Answer", text: "Yes — GovTech is a specialty. We built CapturePilot, a federal contract intelligence platform that ingests 37K+ SAM.gov opportunities daily, scores them with a 140-point algorithm, and serves 80K+ contractor profiles." } },
+    { "@type": "Question", name: "Do you offer ongoing support after launch?", acceptedAnswer: { "@type": "Answer", text: "Yes. Every project sprint includes 30 days of post-launch support. Most clients transition to a Growth Retainer ($5K-$15K/month) for dedicated engineering capacity, weekly sprint cycles, and feature development." } },
+  ],
+};
+
 const SERVICES = [
   {
     icon: Code2,
@@ -104,6 +134,8 @@ const TECH_STACK = [
 export default function ServicesPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(servicesCollectionJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(servicesFaqJsonLd) }} />
       {/* Hero */}
       <section className="relative overflow-hidden py-24 md:py-32">
         <div className="absolute inset-0 bg-gradient-to-b from-emerald-950/20 via-stone-950 to-stone-950" />

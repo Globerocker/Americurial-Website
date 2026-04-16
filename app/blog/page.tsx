@@ -1,6 +1,27 @@
 import Link from "next/link";
 import { ArrowRight, BookOpen, Clock } from "lucide-react";
 
+const BASE = "https://www.americurial.com";
+const collectionJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  name: "Americurial Blog",
+  description: "Expert insights on SaaS development, GovTech, AI content marketing, and growing veteran-owned businesses.",
+  url: `${BASE}/blog`,
+  isPartOf: { "@type": "WebSite", name: "Americurial", url: BASE },
+  publisher: { "@type": "Organization", name: "Americurial", logo: { "@type": "ImageObject", url: `${BASE}/logo.png` } },
+  mainEntity: {
+    "@type": "ItemList",
+    numberOfItems: 4,
+    itemListElement: [
+      { "@type": "ListItem", position: 1, url: `${BASE}/blog/ai-content-marketing`, name: "AI Content Marketing for Agencies" },
+      { "@type": "ListItem", position: 2, url: `${BASE}/blog/govtech-trends-2026`, name: "GovTech Trends in 2026" },
+      { "@type": "ListItem", position: 3, url: `${BASE}/blog/veteran-owned-business-growth`, name: "Growing Your Veteran-Owned Business" },
+      { "@type": "ListItem", position: 4, url: `${BASE}/blog/saas-mvp-launch-guide`, name: "How to Launch a SaaS MVP in 90 Days" },
+    ],
+  },
+};
+
 const POSTS = [
   {
     title: "AI Content Marketing for Agencies",
@@ -39,6 +60,7 @@ const POSTS = [
 export default function BlogPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionJsonLd) }} />
       {/* Hero */}
       <section className="relative overflow-hidden py-24 md:py-32">
         <div className="absolute inset-0 bg-gradient-to-b from-emerald-950/20 via-stone-950 to-stone-950" />

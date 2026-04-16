@@ -23,21 +23,25 @@ const SERVICES = [
     icon: Code2,
     title: "SaaS Development",
     desc: "Full-stack product builds from zero to launch. We design, build, and ship subscription software with the infrastructure to scale.",
+    href: "/services/saas",
   },
   {
     icon: Globe,
     title: "Web & Digital Products",
     desc: "High-performance marketing sites, dashboards, and portals. Conversion-focused design meets bulletproof engineering.",
+    href: "/services/web",
   },
   {
     icon: Shield,
     title: "GovTech Solutions",
     desc: "Federal-grade platforms for government contractors. Compliance-ready, data-rich, built to handle 40K+ data points.",
+    href: "/services/govtech",
   },
   {
     icon: BarChart3,
     title: "AI & Data Platforms",
     desc: "Machine learning pipelines, intelligent matching, and AI-powered automation built into production-grade systems.",
+    href: "/services/ai",
   },
 ];
 
@@ -163,13 +167,19 @@ export default function HomePage() {
           <div className="grid md:grid-cols-2 gap-6">
             {SERVICES.map((svc, i) => (
               <Reveal key={svc.title} delay={i * 100}>
-                <div className="group bg-stone-900/40 border border-white/5 hover:border-emerald-500/20 rounded-2xl p-8 transition-all hover:bg-stone-900/60 hover-lift shimmer-bg">
+                <Link
+                  href={svc.href}
+                  className="group block bg-stone-900/40 border border-white/5 hover:border-emerald-500/40 rounded-2xl p-8 transition-all hover:bg-stone-900/60 hover-lift shimmer-bg"
+                >
                   <div className="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400 mb-6 group-hover:bg-emerald-500/20 transition-colors">
                     <svc.icon className="w-6 h-6" />
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-3">{svc.title}</h3>
-                  <p className="text-sm text-stone-400 leading-relaxed">{svc.desc}</p>
-                </div>
+                  <h3 className="text-xl font-bold text-white mb-3 group-hover:text-emerald-300 transition-colors">{svc.title}</h3>
+                  <p className="text-sm text-stone-400 leading-relaxed mb-4">{svc.desc}</p>
+                  <span className="text-xs font-bold text-emerald-400 inline-flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
+                    Learn more <ArrowRight className="w-3 h-3" />
+                  </span>
+                </Link>
               </Reveal>
             ))}
           </div>
