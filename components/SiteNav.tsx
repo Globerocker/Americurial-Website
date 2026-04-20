@@ -8,9 +8,10 @@ import { Menu, X, ArrowRight } from "lucide-react";
 const NAV_LINKS = [
   { href: "/services", label: "Services" },
   { href: "/capturepilot", label: "CapturePilot" },
-  { href: "/about", label: "About" },
-  { href: "/blog", label: "Insights" },
+  { href: "/tools", label: "Free Tools" },
+  { href: "/blog", label: "Field Manual" },
   { href: "/pricing", label: "Pricing" },
+  { href: "/about", label: "About" },
 ];
 
 const AUDIENCE_LINKS = [
