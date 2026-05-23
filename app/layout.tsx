@@ -50,7 +50,6 @@ export const metadata: Metadata = {
     },
   },
   alternates: { canonical: "https://www.americurial.com" },
-  icons: { icon: "/icon-white.png", apple: "/icon-black.png" },
 };
 
 const orgJsonLd = {

@@ -1,4 +1,4 @@
-import { Award, Building2, ShieldCheck, Workflow, Boxes } from "lucide-react";
+import { Award, ShieldCheck, Workflow, Boxes } from "lucide-react";
 
 export function TrustBar() {
   return (
@@ -46,11 +46,6 @@ export function TrustBar() {
           icon={Boxes}
           label="Microsoft Partner"
           sub="Dynamics 365"
-        />
-        <TrustChip
-          icon={Building2}
-          label="Americurial LLC"
-          sub="Delaware · 2024"
         />
       </div>
     </section>
