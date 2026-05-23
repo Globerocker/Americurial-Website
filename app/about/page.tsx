@@ -119,9 +119,17 @@ export default function AboutPage() {
                         <p className="text-xs font-bold uppercase tracking-[0.25em] text-emerald-400 mb-1">
                           Co-Founder
                         </p>
-                        <p className="text-2xl font-black text-white tracking-tight">
-                          Andre Schuler
-                        </p>
+                        <div className="flex items-center gap-3 mb-0.5">
+                          <p className="text-2xl font-black text-white tracking-tight">
+                            Andre Schuler
+                          </p>
+                          {/* eslint-disable-next-line @next/next/no-img-element */}
+                          <img
+                            src="https://flagcdn.com/de.svg"
+                            alt="Germany"
+                            className="h-5 w-auto rounded-sm ring-1 ring-white/10"
+                          />
+                        </div>
                         <p className="text-sm text-stone-400">Deutsche Marine · Boarding Team</p>
                       </div>
                     </div>
@@ -219,7 +227,17 @@ export default function AboutPage() {
                         <p className="text-xs font-bold uppercase tracking-[0.25em] text-emerald-400 mb-1">
                           Co-Founder
                         </p>
-                        <p className="text-2xl font-black text-white tracking-tight">Sergio Gouveia</p>
+                        <div className="flex items-center gap-3 mb-0.5">
+                          <p className="text-2xl font-black text-white tracking-tight">
+                            Sergio Gouveia
+                          </p>
+                          {/* eslint-disable-next-line @next/next/no-img-element */}
+                          <img
+                            src="https://flagcdn.com/ca.svg"
+                            alt="Canada"
+                            className="h-5 w-auto rounded-sm ring-1 ring-white/10"
+                          />
+                        </div>
                         <p className="text-sm text-stone-400">Canadian Army · Infantry</p>
                       </div>
                     </div>
