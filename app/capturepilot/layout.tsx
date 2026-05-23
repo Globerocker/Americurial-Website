@@ -107,7 +107,7 @@ const faqJsonLd = {
       name: "Who built CapturePilot?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "CapturePilot was designed and built by Americurial, a veteran-owned digital agency in Jacksonville, Florida, founded by Andre Schuler. It is the agency's flagship SaaS product and serves as the reference implementation of our 90-day MVP methodology using Next.js, Supabase, Stripe, and Vercel. The same team that builds CapturePilot designs and ships SaaS products for Americurial clients.",
+        text: "CapturePilot was designed and built by Americurial, a veteran-led capture and growth agency in Phoenix, Arizona, co-founded by Andre Schuler and Sergio Gouveia. It is the agency's flagship SaaS product and serves as the reference implementation of our 90-day MVP methodology using Next.js, Supabase, Stripe, and Vercel. The same team that builds CapturePilot designs and ships SaaS products for Americurial clients.",
       },
     },
     {

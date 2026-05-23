@@ -30,7 +30,7 @@ const aboutPageJsonLd = {
   name: "About Americurial",
   url: "https://www.americurial.com/about",
   description:
-    "Americurial is a veteran-owned digital agency founded by Andre Schuler in Jacksonville, FL. We bring military discipline to software engineering — building SaaS, GovTech, and AI-powered products.",
+    "Americurial is a veteran-led capture and growth agency for federal contractors, co-founded by Andre Schuler and Sergio Gouveia in Phoenix, AZ. We run pursuits, write proposals, build the software you track them in (CapturePilot), and run the marketing side when clients need more than capture.",
   mainEntity: {
     "@type": "Organization",
     name: "Americurial",
@@ -43,8 +43,8 @@ const aboutPageJsonLd = {
     },
     address: {
       "@type": "PostalAddress",
-      addressLocality: "Jacksonville",
-      addressRegion: "FL",
+      addressLocality: "Phoenix",
+      addressRegion: "AZ",
       addressCountry: "US",
     },
     areaServed: { "@type": "Country", name: "United States" },
@@ -130,7 +130,7 @@ const faqJsonLd = {
       name: "Where is Americurial located?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Americurial is headquartered in Jacksonville, Florida and serves clients across the United States. We work remotely with clients nationwide, with a concentration on small businesses, startups, veteran-owned firms, digital agencies needing overflow capacity, and federal contractors who need GovTech platforms.",
+        text: "Americurial is headquartered in Phoenix, Arizona and serves clients across the United States. We work remotely with clients nationwide, with a concentration on small businesses, startups, veteran-owned firms, digital agencies needing overflow capacity, and federal contractors who need GovTech platforms.",
       },
     },
     {

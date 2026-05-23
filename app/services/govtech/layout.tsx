@@ -104,7 +104,7 @@ const faqJsonLd = {
       name: "Is Americurial a veteran-owned business?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. Americurial is a veteran-owned agency founded by Andre Schuler and based in Jacksonville, FL. We understand the federal contracting landscape from the inside — certifications, set-asides, compliance requirements, and the culture of government procurement — because we live in it ourselves.",
+        text: "Yes. Americurial is a veteran-led agency co-founded by Andre Schuler and Sergio Gouveia, based in Phoenix, AZ. We understand the federal contracting landscape from the inside — certifications, set-asides, compliance, and the culture of government procurement — because we live in it ourselves.",
       },
     },
     {

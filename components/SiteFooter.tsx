@@ -43,8 +43,10 @@ export function SiteFooter() {
               className="h-10 w-auto opacity-80 mb-4"
             />
             <p className="text-xs text-stone-500 leading-relaxed mb-4">
-              Veteran-owned digital agency building software that wins.
-              Based in Jacksonville, FL.
+              Veteran-led capture agency for federal contractors. We run
+              pursuits, ship proposals, and build the software (CapturePilot)
+              you track them in. Marketing side too — paid acquisition, SEO,
+              CRM rollouts when you need more than capture. Phoenix, AZ.
             </p>
             <p className="text-[10px] text-stone-600 uppercase tracking-widest font-bold">
               Veteran-Owned

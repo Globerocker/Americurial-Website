@@ -257,7 +257,7 @@ export default function ContactPage() {
                   <div>
                     <h3 className="text-white font-bold mb-1">Location</h3>
                     <p className="text-sm text-stone-400">
-                      Jacksonville, FL
+                      Phoenix, AZ
                     </p>
                   </div>
                 </div>

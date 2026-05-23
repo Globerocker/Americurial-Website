@@ -3,13 +3,13 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Get in touch with Americurial. Book a strategy call, send us a message, or visit our Jacksonville FL office. Veteran-owned digital agency ready to build.",
+    "Get in touch with Americurial. Book a strategy call, send us a message, or visit our Phoenix AZ office. Veteran-owned digital agency ready to build.",
   keywords:
-    "contact Americurial, book a call, digital agency contact, veteran-owned agency, Jacksonville FL, strategy call",
+    "contact Americurial, book a call, digital agency contact, veteran-owned agency, Phoenix AZ, strategy call",
   openGraph: {
     title: "Contact | Americurial",
     description:
-      "Ready to build? Book a strategy call or send us a message. Veteran-owned digital agency in Jacksonville, FL.",
+      "Ready to build? Book a strategy call or send us a message. Veteran-owned digital agency in Phoenix, AZ.",
     url: "https://www.americurial.com/contact",
   },
   alternates: { canonical: "https://www.americurial.com/contact" },
@@ -41,7 +41,7 @@ const contactPageJsonLd = {
   url: "https://www.americurial.com/contact",
   inLanguage: "en-US",
   description:
-    "Contact Americurial — a veteran-owned digital agency in Jacksonville, Florida specializing in GovTech, SaaS MVPs, AI integration, and web development. Book a strategy call or send a message.",
+    "Contact Americurial — a veteran-owned digital agency in Phoenix, Arizona specializing in GovTech, SaaS MVPs, AI integration, and web development. Book a strategy call or send a message.",
   isPartOf: {
     "@type": "WebSite",
     name: "Americurial",
@@ -53,15 +53,15 @@ const contactPageJsonLd = {
     url: "https://www.americurial.com",
     logo: "https://www.americurial.com/logo.png",
     description:
-      "Veteran-owned digital agency in Jacksonville, Florida. We build SaaS products, GovTech platforms, and AI-integrated web applications.",
+      "Veteran-owned digital agency in Phoenix, Arizona. We build SaaS products, GovTech platforms, and AI-integrated web applications.",
     founder: {
       "@type": "Person",
       name: "Andre Schuler",
     },
     address: {
       "@type": "PostalAddress",
-      addressLocality: "Jacksonville",
-      addressRegion: "FL",
+      addressLocality: "Phoenix",
+      addressRegion: "AZ",
       addressCountry: "US",
     },
     contactPoint: [
@@ -100,8 +100,8 @@ const localBusinessJsonLd = {
   },
   address: {
     "@type": "PostalAddress",
-    addressLocality: "Jacksonville",
-    addressRegion: "FL",
+    addressLocality: "Phoenix",
+    addressRegion: "AZ",
     addressCountry: "US",
   },
   areaServed: {

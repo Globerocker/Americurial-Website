@@ -47,21 +47,21 @@ const BADGES: Badge[] = [
 
 function BadgeCard({ b }: { b: Badge }) {
   const inner = (
-    <div className="flex items-center gap-4 bg-stone-900/50 border border-white/10 hover:border-emerald-500/30 rounded-2xl pl-3 pr-5 py-2.5 transition-colors min-w-max">
-      <div className="w-12 h-12 rounded-xl bg-white/95 flex items-center justify-center flex-shrink-0 overflow-hidden">
+    <div className="flex items-center gap-5 bg-stone-900/50 border border-white/10 hover:border-emerald-500/30 rounded-2xl pl-4 pr-7 py-4 transition-colors min-w-max">
+      <div className="w-20 h-20 rounded-2xl bg-white/95 flex items-center justify-center flex-shrink-0 overflow-hidden p-2">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src={b.src}
           alt={b.alt}
           loading="lazy"
-          className="max-w-[80%] max-h-[80%] object-contain"
+          className="max-w-full max-h-full object-contain"
         />
       </div>
       <div className="text-left">
-        <p className="text-xs font-bold uppercase tracking-widest text-stone-200 leading-tight whitespace-nowrap">
+        <p className="text-sm font-bold uppercase tracking-widest text-stone-100 leading-tight whitespace-nowrap">
           {b.title}
         </p>
-        <p className="text-[10px] text-stone-500 leading-tight mt-1 whitespace-nowrap">
+        <p className="text-xs text-stone-500 leading-tight mt-1.5 whitespace-nowrap">
           {b.sub}
         </p>
       </div>
@@ -88,7 +88,7 @@ export function TrustBar() {
   return (
     <section
       aria-label="Certifications and Partners"
-      className="border-y border-white/5 bg-stone-950 py-5 relative overflow-hidden"
+      className="border-y border-white/5 bg-stone-950 py-7 relative overflow-hidden"
     >
       {/* Edge fades */}
       <div className="absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-stone-950 to-transparent z-10 pointer-events-none" />

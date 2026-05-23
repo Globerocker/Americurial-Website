@@ -136,37 +136,28 @@ export default function AboutPage() {
 
                     <div className="space-y-4 text-stone-300 leading-relaxed text-sm">
                       <p>
-                        Joined the German Navy as a Marineinfanterist — Marine Infantry. After
-                        the regular pipeline, Andre was selected into the{" "}
-                        <strong className="text-white">Boarding Team</strong>, a special
-                        maritime unit trained for vessel boarding and counter-piracy
-                        interdiction.
+                        German Navy Marineinfanterist, selected into the{" "}
+                        <strong className="text-white">Boarding Team</strong> — the special
+                        unit trained for vessel boarding and counter-piracy interdiction.
+                        <strong className="text-white"> Two tours on Operation Atalanta</strong>{" "}
+                        off the Horn of Africa. Boarding at 04:00 with incomplete intel
+                        teaches a specific kind of decision-making: the clock starts when
+                        you commit, and the plan has to hold under pressure.
                       </p>
                       <p>
-                        <strong className="text-white">Two tours on Operation Atalanta</strong> —
-                        the EU anti-piracy mission off the Horn of Africa. Board suspect
-                        vessels in international waters, clear spaces under time pressure,
-                        make calls with incomplete information. That operational tempo is
-                        what Americurial runs on: when an RFP drops, the clock starts.
-                      </p>
-                      <p>
-                        After service, several years teaching in the German school system —
+                        Post-service, a few years teaching in the German school system —
                         communication, business basics, IT. That&apos;s where the coaching
-                        habit comes from. He can walk a five-person firm through federal
-                        capture without making them feel small for asking beginner
-                        questions.
-                      </p>
-                      <p>
-                        Six years as Head of Marketing inside a large corporation after that —
-                        paid search, SEO, conversion teams, full funnel across multiple
-                        product lines. Today: certified HubSpot Partner and Microsoft
-                        Partner for Dynamics 365.
+                        habit comes from. Then six years as{" "}
+                        <strong className="text-white">Head of Marketing</strong> inside a
+                        large corporation — paid search, SEO, conversion teams, the full
+                        funnel. Today: certified HubSpot Partner and Microsoft Partner for
+                        Dynamics 365.
                       </p>
                       <p>
                         That&apos;s the second engine inside Americurial. When a client
                         needs more than federal capture — a website that converts, an SEO
                         problem nobody&apos;s touched in two years, paid acquisition
-                        that&apos;s leaking — Andre owns that side while Sergio runs
+                        that&apos;s leaking — Andre runs that side while Sergio runs
                         capture.
                       </p>
                     </div>
@@ -239,38 +230,28 @@ export default function AboutPage() {
 
                     <div className="space-y-4 text-stone-300 leading-relaxed text-sm">
                       <p>
-                        Enlisted in the Canadian Army as an Infantryman. Served with the
-                        regular force and deployed on{" "}
-                        <strong className="text-white">two combat tours in
-                        Afghanistan</strong> during the mission&apos;s most active years —
-                        running patrols, holding ground, working in units where the standard
-                        of proof for any plan was whether it survived first contact.
+                        Canadian Army Infantryman.{" "}
+                        <strong className="text-white">Two combat tours in Afghanistan</strong>{" "}
+                        during the mission&apos;s most active years — patrols, holding
+                        ground, working in units where every plan had to survive first
+                        contact. Infantry teaches imperfect intel, tight windows, no second
+                        attempt. You build the plan, expect it to break, bake in the
+                        contingencies before you cross the line of departure.
                       </p>
                       <p>
-                        Infantry teaches a specific kind of decision-making: imperfect intel,
-                        tight windows, no second attempt. You build the plan, expect it to
-                        break, and bake in the contingencies before you cross the line of
-                        departure. That&apos;s the lens Sergio brings to every capture cycle.
+                        That&apos;s the lens Sergio brings to every capture cycle. A proposal
+                        that looks perfect on paper is worthless if it doesn&apos;t hold
+                        under agency scrutiny, incumbent pressure, or the uncomfortable
+                        debrief question. He runs every pursuit assuming the incumbent
+                        defends, a stronger competitor shows up, and the agency pushes back
+                        on scope.
                       </p>
                       <p>
-                        A proposal that looks perfect on paper is worthless if it
-                        doesn&apos;t hold up under agency scrutiny, incumbent pressure, or
-                        the uncomfortable question at debrief. Sergio runs every pursuit
-                        assuming the incumbent defends, a stronger competitor appears, and
-                        the agency pushes back on scope. Plan backward from there.
-                      </p>
-                      <p>
-                        He owns the capture side at Americurial — pursuit go/no-go calls,{" "}
+                        Sergio owns the capture side at Americurial — pursuit go/no-go,{" "}
                         <strong className="text-white">Black Hat reviews</strong>, competitor
-                        intelligence, win-themes development. Before every submission the
-                        team plays the role of the source-selection panel and the rival
-                        bidders, hunting for every reason this proposal gets eliminated.
-                        Anything that survives that gauntlet has a real shot.
-                      </p>
-                      <p>
-                        He&apos;s the one in the room asking <em>&quot;what does the
-                        agency actually need?&quot;</em> — not &quot;what would be cool to
-                        propose?&quot; That gap is where most small-business proposals lose.
+                        intel, win-themes. Before every submission the team plays the
+                        source-selection panel and the rival bidders. Whatever survives that
+                        gauntlet has a real shot.
                       </p>
                     </div>
 

@@ -43,7 +43,7 @@ const faqJsonLd = {
       name: "Is Americurial a veteran-owned business?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. Americurial is veteran-owned and veteran-operated, founded by Andre Schuler in Jacksonville, FL. We build the digital infrastructure that helps fellow veteran entrepreneurs win federal contracts and scale their businesses. We understand the SDVOSB and VOSB certification process, the set-aside landscape, and how to position a veteran-owned business for VA and DoD contracts.",
+        text: "Yes. Americurial is veteran-owned and veteran-operated, co-founded by Andre Schuler (German Navy Boarding Team) and Sergio Gouveia (Canadian Army Infantry) and based in Phoenix, AZ. We help fellow veteran entrepreneurs win federal contracts — we know the SDVOSB and VOSB certification process, the set-aside landscape, and how to position a veteran-owned firm for VA and DoD work because we live in it ourselves.",
       },
     },
     {
