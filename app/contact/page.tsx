@@ -36,6 +36,9 @@ export default function ContactPage() {
       `Name: ${form.name}\nEmail: ${form.email}\nCompany: ${form.company}\n\n${form.message}`
     );
     window.location.href = `mailto:hello@americurial.com?subject=${subject}&body=${body}`;
+    // Meta Pixel — contact form is the primary lead source on americurial.com.
+    const w = window as Window & { fbq?: (...args: unknown[]) => void };
+    w.fbq?.("track", "Lead", { has_company: Boolean(form.company) });
     setSubmitted(true);
   }
 

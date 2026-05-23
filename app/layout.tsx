@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { SiteNav } from "@/components/SiteNav";
 import { SiteFooter } from "@/components/SiteFooter";
+import MetaPixel from "@/components/MetaPixel";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 
@@ -94,6 +95,7 @@ export default function RootLayout({
         />
       </head>
       <body className="min-h-full flex flex-col font-sans bg-stone-950 text-stone-200 dot-grid-bg">
+        <MetaPixel />
         <SiteNav />
         <main className="flex-1 pt-16">{children}</main>
         <SiteFooter />
