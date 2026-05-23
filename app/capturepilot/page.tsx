@@ -17,51 +17,51 @@ import {
 const FEATURES = [
   {
     icon: Brain,
-    title: "AI Matching",
-    desc: "Machine learning algorithms scan 40,000+ federal opportunities daily and surface the contracts your business is most likely to win.",
+    title: "Daily matching",
+    desc: "We pull SAM.gov, Grants.gov, and a handful of other feeds every night. By the time you log in, the day's matches are scored and waiting.",
   },
   {
     icon: Gauge,
-    title: "Readiness Score",
-    desc: "Get a 0-10 government readiness assessment based on your registrations, certifications, past performance, and capabilities.",
+    title: "Readiness score",
+    desc: "A 0–10 number for how ready you actually are: SAM health, certs, past performance, capability statement. With the specific gaps spelled out.",
   },
   {
     icon: Users,
-    title: "Competitor Intel",
-    desc: "See who won similar contracts, track incumbent contractors via USASpending, and identify teaming opportunities before you bid.",
+    title: "Competitor intel",
+    desc: "Who won the last contract like this. Their NAICS, their UEI, what USASpending shows them billing. Useful before you decide to bid.",
   },
   {
     icon: Tags,
-    title: "NAICS Classification",
-    desc: "AI-powered NAICS code identification ensures you are matched against the right industry codes for your capabilities.",
+    title: "NAICS mapping",
+    desc: "Paste your website. We pull the right NAICS and PSC codes from what's there, instead of asking you to guess.",
   },
   {
     icon: FileText,
-    title: "Premium Reports",
-    desc: "Detailed PDF intelligence reports with opportunity breakdowns, competitive landscape analysis, and actionable next steps.",
+    title: "Per-opportunity reports",
+    desc: "Branded PDFs with the notice details, the competitive picture, and a checklist of what to do next. Useful for capture meetings or sharing with a teaming partner.",
   },
   {
     icon: RefreshCw,
-    title: "Daily Pipeline Updates",
-    desc: "Automated daily ingestion from SAM.gov with scoring, enrichment, and email alerts so you never miss a relevant opportunity.",
+    title: "Email alerts that don't spam",
+    desc: "Only HOT matches above your threshold hit your inbox. Daily digest, not a notification every twenty minutes.",
   },
 ];
 
 const STEPS = [
   {
     step: "01",
-    title: "Enter Your Website",
-    desc: "Provide your company URL and we analyze your capabilities, certifications, and market positioning automatically.",
+    title: "Paste your website",
+    desc: "We pull capabilities, certs, and a rough positioning read straight from the page. No long form.",
   },
   {
     step: "02",
-    title: "Get Your Readiness Score",
-    desc: "Receive a comprehensive government readiness assessment with specific recommendations to improve your competitive position.",
+    title: "See your readiness score",
+    desc: "Where you stand on a 0–10, with the two or three things that would actually move the number.",
   },
   {
     step: "03",
-    title: "See Matched Contracts",
-    desc: "Browse federal opportunities ranked by your likelihood to win, complete with competitor intelligence and bid deadlines.",
+    title: "Get matched opportunities",
+    desc: "Today's HOT and WARM matches with deadlines, set-asides, and the competitive picture on each.",
   },
 ];
 
@@ -88,9 +88,9 @@ export default function CapturePilotPage() {
           </h1>
 
           <p className="text-lg md:text-xl text-stone-400 max-w-3xl mx-auto leading-relaxed mb-12">
-            The AI-powered platform that matches small businesses with federal
-            government contracts they can actually win. Built by Americurial.
-            Trusted by contractors nationwide.
+            We built this because we needed it ourselves. It scores federal
+            opportunities against your actual capability statement, then tells
+            you what to do about the ones worth chasing.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -126,17 +126,16 @@ export default function CapturePilotPage() {
           </div>
 
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-black tracking-tighter text-white mb-8">
-            Small businesses are fighting a{" "}
-            <span className="text-emerald-400">$700B federal market</span> with
-            spreadsheets and SAM.gov searches.
+            Most small firms still find federal work the same way:
+            <span className="text-emerald-400"> a tab in SAM.gov</span> and a
+            spreadsheet.
           </h2>
 
           <p className="text-lg text-stone-400 leading-relaxed max-w-3xl mx-auto">
-            The federal procurement system was designed for large defense
-            contractors with dedicated capture teams. Small businesses lack the
-            tools, data, and intelligence to compete effectively. Most never find
-            the right opportunities. Those that do often lack the readiness to
-            win them.
+            The agencies post the notices. Big contractors have full capture
+            teams parsing them. Everyone else gets the leftover hour at the
+            end of the day and a generic keyword search. CapturePilot is what
+            we built so we didn&apos;t have to keep doing that ourselves.
           </p>
         </div>
       </section>
@@ -153,13 +152,11 @@ export default function CapturePilotPage() {
               <div className="h-px w-8 bg-emerald-500/40" />
             </div>
             <h2 className="text-4xl md:text-5xl font-black tracking-tighter text-white mb-6">
-              Intelligence That{" "}
-              <span className="text-emerald-400">Levels the Field</span>
+              What it actually <span className="text-emerald-400">does</span>
             </h2>
             <p className="text-stone-400 max-w-2xl mx-auto">
-              CapturePilot gives small businesses the same capture intelligence
-              that large contractors pay millions for &mdash; automated, affordable, and
-              always up to date.
+              Same workflow a Lockheed capture team runs, scoped down to what
+              a five-person firm can use without hiring three more analysts.
             </p>
           </div>
 
@@ -196,8 +193,7 @@ export default function CapturePilotPage() {
               <div className="h-px w-8 bg-emerald-500/40" />
             </div>
             <h2 className="text-4xl md:text-5xl font-black tracking-tighter text-white">
-              Three Steps to{" "}
-              <span className="text-emerald-400">Contract Intelligence</span>
+              How to <span className="text-emerald-400">use it</span>
             </h2>
           </div>
 
@@ -234,17 +230,16 @@ export default function CapturePilotPage() {
                 </span>
               </div>
               <h2 className="text-4xl md:text-5xl font-black tracking-tighter text-white mb-6">
-                Everything You Need to{" "}
-                <span className="text-emerald-400">Win</span>
+                What you actually <span className="text-emerald-400">get</span>
               </h2>
               <ul className="space-y-4 mb-8">
                 {[
-                  "40,000+ active federal opportunities tracked daily",
-                  "AI-powered scoring based on your NAICS, set-asides, and capabilities",
-                  "Competitor tracking with USASpending award data",
-                  "Automated NAICS classification using GPT-4o",
-                  "Premium PDF reports for capture managers and BD teams",
-                  "Daily email alerts for HOT-matched opportunities",
+                  "Around 40K live federal opportunities, refreshed every night",
+                  "Match scoring against your NAICS, set-asides, and capability statement",
+                  "Incumbent tracking with the USASpending award trail",
+                  "NAICS pulled from your website with GPT-4o, not a dropdown",
+                  "Branded PDF reports you can hand to a capture meeting",
+                  "Daily HOT-match email — opt out of WARM if you want quieter",
                 ].map((item) => (
                   <li
                     key={item}
@@ -332,31 +327,33 @@ export default function CapturePilotPage() {
         <div className="max-w-3xl mx-auto px-6 text-center">
           <Zap className="w-10 h-10 text-emerald-400 mx-auto mb-6" />
           <h2 className="text-4xl md:text-5xl font-black tracking-tighter text-white mb-6">
-            Free During Beta
+            Try It Free, See Plans on capturepilot.com
           </h2>
           <p className="text-lg text-stone-400 mb-4 leading-relaxed">
-            CapturePilot is currently in beta. Full access is free while we
-            refine the platform with early users.
+            Run the Quick Checker without signing up — it shows you matched
+            federal opportunities in 60 seconds.
           </p>
           <p className="text-stone-500 mb-10">
-            $199/mo after beta. Lock in early access pricing by signing up now.
+            Full plans and current pricing live on capturepilot.com.
+            Americurial retainer and Co-Pilot Coaching clients get a software
+            tier included or discounted.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a
-              href="https://www.capturepilot.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-sm px-8 py-4 rounded-full transition-all flex items-center gap-2 glow-emerald"
-            >
-              Visit CapturePilot <ExternalLink className="w-4 h-4" />
-            </a>
             <a
               href="https://app.capturepilot.com/check"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-white/5 hover:bg-white/10 border border-white/10 text-white font-bold text-sm px-8 py-4 rounded-full transition-all flex items-center gap-2"
+              className="bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-sm px-8 py-4 rounded-full transition-all flex items-center gap-2 glow-emerald"
             >
               Try Quick Checker (Free) <ArrowRight className="w-4 h-4" />
+            </a>
+            <a
+              href="https://www.capturepilot.com/pricing"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-white/5 hover:bg-white/10 border border-white/10 text-white font-bold text-sm px-8 py-4 rounded-full transition-all flex items-center gap-2"
+            >
+              See CapturePilot Plans <ExternalLink className="w-4 h-4" />
             </a>
           </div>
         </div>

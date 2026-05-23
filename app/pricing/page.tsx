@@ -17,6 +17,7 @@ import {
   Layers,
   Zap,
   Info,
+  Compass,
 } from "lucide-react";
 import { Reveal } from "@/components/Reveal";
 import { TiltCard, Eyebrow } from "@/components/Interactive";
@@ -38,9 +39,32 @@ type Tier = {
 
 const TIERS: Tier[] = [
   {
+    icon: Compass,
+    name: "Co-Pilot Coaching",
+    tagline: "Build federal capture in-house instead of outsourcing it. We coach, your team executes.",
+    price: 1500,
+    period: "/month",
+    successFee: "No success fee — your team owns the wins",
+    scope: "Solo founder or 1–2 person team · DIY with weekly guidance",
+    scopeLine: [
+      { label: "Team Size", value: "1–2" },
+      { label: "Calls", value: "Weekly" },
+      { label: "Match Review", value: "Self-serve" },
+    ],
+    features: [
+      "Weekly 60-min Co-Pilot call with a capture lead",
+      "Full Starter Kit access (Sources Sought, capability, teaming templates)",
+      "CapturePilot software at 50% off ($99/mo instead of $199)",
+      "Shared Slack channel for between-call questions",
+      "Monthly office hours with the full Americurial team",
+      "1 proposal review (Pink Team) per quarter",
+      "Upgrade credit: 100% of your first 3 months apply to any retainer",
+    ],
+  },
+  {
     icon: Rocket,
     name: "Starter Capture",
-    tagline: "You have 1 location, a clear niche, and want your first $1M in federal revenue.",
+    tagline: "1 location, a clear niche, and you want your first federal contracts in the next 6–12 months.",
     price: 2500,
     period: "/month",
     successFee: "5% success fee on awarded contracts",
@@ -321,7 +345,7 @@ export default function PricingPage() {
             </p>
           </Reveal>
 
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {TIERS.map((tier, i) => {
               const Icon = tier.icon;
               const finalPrice = isVet ? discounted(tier.price) : tier.price;
@@ -409,6 +433,9 @@ export default function PricingPage() {
                       >
                         Book Scoping Call <ArrowRight className="w-4 h-4" />
                       </a>
+                      <p className="text-[10px] text-stone-500 text-center mt-3 uppercase tracking-widest font-bold">
+                        Month-to-month · Cancel anytime
+                      </p>
                     </div>
                   </TiltCard>
                 </Reveal>

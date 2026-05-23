@@ -19,19 +19,19 @@ import {
 import { Reveal, AnimatedCounter } from "@/components/Reveal";
 
 const FEATURES = [
-  { icon: Shield, title: "SDVOSB & VOSB Expertise", desc: "We understand the certification process, the set-aside landscape, and how to position your business for VA and DoD contracts." },
-  { icon: Target, title: "CapturePilot — Built By Us", desc: "We built the leading federal contract intelligence platform. We use the same technology to help veteran-owned businesses win." },
-  { icon: BarChart3, title: "GovTech Platforms", desc: "Need a custom platform to manage your pipeline, teaming partners, or compliance? We build federal-grade software that works." },
-  { icon: Globe, title: "Digital Presence", desc: "Professional websites, capability statements, and digital marketing tailored to the government contracting world." },
-  { icon: Handshake, title: "Veteran Network", desc: "Access our network of veteran-owned businesses for teaming, mentorship, and joint venture opportunities." },
-  { icon: TrendingUp, title: "Growth Strategy", desc: "From first contract to $10M in revenue. We help you plan the growth path and build the systems to support it." },
+  { icon: Shield, title: "SDVOSB & VOSB", desc: "We've been through SBA verification ourselves. We know which form trips people up and what VA Center for Verification actually wants to see." },
+  { icon: Target, title: "We built CapturePilot", desc: "It's our own platform — 40K-plus federal opportunities, daily scoring, the lot. Retainer and Co-Pilot clients get it included or discounted." },
+  { icon: BarChart3, title: "GovTech that works", desc: "Need a pipeline tool, a partner CRM, a compliance dashboard? We've built that pattern before. Won't take six months." },
+  { icon: Globe, title: "Site + capability statement", desc: "A website that doesn't look like a 2014 GovCon template, and a capability statement evaluators actually read past page one." },
+  { icon: Handshake, title: "Teaming network", desc: "Warm intros to other veteran-owned firms in our network — primes looking for SDVOSBs, SDVOSBs looking for HUBZone teammates. We run the matchmaking." },
+  { icon: TrendingUp, title: "Growth without burning out", desc: "First federal contract to a few million in topline is a different game than four-million to twenty. We've seen both. We'll tell you which playbook you're in." },
 ];
 
 const PROCESS = [
-  { step: "01", title: "Strategy Session", desc: "Free call to understand your business, certifications, and goals." },
-  { step: "02", title: "Readiness Assessment", desc: "We evaluate your digital presence, capabilities, and market position." },
-  { step: "03", title: "Build & Position", desc: "We build the tools, website, and systems you need to compete." },
-  { step: "04", title: "Win & Grow", desc: "Ongoing support to help you capture contracts and scale." },
+  { step: "01", title: "Free intro call", desc: "Fifteen minutes. We look at your NAICS, certs, and the current SAM feed." },
+  { step: "02", title: "Readiness check", desc: "Where you stand today on SAM, past performance, and capability story." },
+  { step: "03", title: "Build the basics", desc: "Capability statement, SAM optimisation, the tools you're missing." },
+  { step: "04", title: "Run capture", desc: "Daily matches, Sources Sought, proposal support, ongoing." },
 ];
 
 export default function VeteransPage() {
@@ -54,8 +54,9 @@ export default function VeteransPage() {
             <span className="gradient-text">Your Advantage.</span>
           </h1>
           <p className="animate-fade-in-up-200 text-lg md:text-xl text-stone-400 max-w-2xl mx-auto mb-12 leading-relaxed">
-            Americurial is veteran-owned and veteran-operated. We build the digital infrastructure
-            that helps fellow veteran entrepreneurs win federal contracts and scale their businesses.
+            Two veterans built this — a German Navy boarding-team op and a
+            Canadian Army infantryman. We run capture, build the software,
+            and take a 20% off everything for anyone who served.
           </p>
           <div className="animate-fade-in-up-300 flex flex-col sm:flex-row items-center justify-center gap-4">
             <a href="https://meetings-na2.hubspot.com/americurial/intro-call" target="_blank" rel="noopener noreferrer" className="bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-sm px-8 py-4 rounded-full transition-all flex items-center gap-2 glow-emerald">

@@ -35,15 +35,15 @@ export default function Post() {
       ]}
     >
       <p>
-        A capability statement (CAP) is the one-page document that decides whether a contracting
-        officer invites you to quote on a micro-purchase, whether a prime invites you to team,
-        and whether a program office includes you in their next Sources Sought outreach. It is
-        also one of the most mangled documents in all of GovCon.
+        A capability statement (CAP) is the one-page PDF that decides whether a contracting
+        officer pulls you in on a micro-purchase, whether a prime calls you about teaming, and
+        whether a program office puts you on the Sources Sought list next quarter. It&apos;s also
+        the most consistently mangled document in GovCon.
       </p>
 
       <p>
-        We&apos;ve reviewed 200+ capability statements from veteran-owned firms at Americurial.
-        Most are unreadable — walls of text, no hierarchy, no proof. Here&apos;s what works.
+        Most CAPs we see from veteran-owned firms are unreadable — walls of text, no hierarchy,
+        no proof. Here&apos;s what actually works.
       </p>
 
       <Section id="what-it-is" title="What a capability statement is (and isn&apos;t)" />
@@ -80,19 +80,19 @@ export default function Post() {
 
       <h3>1. Header — identity at a glance</h3>
       <p>
-        Top strip. Logo on the left. Company name, tagline, and set-aside cert badges on the
-        right. This is what shows up in search-result thumbnails, so it needs to tell your story
-        in under a second.
+        Top strip of the page. Logo left, company name and tagline right, set-aside cert
+        badges underneath or in the corner. This is what shows up in a search-result
+        thumbnail — your whole story has to land in about one second.
       </p>
       <p>
-        <strong>Include:</strong> DUNS / UEI, CAGE code, website, phone, email, all in an
-        easy-scan row.
+        <strong>Also include here:</strong> UEI, CAGE code, website, phone, email — in an
+        easy-scan row, not a paragraph.
       </p>
 
-      <h3>2. Core competencies — what you do</h3>
+      <h3>2. Core competencies — what you actually do</h3>
       <p>
-        Four to six bullets of services. Short phrases, not paragraphs. Each should map to a
-        NAICS code you hold. Example:
+        Four to six bullets, short phrases. Not paragraphs. Each should map to a NAICS code
+        you hold. Example:
       </p>
       <blockquote>
         <strong>Core Competencies</strong>
@@ -102,18 +102,19 @@ export default function Post() {
         <br />• Emergency response &amp; 24/7 dispatch
       </blockquote>
 
-      <h3>3. Past performance — proof</h3>
+      <h3>3. Past performance — the proof</h3>
       <p>
-        Three to five recent contracts. For each: agency, contract value, period of
-        performance, your role (prime or sub), and the outcome. One line each. If you don&apos;t
-        have federal past performance yet, use commercial — <em>but label it clearly</em>.
+        Three to five recent contracts. For each: agency, dollar value, period of performance,
+        your role (prime or sub), the outcome. One line each. If you don&apos;t have federal
+        past performance yet, use commercial — <em>but label it as commercial</em>. The worst
+        thing you can do is leave the reader guessing.
       </p>
 
-      <h3>4. Differentiators — why you</h3>
+      <h3>4. Differentiators — why you specifically</h3>
       <p>
-        This is the section most people screw up. Do not write &ldquo;superior customer
-        service.&rdquo; Write the <em>specific capability</em> that separates you from
-        competitors. Examples:
+        This is the section most firms screw up. Don&apos;t write &ldquo;superior customer
+        service.&rdquo; That phrase is functionally invisible — every CAP in the pile has it.
+        Write the <em>specific capability</em> that actually separates you. Examples:
       </p>
       <ul>
         <li>&ldquo;24/7 emergency response within 2 hours of dispatch — documented SLA&rdquo;</li>
@@ -140,29 +141,30 @@ export default function Post() {
 
       <h3>6. Contact block</h3>
       <p>
-        Bottom strip. Primary contact with direct phone + email. Not &ldquo;info@&rdquo; — a
-        named person. This matters for relationship-building.
+        Bottom strip. Primary contact with direct phone and email. Not
+        &ldquo;info@&rdquo; — a real human with a name and a cell number. Contracting
+        officers don&apos;t email info@ inboxes.
       </p>
 
-      <Section id="veteran-angle" title="The veteran-positioning angle" />
+      <Section id="veteran-angle" title="The veteran-positioning angle most firms miss" />
 
       <p>
-        Most capability statements list set-aside status as a checkbox. Yours should use it as a{" "}
-        <strong>narrative thread</strong>.
+        Most CAPs treat set-aside status as a checkbox in the corner. Yours should use it as a{" "}
+        <strong>thread that runs through the whole document</strong>.
       </p>
 
       <p>
-        Evaluators respond to service-connection stories. A line under your tagline that reads
-        &ldquo;Veteran-owned. Navy Boarding Team operator turned federal contractor&rdquo; tells
-        a story your competitors can&apos;t replicate. It&apos;s the human detail that
-        differentiates you from the other 5,000 SDVOSBs in the registry.
+        Evaluators respond to specific service stories. A line under your tagline that reads
+        &ldquo;Navy Boarding Team operator turned federal contractor&rdquo; lands differently
+        from &ldquo;Veteran-Owned Small Business.&rdquo; The first is yours. The second is on
+        five thousand other capability statements.
       </p>
 
-      <p>For how to frame your service:</p>
+      <p>How to frame the service line:</p>
       <ul>
-        <li>Branch + role + notable deployment or unit (one line, not a war story)</li>
-        <li>How it shaped your operational discipline (one sentence)</li>
-        <li>What it translates to for the federal customer (one sentence)</li>
+        <li>Branch, role, notable deployment or unit. One line, not a war story.</li>
+        <li>How it shaped your operational discipline. One sentence.</li>
+        <li>What that translates to for the federal customer. One sentence.</li>
       </ul>
 
       <Callout variant="vet" title="Real examples">
@@ -171,11 +173,11 @@ export default function Post() {
         tours. 10 years of operational planning discipline applied to federal facilities O&amp;M.&rdquo;
       </Callout>
 
-      <Section id="design" title="Design — looks do matter" />
+      <Section id="design" title="Design — yes, it matters" />
 
       <p>
-        A capability statement that looks cheap gets treated as cheap. You do not need to hire a
-        brand agency, but you do need:
+        A capability statement that looks cheap gets treated as cheap. You don&apos;t need a
+        brand agency for it, but you do need:
       </p>
       <ul>
         <li>
@@ -197,29 +199,34 @@ export default function Post() {
       </ul>
 
       <p>
-        Export as a high-quality PDF. Host a link on your website. Embed it in SAM.gov
-        marketing materials. Carry printed copies to every APEX Accelerator event.
+        Export as a real PDF (not a Word print-to-PDF that looks like a Word print-to-PDF).
+        Host it at <code>/capability-statement.pdf</code> on your site. Upload it as SAM.gov
+        marketing material. Print twenty copies and carry them to every APEX Accelerator event
+        you go to. Hand them out like business cards.
       </p>
 
-      <Section id="mistakes" title="3 mistakes that kill CAPs" />
+      <Section id="mistakes" title="The 3 mistakes that get CAPs binned" />
 
       <h3>1. Walls of text</h3>
       <p>
-        Paragraphs of 5+ lines get skipped. Always use bullets, short phrases, visual blocks.
-        If it reads like a Word doc, it looks like a Word doc, and it gets treated accordingly.
+        A paragraph of five or more lines gets skipped. Use bullets, short phrases, visual
+        blocks. If it reads like a Word document, it looks like a Word document, and it gets
+        binned like a Word document. Be ruthless about cutting.
       </p>
 
       <h3>2. Vague past performance</h3>
       <p>
-        &ldquo;Performed janitorial services for a federal agency&rdquo; is worthless. Specify:{" "}
-        <em>which agency, what building, what square footage, what contract value, what period
-        of performance, what outcome</em>. Numbers carry credibility.
+        &ldquo;Performed janitorial services for a federal agency&rdquo; is worthless. Specify
+        which agency, which building, the square footage, the contract value, the period of
+        performance, the outcome. Numbers carry credibility. Without them, you might as well
+        leave the section blank.
       </p>
 
-      <h3>3. No contact person</h3>
+      <h3>3. No human contact</h3>
       <p>
-        &ldquo;Contact: info@company.com&rdquo; signals &ldquo;I don&apos;t own this.&rdquo; Name
-        a human. Include their title. Include a direct cell.
+        &ldquo;Contact: info@company.com&rdquo; reads as &ldquo;nobody here actually owns
+        this.&rdquo; Name a person. Include their title. Include a direct cell phone. That&apos;s
+        the difference between a CAP that gets filed and one that gets called.
       </p>
 
       <Section id="next" title="Where to go from here" />
@@ -249,12 +256,11 @@ export default function Post() {
         (5 industry templates).
       </Callout>
 
-      <h2>The bottom line</h2>
+      <h2>Two days of work, three years of mileage</h2>
       <p>
-        A capability statement is not a brochure. It&apos;s a weapons-grade marketing tool that
-        either gets you invited into the room or keeps you out. Spend real time on it.
-        Iterate. Get feedback from a contracting officer if you can. The document that takes
-        you two days to get right will work for the next three years.
+        A capability statement isn&apos;t a brochure. It either gets you in the room or keeps
+        you out. Spend real time on it. Iterate. If you know a contracting officer, ask them
+        to mark it up. The version you sweat for two days runs for the next three years.
       </p>
     </BlogArticle>
   );

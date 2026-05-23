@@ -18,10 +18,10 @@ const FOOTER_LINKS = {
   ],
   Insights: [
     { href: "/blog", label: "All Articles" },
-    { href: "/blog/ai-content-marketing", label: "AI Content Marketing" },
-    { href: "/blog/govtech-trends-2026", label: "GovTech Trends" },
-    { href: "/blog/veteran-owned-business-growth", label: "Veteran Growth" },
-    { href: "/blog/saas-mvp-launch-guide", label: "SaaS MVP Guide" },
+    { href: "/blog/sam-gov-registration-for-veterans", label: "SAM.gov Playbook" },
+    { href: "/blog/sources-sought-playbook", label: "Sources Sought" },
+    { href: "/blog/capability-statement-guide", label: "Capability Statement" },
+    { href: "/blog/set-aside-programs-veteran-guide", label: "Set-Aside Stack" },
     { href: "/about", label: "About Us" },
     { href: "/pricing", label: "Pricing" },
     { href: "/contact", label: "Contact" },
@@ -47,7 +47,7 @@ export function SiteFooter() {
               Based in Jacksonville, FL.
             </p>
             <p className="text-[10px] text-stone-600 uppercase tracking-widest font-bold">
-              SDVOSB / Veteran-Owned
+              Veteran-Owned
             </p>
           </div>
 

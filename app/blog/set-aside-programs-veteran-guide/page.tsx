@@ -35,14 +35,14 @@ export default function Post() {
       ]}
     >
       <p>
-        Set-asides are the single biggest lever a small veteran-owned firm has in the federal
-        market. The government carves out billions of dollars a year specifically for firms
-        that look like yours — but only if you&apos;re properly certified, properly registered,
-        and actively tracking opportunities scoped to your cert stack.
+        Set-asides are the biggest lever a small veteran-owned firm has in the federal market.
+        The government carves out billions a year for firms that look like yours. You just have
+        to be properly certified, properly registered, and actively tracking opportunities
+        scoped to your cert stack.
       </p>
 
       <p>
-        Most veteran-owned firms hold one cert. The firms that grow fastest hold two or three.
+        Most veteran-owned firms hold one cert. The ones that grow fastest hold two or three.
         Here&apos;s the full landscape.
       </p>
 
@@ -179,34 +179,35 @@ export default function Post() {
       <Section id="stacking" title="The stacking strategy" />
 
       <p>
-        A single cert is a single lane. Multiple certs compound. Contracting officers can run
-        set-asides that combine certifications — e.g., an SDVOSB + WOSB + HUBZone bid gets you
-        onto contracts that functionally have 10 competitors instead of 5,000.
+        One cert opens one lane. Multiple certs compound. Contracting officers can run
+        set-asides that combine certifications — and when they do, you&apos;re competing
+        against ten firms instead of five thousand. That&apos;s the whole game.
       </p>
 
-      <p>Example stacking profiles we see:</p>
+      <p>Three stacking profiles we see most often:</p>
 
-      <h3>Triple-Vet Stack (rare, extremely valuable)</h3>
-      <p>Woman veteran with VA disability rating + office in HUBZone area:</p>
+      <h3>Triple-Vet Stack (rare, very valuable)</h3>
+      <p>Woman veteran, VA disability rating, principal office in a HUBZone:</p>
       <ul>
-        <li>SDVOSB + WOSB + EDWOSB + HUBZone = 4 certs</li>
-        <li>Competitive set: <em>dozens</em>, not thousands</li>
-        <li>Sole-source authority through SBA 8(a) if enrolled: up to $7M</li>
+        <li>SDVOSB + WOSB + EDWOSB + HUBZone — four overlapping certs</li>
+        <li>Competitive set on a stacked-cert solicitation: dozens, not thousands</li>
+        <li>If also enrolled in 8(a), sole-source ceiling jumps to $7M</li>
       </ul>
 
       <h3>Standard Vet Stack</h3>
-      <p>Veteran with VA disability + SDVOSB:</p>
+      <p>Veteran with VA disability rating, SDVOSB-verified:</p>
       <ul>
-        <li>SDVOSB + (optionally) HUBZone if location qualifies</li>
-        <li>Access to $25B/yr SDVOSB target + VA contracting preference</li>
+        <li>SDVOSB plus HUBZone if your office qualifies</li>
+        <li>Direct access to the ~$25B SDVOSB target + VA contracting preference</li>
       </ul>
 
-      <h3>The 8(a) + SDVOSB power combo</h3>
+      <h3>8(a) + SDVOSB — the combo that actually scales firms</h3>
       <p>
-        SDVOSB handles the 3% set-aside market; 8(a) handles the sole-source ceiling ($4.5M-$7M
-        direct awards). Together they give you access to <strong>both</strong> the set-aside
-        competitive market <strong>and</strong> the sole-source pipeline — which is how small
-        firms grow to $5M+ revenue fast.
+        SDVOSB gets you into the 3% set-aside market. 8(a) gives you sole-source authority up
+        to $4.5M for services, $7M for manufacturing — direct awards, no competition. Run
+        together, you&apos;re working both the open set-aside market <em>and</em> the
+        sole-source pipeline at the same time. That&apos;s how a sub-million-dollar firm gets
+        to $5M+ topline in three years instead of seven.
       </p>
 
       <Callout variant="tip" title="Run the numbers yourself">
@@ -286,14 +287,15 @@ export default function Post() {
         18 months — set a recurring check. Losing HUBZone status mid-contract is painful.
       </Callout>
 
-      <Section id="track" title="Track &amp; target opportunities" />
+      <Section id="track" title="Find the contracts the certs unlock" />
 
       <p>
-        Being certified is Step 1. Actively tracking opportunities scoped to your cert stack is
-        Step 2. Most firms stop at the certificate and wait for the phone to ring.
+        Getting certified is step one. Actively tracking opportunities scoped to your cert
+        stack is step two. Most firms stop at the certificate and wait for the phone to ring.
+        It doesn&apos;t.
       </p>
 
-      <p>At minimum:</p>
+      <p>The minimum tracking setup:</p>
 
       <CheckList
         items={[
@@ -315,18 +317,18 @@ export default function Post() {
         which has the highest rejection rate. $3,500 standard, $2,800 for verified veterans.
       </Callout>
 
-      <h2>The bottom line</h2>
+      <h2>Two years of discipline, then the work changes</h2>
       <p>
-        Federal set-asides are free money in the sense that you&apos;ve already earned the right
-        to access them by serving, by building a small business, or both. The certification
-        paperwork is real work, but it&apos;s one-time. Once you&apos;re stacked, every
-        opportunity in your lane becomes exponentially easier to win.
+        Set-asides aren&apos;t free money — you earned the access by serving, by building a
+        small business, or both. The certification paperwork is real work, but it&apos;s a
+        one-time tax. Once the stack is in place, the pool of contracts you can actually
+        compete on opens up several times over.
       </p>
 
       <p>
-        Start with the foundation (SB self-cert), add the cert that matches your service
-        (SDVOSB or VOSB), and layer from there. Two years of discipline here is the difference
-        between chasing every RFP and having RFPs come to you.
+        Start with the foundation (SB self-cert), add the one that matches your service
+        (SDVOSB or VOSB), layer from there. Two years of discipline and you stop chasing every
+        RFP — the right ones start showing up in your inbox instead.
       </p>
     </BlogArticle>
   );

@@ -1,15 +1,15 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Growing Your Veteran-Owned Business",
+  title: "The Veteran-Owned Growth Playbook",
   description:
-    "A practical guide to leveraging SDVOSB and VOSB status, winning federal set-asides, building past performance, and transitioning from subcontractor to prime.",
+    "How to use SDVOSB/VOSB status to win set-asides, build past performance from micro-purchases up, team without getting used, and move from subcontractor to prime.",
   keywords:
     "veteran-owned business, SDVOSB, VOSB, federal set-asides, government contracting, past performance, teaming agreements, veteran entrepreneur",
   openGraph: {
-    title: "Growing Your Veteran-Owned Business | Americurial",
+    title: "The Veteran-Owned Growth Playbook | Americurial",
     description:
-      "Leverage SDVOSB status, win set-asides, build past performance, and grow from subcontractor to prime. A veteran entrepreneur playbook.",
+      "Use SDVOSB status to win set-asides, build past performance, team smart, and move from subcontractor to prime — without the consulting fluff.",
     url: "https://www.americurial.com/blog/veteran-owned-business-growth",
   },
   alternates: {
@@ -37,7 +37,7 @@ const breadcrumbJsonLd = {
     {
       "@type": "ListItem",
       position: 3,
-      name: "Growing Your Veteran-Owned Business",
+      name: "The Veteran-Owned Growth Playbook",
       item: "https://www.americurial.com/blog/veteran-owned-business-growth",
     },
   ],
@@ -46,9 +46,9 @@ const breadcrumbJsonLd = {
 const articleJsonLd = {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
-  headline: "Growing Your Veteran-Owned Business",
+  headline: "The Veteran-Owned Growth Playbook",
   description:
-    "A practical guide to leveraging SDVOSB and VOSB status, winning federal set-asides, building past performance, using teaming agreements, and transitioning from subcontractor to prime.",
+    "How to use SDVOSB/VOSB status to win set-asides, build past performance from micro-purchases up, team without getting used, and move from subcontractor to prime.",
   image:
     "https://www.americurial.com/og/veteran-owned-business-growth.png",
   author: {

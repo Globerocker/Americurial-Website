@@ -3,9 +3,9 @@ import type { Metadata } from "next";
 import { BlogArticle, Callout, Section, CheckList } from "@/components/BlogArticle";
 
 export const metadata: Metadata = {
-  title: "Sources Sought Is Your Unfair Advantage. Here&apos;s How to Use It.",
+  title: "Sources Sought Is Your Unfair Advantage",
   description:
-    "80% of federal winners responded to Sources Sought. The 6-month pre-RFP playbook, with templates and a realistic timeline.",
+    "About 80% of federal winners responded to Sources Sought first. Here's the six-month pre-RFP playbook with templates and a realistic timeline.",
   alternates: {
     canonical: "https://www.americurial.com/blog/sources-sought-playbook",
   },
@@ -23,8 +23,8 @@ const TOC = [
 export default function Post() {
   return (
     <BlogArticle
-      title="Sources Sought Is Your Unfair Advantage. Here&apos;s How to Use It."
-      subtitle="80% of federal winners responded to Sources Sought. The 6-month pre-RFP playbook, with templates and a realistic timeline."
+      title="Sources Sought Is Your Unfair Advantage"
+      subtitle="About 80% of federal winners responded to Sources Sought first. Here's the six-month pre-RFP playbook, with templates and a realistic timeline."
       date="April 12, 2026"
       readTime="11 min read"
       category="Capture"
@@ -50,27 +50,28 @@ export default function Post() {
       <Section id="what" title="What Sources Sought actually is" />
 
       <p>
-        A Sources Sought notice (also called &ldquo;Request for Information&rdquo; or RFI) is the
-        government&apos;s way of asking: <em>&ldquo;Before we write a solicitation, who&apos;s
-        out there capable of doing this?&rdquo;</em>
+        A Sources Sought notice (sometimes posted as an RFI — Request for Information) is the
+        government asking, in writing: <em>&ldquo;Before we write the solicitation, who&apos;s
+        out there who could actually do this?&rdquo;</em>
       </p>
 
-      <p>The agency uses responses to answer three practical questions:</p>
+      <p>The agency uses the responses to figure out three things:</p>
 
       <ol>
         <li>
-          <strong>Is there enough capable small business to set this aside?</strong> If at
-          least 2 qualified small businesses respond, the Rule of Two requires them to set it
-          aside for small business (or further — 8(a), HUBZone, SDVOSB).
+          <strong>Can we set this aside for small business?</strong> If at least two qualified
+          small businesses respond, the Rule of Two kicks in and the agency has to set it
+          aside (small business, or further — 8(a), HUBZone, SDVOSB).
         </li>
         <li>
-          <strong>What&apos;s technically feasible?</strong> The agency shapes the eventual RFP
-          around what respondents say is achievable, cost-effective, and realistic.
+          <strong>What&apos;s actually realistic?</strong> The eventual RFP gets shaped by what
+          respondents say is achievable. If everyone says &ldquo;six-month delivery is too
+          tight,&rdquo; the agency hears that.
         </li>
         <li>
-          <strong>Who has the capacity?</strong> Program offices make mental lists of who
-          they&apos;ll invite to the pre-solicitation conference, who they&apos;ll flag for
-          teaming conversations, and who they expect to compete hard.
+          <strong>Who&apos;s on the shortlist?</strong> Program offices build mental notes —
+          who to invite to the pre-solicitation conference, who to introduce to teaming
+          partners, who they expect to bring a real proposal.
         </li>
       </ol>
 
@@ -79,31 +80,31 @@ export default function Post() {
         program office — typed in advance.
       </Callout>
 
-      <Section id="why" title="Why 80% of winners respond" />
+      <Section id="why" title="Why the 80% number isn't an accident" />
 
-      <p>Three reasons the correlation is so strong:</p>
+      <p>Three reasons the correlation is that strong:</p>
 
       <h3>1. You shape the RFP</h3>
       <p>
-        Your response influences the requirements document. If you have a unique capability —
-        say, a specific certification or a geographic presence — and you describe it clearly in
-        your response, that capability often shows up as a mandatory requirement in the eventual
-        RFP. Your competitors are now out before the game starts.
+        Your response goes into the requirements draft. If you have a unique capability — a
+        specific certification, a regional presence, a piece of equipment most don&apos;t own —
+        and you describe it clearly, it often surfaces as a <em>mandatory</em> requirement in
+        the final RFP. Half your competitors are out before the bid window opens.
       </p>
 
-      <h3>2. The program office already knows you</h3>
+      <h3>2. The program office already knows your name</h3>
       <p>
-        By the time the RFP drops, a contracting officer who remembers your Sources Sought
-        response has a mental shortlist. You&apos;re not a cold entry in a pile of 40
-        proposals — you&apos;re &ldquo;oh yeah, those folks from February.&rdquo;
+        When the RFP drops, the contracting officer reads forty proposals. Yours is &ldquo;oh
+        yeah, those folks from February.&rdquo; Everyone else is a cold entry. That&apos;s a
+        small thing on paper and a huge thing in practice.
       </p>
 
       <h3>3. You can force a set-aside</h3>
       <p>
-        If you&apos;re a qualified small business (SDVOSB, 8(a), HUBZone), responding makes the
-        Rule of Two math work in your favor. Two qualified responses = the agency <em>must</em>
-        set it aside. One response = they can go full-and-open. You&apos;re literally controlling
-        competitive structure by submitting.
+        If you&apos;re a qualified small business (SDVOSB, 8(a), HUBZone), your response makes
+        the Rule of Two math work. Two qualified responses and the agency <em>has to</em> set it
+        aside. One response and they can go full-and-open. By submitting, you&apos;re shaping
+        the competitive structure of the contract before it exists.
       </p>
 
       <Section id="timing" title="The 6-month pre-RFP timeline" />
@@ -139,36 +140,37 @@ export default function Post() {
 
       <h3>2. Executive summary (1 page)</h3>
       <p>
-        3-4 paragraphs: who you are, what you understand the requirement to be, why you&apos;re
-        relevant, and your high-level recommendation. Most contracting officers read this page
-        and skim the rest.
+        Three or four paragraphs. Who you are, what you read the requirement to be, why
+        you&apos;re relevant, and one high-level recommendation. Most contracting officers
+        read this page and skim the rest. Spend time here.
       </p>
 
       <h3>3. Capability response (2-4 pages)</h3>
-      <p>Answer every question in the notice, in order, with the same numbering. For each:</p>
+      <p>Answer every question in the notice, in order, using the same numbering. For each:</p>
       <ul>
         <li>
-          <strong>Direct answer</strong> — can you do it, yes/no
+          <strong>Direct answer</strong> — yes or no, no hedging
         </li>
         <li>
-          <strong>Supporting evidence</strong> — past performance citation, cert, staff
-          credential
+          <strong>Supporting evidence</strong> — a past performance citation, a cert, a named
+          staff credential
         </li>
         <li>
-          <strong>Relevant detail</strong> — what&apos;s specific about your approach
+          <strong>What&apos;s specific about your approach</strong> — one or two lines
         </li>
       </ul>
 
       <h3>4. Past performance (1-2 pages)</h3>
       <p>
-        3-5 contracts with agency, dollar value, period, your role, and outcome. Mirror the
-        requirement — don&apos;t list unrelated commercial work.
+        Three to five contracts. Agency, dollar value, period of performance, your role,
+        outcome. Mirror the requirement — don&apos;t pad with unrelated commercial work, the
+        evaluator will notice.
       </p>
 
       <h3>5. Recommendations (0.5 page)</h3>
       <p>
-        This section is underused. Give the agency specific, professional recommendations about
-        how to structure the eventual RFP:
+        Most small firms skip this. Don&apos;t. Give the agency specific, professional
+        suggestions on how to structure the eventual RFP:
       </p>
       <ul>
         <li>&ldquo;We recommend Sources Sought set aside for SDVOSB given the qualified pool.&rdquo;</li>
@@ -182,8 +184,8 @@ export default function Post() {
       <Section id="templates" title="Templates &amp; examples" />
 
       <p>
-        We maintain a Sources Sought response template for every industry our clients operate
-        in. Here&apos;s the high-level structure, ready to reuse:
+        We keep a Sources Sought response template for every industry our clients work in.
+        High-level structure, ready to drop into your Word doc:
       </p>
 
       <Callout variant="info" title="Response template outline">
@@ -195,14 +197,18 @@ export default function Post() {
       </Callout>
 
       <p>
-        Never copy-paste prior responses verbatim. Contracting officers spot boilerplate
-        immediately. Start with your template, rewrite the executive summary and recommendations
-        for the specific notice.
+        Don&apos;t copy-paste old responses verbatim. Contracting officers spot boilerplate
+        in about ten seconds. Start from your template, then rewrite the executive summary
+        and recommendations against the specific notice. Sixty extra minutes here is worth
+        more than the rest of the response combined.
       </p>
 
-      <Section id="after" title="After you submit" />
+      <Section id="after" title="What happens after you submit" />
 
-      <p>Submission is the start, not the end. The 30 days after a Sources Sought response are where most of the capture value is created:</p>
+      <p>
+        Submission is the start of the work, not the end. The thirty days after you send a
+        Sources Sought response are where most of the capture value gets built:
+      </p>
 
       <CheckList
         items={[
@@ -231,18 +237,17 @@ export default function Post() {
         veterans.
       </Callout>
 
-      <h2>The bottom line</h2>
+      <h2>So what does this actually look like as a habit?</h2>
       <p>
-        Sources Sought is the single highest-leverage capture move a small veteran-owned firm
-        can make. The responses take 4-8 hours. The upside is 6 months of relationship
-        equity with a program office that&apos;s about to write an RFP. Nothing else in
-        capture has that ratio.
+        Four to eight hours per response. You get six months of relationship equity with
+        a program office that&apos;s about to write an RFP. We don&apos;t know another
+        capture move with that ratio.
       </p>
 
       <p>
-        Respond to 2-3 per month. Keep the template tight. Build a routine around it. Twelve
-        months in, you&apos;ll be on the mental shortlists of half a dozen program offices —
-        and that&apos;s where real pipeline comes from.
+        Two or three responses a month. Keep the template tight, swap in the specifics each
+        time. A year in, you&apos;re on the mental shortlists of half a dozen program offices.
+        That&apos;s where pipeline actually comes from.
       </p>
     </BlogArticle>
   );

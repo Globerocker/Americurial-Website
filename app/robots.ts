@@ -5,7 +5,7 @@ export default function robots(): MetadataRoute.Robots {
     rules: {
       userAgent: "*",
       allow: "/",
-      disallow: ["/tools/", "/api/"],
+      disallow: ["/api/"],
     },
     sitemap: "https://www.americurial.com/sitemap.xml",
   };

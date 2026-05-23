@@ -36,15 +36,16 @@ export default function Post() {
       ]}
     >
       <p>
-        A federal proposal isn&apos;t creative writing. It&apos;s a compliance document that has
-        to match a scoring rubric you mostly have to reverse-engineer. Most small primes lose
-        proposals not because their solution is wrong but because they&apos;re graded on
-        criteria they didn&apos;t understand.
+        A federal proposal isn&apos;t creative writing. It&apos;s a compliance document graded
+        against a rubric you mostly have to reverse-engineer from the solicitation. Small primes
+        usually lose not because the solution is wrong, but because they were graded against
+        criteria they never spotted.
       </p>
 
       <p>
-        This is the framework we use at Americurial. 10 rules, one integrated process. It works
-        for a 40-person team and it works for a solo veteran running their first solicitation.
+        This is the framework we use at Americurial — ten rules, one process. Works the same
+        whether you&apos;ve got a forty-person proposal team or you&apos;re a solo veteran
+        writing your first one over a weekend.
       </p>
 
       <Section id="framework" title="The framework — 1 map, 10 rules" />
@@ -100,35 +101,37 @@ export default function Post() {
         layers is why most small primes lose.
       </Callout>
 
-      <Section id="read" title="Rules 1-3 — Read, Re-read, Compliance Matrix" />
+      <Section id="read" title="Rules 1-3 — Read, re-read, compliance matrix" />
 
-      <h3>Rule 1 — Read the solicitation 3 times</h3>
+      <h3>Rule 1 — Read the solicitation three times</h3>
       <p>
-        First read: is this worth bidding? Check fit, set-aside eligibility, size standard.
-        Second read: pull out every &ldquo;shall,&rdquo; &ldquo;must,&rdquo; and evaluation
-        criterion. Third read: look for contradictions and traps (double-requirements, hidden
-        page limits, evaluation rubrics that don&apos;t match Section L).
+        First pass: is this worth bidding? Check fit, set-aside eligibility, size standard.
+        Second pass: highlight every &ldquo;shall,&rdquo; &ldquo;must,&rdquo; and evaluation
+        criterion. Third pass: hunt for contradictions and traps — double-requirements, hidden
+        page limits, an evaluation rubric in Section M that doesn&apos;t match the instructions
+        in Section L. Those happen more often than you&apos;d think.
       </p>
 
       <h3>Rule 2 — Build a compliance matrix</h3>
       <p>
-        A spreadsheet with one row per requirement. Columns: requirement text, section
-        reference, where it&apos;s addressed in your response, status (draft/final/reviewed),
-        owner. This is the document you hand to your color-team reviewers.
+        A spreadsheet, one row per requirement. Columns: requirement text, section reference,
+        where you address it in your response, status (draft / final / reviewed), owner. Boring.
+        Essential. This is the document your color-team reviewers will hand back to you.
       </p>
 
-      <Callout variant="warn" title="Missing requirement = disqualified">
+      <Callout variant="warn" title="One missed &ldquo;shall&rdquo; and you&apos;re out">
         Contracting officers routinely disqualify proposals that miss a single mandatory
-        &ldquo;shall&rdquo; clause. A compliance matrix is not bureaucracy — it&apos;s the only
-        reliable way to avoid automatic rejection.
+        &ldquo;shall&rdquo; clause. The compliance matrix isn&apos;t bureaucracy. It&apos;s
+        the only reliable way to avoid automatic rejection on something stupid.
       </Callout>
 
-      <h3>Rule 3 — Write to evaluation criteria, not the SOW</h3>
+      <h3>Rule 3 — Write to the evaluation criteria, not the SOW</h3>
       <p>
-        Section M (evaluation factors) is more important than Section C (scope of work). The SOW
-        tells you <em>what to do</em>; Section M tells you <em>how you&apos;ll be judged</em>.
-        Organize your response around evaluation criteria, with SOW requirements nested
-        inside.
+        Section M (evaluation factors) outranks Section C (scope of work) for proposal
+        purposes. The SOW tells you <em>what the work is</em>. Section M tells you{" "}
+        <em>how you&apos;ll be graded</em>. Organise your response around the evaluation
+        criteria, with the SOW requirements tucked inside each one. It&apos;s an obvious
+        move that small primes still miss constantly.
       </p>
 
       <Section id="win-themes" title="Rules 4-5 — Win Themes &amp; Language" />
@@ -164,11 +167,12 @@ export default function Post() {
         write &ldquo;end-user assistance.&rdquo;
       </p>
 
-      <Section id="proof" title="Rules 6-7 — Proof &amp; Metrics" />
+      <Section id="proof" title="Rules 6-7 — Proof and metrics" />
 
       <h3>Rule 6 — Lead every section with proof</h3>
       <p>
-        Federal evaluators are trained to look for substantiation. Every claim needs:
+        Federal evaluators are trained to find substantiation, and they&apos;ll discount any
+        claim that doesn&apos;t have it. Every claim should land with one of these attached:
       </p>
       <ul>
         <li>A past performance citation with the contract number</li>
@@ -193,7 +197,7 @@ export default function Post() {
 
       <p>
         Price is where most small primes either leave money on the table or price themselves
-        out. A serious PTW analysis includes:
+        right out of the running. A serious PTW analysis is short and unsexy:
       </p>
 
       <CheckList
@@ -208,38 +212,42 @@ export default function Post() {
       />
 
       <p>
-        For small primes, positioning in the 50th-75th percentile is usually ideal: competitive
-        without signaling low-quality. Below 40th is a red flag for realism to evaluators.
+        Small primes usually want to land in the 50th–75th percentile. Competitive without
+        signalling cheap. Below the 40th gets flagged by evaluators for realism — they start
+        wondering what corners you&apos;re cutting.
       </p>
 
-      <Section id="reviews" title="Rule 9 — Color Team Reviews" />
+      <Section id="reviews" title="Rule 9 — Color team reviews" />
 
       <p>
-        Color reviews are structured internal reviews at specific maturity stages:
+        Colour reviews are structured internal reads at specific maturity stages. They&apos;re
+        boring and they&apos;re what wins proposals.
       </p>
 
-      <h3>Pink Team (40% complete)</h3>
+      <h3>Pink Team (around 40% complete)</h3>
       <p>
-        Concept review. Does the compliance matrix look complete? Are win themes coherent? Is
-        the approach directionally right?
+        Concept-level read. Does the compliance matrix look complete? Are the win themes
+        coherent? Is the approach pointed in the right direction? Cheap to fix things here;
+        expensive later.
       </p>
 
-      <h3>Red Team (80% complete)</h3>
+      <h3>Red Team (around 80% complete)</h3>
       <p>
-        Full proposal review. Every reviewer reads cold, as if they&apos;re an evaluator. Score
-        against the rubric. Find compliance gaps, weak sections, unclear claims.
+        Full proposal read. Every reviewer reads cold, as if they&apos;re the evaluator and
+        haven&apos;t seen this before. Score against the rubric. Surface compliance gaps,
+        weak sections, claims that don&apos;t hold up.
       </p>
 
-      <h3>Gold Team (95% complete)</h3>
+      <h3>Gold Team (around 95% complete)</h3>
       <p>
-        Final executive review. Focused on executive summary, win themes, price, and top-level
-        risks. Approves for submission.
+        Final executive read. Focus narrows to the executive summary, win themes, price
+        position, and top-level risks. Sign-off for submission.
       </p>
 
       <Callout variant="info" title="Small-shop color teams">
-        Color team doesn&apos;t require a committee. For a solo shop: hire an experienced
-        proposal consultant for 2-4 hours per color team — enough to catch 80% of issues
-        without a massive budget.
+        You don&apos;t need a committee for this. Solo shop? Hire an experienced proposal
+        consultant for two to four hours per colour team. That&apos;s enough to catch around
+        80% of the issues without a five-figure review budget.
       </Callout>
 
       <Section id="edit" title="Rule 10 — The Brutal Final Edit" />
@@ -273,17 +281,17 @@ export default function Post() {
         writing, graphics, color team reviews. $4,500 standard, $3,600 for verified veterans.
       </Callout>
 
-      <h2>The bottom line</h2>
+      <h2>Why this gets easier the more you do it</h2>
       <p>
-        Federal proposal writing is an applied skill, not a creative one. The rules are knowable.
-        The framework compounds: every proposal you write well makes the next one faster because
-        your win themes, templates, and price-to-win analyses carry forward.
+        Federal proposal writing is an applied skill, not a creative one. The rules are
+        knowable. Every proposal you write well makes the next one faster — win themes,
+        templates, and price-to-win work carries forward.
       </p>
 
       <p>
-        The difference between small primes that win and small primes that don&apos;t is almost
-        never solution quality. It&apos;s compliance discipline, proof density, and a realistic
-        price position — applied consistently across every submission.
+        The gap between small primes that win and small primes that don&apos;t is almost never
+        solution quality. It&apos;s compliance discipline, proof density, and a realistic price
+        position. Applied consistently, every time.
       </p>
     </BlogArticle>
   );

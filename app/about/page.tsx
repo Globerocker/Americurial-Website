@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import {
   ArrowRight,
   Shield,
@@ -12,6 +13,11 @@ import {
   Award,
   Compass,
   HeartHandshake,
+  Music,
+  Coffee,
+  GraduationCap,
+  Mountain,
+  ExternalLink,
 } from "lucide-react";
 import { Reveal } from "@/components/Reveal";
 import { TiltCard, Eyebrow } from "@/components/Interactive";
@@ -100,8 +106,14 @@ export default function AboutPage() {
                   <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/5 via-transparent to-transparent" />
                   <div className="relative">
                     <div className="flex items-center gap-4 mb-6">
-                      <div className="w-16 h-16 rounded-2xl bg-emerald-500/15 border border-emerald-500/30 flex items-center justify-center">
-                        <Anchor className="w-8 h-8 text-emerald-300" />
+                      <div className="relative w-20 h-20 rounded-2xl overflow-hidden border border-emerald-500/30 flex-shrink-0">
+                        <Image
+                          src="/team/andre-headshot.jpg"
+                          alt="Andre Schuler, Co-Founder Americurial"
+                          fill
+                          sizes="80px"
+                          className="object-cover"
+                        />
                       </div>
                       <div>
                         <p className="text-xs font-bold uppercase tracking-[0.25em] text-emerald-400 mb-1">
@@ -133,10 +145,31 @@ export default function AboutPage() {
                         That operational tempo is what Americurial runs on. When an RFP drops,
                         the clock starts — and we move like we did boarding a ship at 04:00.
                       </p>
+                      <p>
+                        After service, Andre spent several years teaching in the German
+                        school system — communication, business basics, IT. That&apos;s where
+                        the coaching habit comes from. He can walk a five-person firm through
+                        federal capture without making them feel small for asking the
+                        beginner questions.
+                      </p>
+                      <p>
+                        From there, six years as Head of Marketing inside a large
+                        corporation — paid search, SEO, conversion teams, the whole funnel,
+                        across multiple product lines. Before that, a HubSpot Diamond Partner
+                        agency. Today he carries that as a certified HubSpot Partner and
+                        Microsoft Partner for Dynamics 365.
+                      </p>
+                      <p>
+                        That&apos;s the second engine inside Americurial: when a client needs
+                        more than federal capture — a website that converts, an SEO problem
+                        nobody&apos;s touched in two years, paid acquisition that&apos;s
+                        leaking, or a CRM rollout that&apos;s gone sideways — Andre owns that
+                        side while Sergio runs capture.
+                      </p>
                     </div>
 
                     <div className="mt-6 flex flex-wrap gap-2">
-                      {["Boarding Team", "Atalanta", "Counter-Piracy", "Horn of Africa"].map(
+                      {["Boarding Team", "Atalanta", "Head of Marketing", "HubSpot Partner", "Microsoft Dynamics", "Paid Acquisition", "SEO"].map(
                         (tag) => (
                           <span
                             key={tag}
@@ -146,6 +179,20 @@ export default function AboutPage() {
                           </span>
                         )
                       )}
+                    </div>
+
+                    <div className="mt-6 relative w-full aspect-[16/10] rounded-xl overflow-hidden border border-white/5">
+                      <Image
+                        src="/team/andre-boarding.jpg"
+                        alt="Andre on a Boarding Team RIB during Operation Atalanta"
+                        fill
+                        sizes="(min-width: 768px) 500px, 100vw"
+                        className="object-cover"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-stone-950/60 via-transparent to-transparent" />
+                      <p className="absolute bottom-2 left-3 text-[10px] font-bold uppercase tracking-widest text-white/80">
+                        Boarding Team · Op Atalanta
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -159,14 +206,20 @@ export default function AboutPage() {
                   <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/5 via-transparent to-transparent" />
                   <div className="relative">
                     <div className="flex items-center gap-4 mb-6">
-                      <div className="w-16 h-16 rounded-2xl bg-emerald-500/15 border border-emerald-500/30 flex items-center justify-center">
-                        <Flag className="w-8 h-8 text-emerald-300" />
+                      <div className="relative w-20 h-20 rounded-2xl overflow-hidden border border-emerald-500/30 flex-shrink-0">
+                        <Image
+                          src="/team/sergio-headshot.jpg"
+                          alt="Sergio, Co-Founder Americurial"
+                          fill
+                          sizes="80px"
+                          className="object-cover"
+                        />
                       </div>
                       <div>
                         <p className="text-xs font-bold uppercase tracking-[0.25em] text-emerald-400 mb-1">
                           Co-Founder
                         </p>
-                        <p className="text-2xl font-black text-white tracking-tight">Sergio</p>
+                        <p className="text-2xl font-black text-white tracking-tight">Sergio Gouveia</p>
                         <p className="text-sm text-stone-400">Canadian Army · Infantry</p>
                       </div>
                     </div>
@@ -201,6 +254,20 @@ export default function AboutPage() {
                           {tag}
                         </span>
                       ))}
+                    </div>
+
+                    <div className="mt-6 relative w-full aspect-[16/10] rounded-xl overflow-hidden border border-white/5">
+                      <Image
+                        src="/team/sergio-team.jpg"
+                        alt="Sergio with his Canadian Army infantry team in Afghanistan"
+                        fill
+                        sizes="(min-width: 768px) 500px, 100vw"
+                        className="object-cover"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-stone-950/60 via-transparent to-transparent" />
+                      <p className="absolute bottom-2 left-3 text-[10px] font-bold uppercase tracking-widest text-white/80">
+                        Canadian Army · Afghanistan
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -393,6 +460,106 @@ export default function AboutPage() {
               <p className="text-sm text-stone-400">
                 A small, senior crew — no layer of &ldquo;managers&rdquo;.
               </p>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* ── Off-Duty ── */}
+      <section className="py-20 md:py-28 border-t border-white/5 bg-stone-950 relative overflow-hidden">
+        <div className="absolute top-[20%] right-[10%] w-[400px] h-[400px] rounded-full bg-amber-500/[0.03] blur-[120px] animate-orb-float-slow" />
+        <div className="max-w-6xl mx-auto px-6 relative">
+          <Reveal className="text-center mb-12">
+            <Eyebrow align="center">Off-duty</Eyebrow>
+            <h2 className="text-3xl md:text-4xl font-black tracking-tighter text-white mb-4">
+              Who you&apos;ll <span className="gradient-text">actually be talking to.</span>
+            </h2>
+            <p className="text-stone-400 max-w-2xl mx-auto">
+              We don&apos;t hide behind &ldquo;the team&rdquo;. If you sign with
+              Americurial, this is the room.
+            </p>
+          </Reveal>
+
+          <div className="grid md:grid-cols-3 gap-4">
+            <Reveal delay={0}>
+              <div className="bg-stone-900/40 border border-white/5 rounded-2xl p-6 h-full">
+                <div className="w-10 h-10 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400 mb-4">
+                  <GraduationCap className="w-5 h-5" />
+                </div>
+                <p className="text-[10px] uppercase tracking-widest font-bold text-emerald-400 mb-1">
+                  Andre — Teaching habit
+                </p>
+                <p className="text-sm text-stone-300 leading-relaxed">
+                  Several years as a teacher in the German school system before
+                  marketing. Why our Co-Pilot Coaching clients get patient
+                  walk-throughs, not a fire-hose of GovCon jargon.
+                </p>
+              </div>
+            </Reveal>
+
+            <Reveal delay={100}>
+              <div className="bg-stone-900/40 border border-white/5 rounded-2xl p-6 h-full">
+                <div className="w-10 h-10 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400 mb-4">
+                  <Mountain className="w-5 h-5" />
+                </div>
+                <p className="text-[10px] uppercase tracking-widest font-bold text-emerald-400 mb-1">
+                  Sergio — Ground habit
+                </p>
+                <p className="text-sm text-stone-300 leading-relaxed">
+                  Two combat tours in Afghanistan. Still assumes any plan
+                  works until first contact. That paranoia is why our pursuit
+                  decisions hold up under agency scrutiny.
+                </p>
+              </div>
+            </Reveal>
+
+            <Reveal delay={200}>
+              <div className="bg-stone-900/40 border border-white/5 rounded-2xl p-6 h-full">
+                <div className="w-10 h-10 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400 mb-4">
+                  <Coffee className="w-5 h-5" />
+                </div>
+                <p className="text-[10px] uppercase tracking-widest font-bold text-emerald-400 mb-1">
+                  Small crew habit
+                </p>
+                <p className="text-sm text-stone-300 leading-relaxed">
+                  No account managers, no overseas dev shop. The person who
+                  picks up your Slack ping is the person doing the work. We
+                  keep it that way on purpose.
+                </p>
+              </div>
+            </Reveal>
+          </div>
+
+          {/* Spotify card */}
+          <Reveal delay={300} className="mt-8">
+            <div className="bg-gradient-to-br from-emerald-950/30 via-stone-900/40 to-amber-950/20 border border-emerald-500/15 rounded-2xl p-6 md:p-8 relative overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/5 to-transparent" />
+              <div className="relative grid md:grid-cols-[auto_1fr_auto] gap-6 items-center">
+                <div className="w-14 h-14 rounded-2xl bg-emerald-500/15 border border-emerald-500/30 flex items-center justify-center flex-shrink-0">
+                  <Music className="w-7 h-7 text-emerald-300" />
+                </div>
+                <div>
+                  <p className="text-[10px] uppercase tracking-[0.3em] font-bold text-emerald-400 mb-2">
+                    What&apos;s playing in the office
+                  </p>
+                  <h3 className="text-xl md:text-2xl font-black text-white tracking-tight mb-2">
+                    Right now it&apos;s mostly Creed.
+                  </h3>
+                  <p className="text-sm text-stone-400 leading-relaxed">
+                    Andre&apos;s pick. A proper Americurial playlist is in the
+                    works. Until then, here&apos;s the starter — the same
+                    soundtrack a lot of late-night proposal edits got done to.
+                  </p>
+                </div>
+                <a
+                  href="https://open.spotify.com/artist/3IePvbB8bgZBKpcuMVcKMu"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs uppercase tracking-widest px-5 py-3 rounded-full transition-all inline-flex items-center gap-2 whitespace-nowrap glow-emerald"
+                >
+                  Listen on Spotify <ExternalLink className="w-3.5 h-3.5" />
+                </a>
+              </div>
             </div>
           </Reveal>
         </div>

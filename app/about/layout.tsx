@@ -65,6 +65,54 @@ const aboutPageJsonLd = {
   },
 };
 
+const andreSchemaJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Andre Schuler",
+  jobTitle: "Co-Founder, Americurial",
+  worksFor: { "@type": "Organization", name: "Americurial", url: "https://www.americurial.com" },
+  alumniOf: { "@type": "Organization", name: "Deutsche Marine — Boarding Team" },
+  description:
+    "Co-founder of Americurial. Former Marine Infantry / Boarding Team operator in the German Navy (two tours, Operation Atalanta). Post-service taught in the German school system before moving into marketing. Six years as Head of Marketing inside a large corporation, with prior agency time at a HubSpot Diamond Partner. Certified HubSpot Partner and Microsoft Partner for Dynamics 365.",
+  knowsAbout: [
+    "Federal Contracting",
+    "GovCon Capture",
+    "SaaS Engineering",
+    "Paid Acquisition",
+    "SEO",
+    "Conversion Rate Optimization",
+    "B2C Growth Marketing",
+    "HubSpot CRM",
+    "Microsoft Dynamics 365",
+  ],
+  hasCredential: [
+    { "@type": "EducationalOccupationalCredential", name: "HubSpot Partner" },
+    { "@type": "EducationalOccupationalCredential", name: "Microsoft Partner — Dynamics 365" },
+  ],
+  nationality: { "@type": "Country", name: "Germany" },
+  sameAs: ["https://www.linkedin.com/in/andre-sch%C3%BCler-35b439209/"],
+};
+
+const sergioSchemaJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Sergio Gouveia",
+  jobTitle: "Co-Founder, Americurial",
+  worksFor: { "@type": "Organization", name: "Americurial", url: "https://www.americurial.com" },
+  alumniOf: { "@type": "Organization", name: "Canadian Army — Infantry" },
+  description:
+    "Co-founder of Americurial. Canadian Army Infantry — two combat tours in Afghanistan. Runs the capture side at Americurial: pursuit decisions, Black Hat reviews, competitor intelligence.",
+  knowsAbout: [
+    "Federal Capture Management",
+    "GovCon Pursuit Strategy",
+    "Black Hat / Competitor Analysis",
+    "Proposal Strategy",
+    "Past Performance",
+  ],
+  nationality: { "@type": "Country", name: "Canada" },
+  sameAs: ["https://www.linkedin.com/in/sergio-andre-gouveia-a122053b4/"],
+};
+
 const faqJsonLd = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
@@ -130,6 +178,14 @@ export default function AboutLayout({
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(andreSchemaJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(sergioSchemaJsonLd) }}
       />
       {children}
     </>

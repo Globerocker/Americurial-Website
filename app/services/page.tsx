@@ -11,6 +11,7 @@ import {
   RefreshCw,
   CheckCircle2,
   Zap,
+  Compass,
 } from "lucide-react";
 import { Reveal } from "@/components/Reveal";
 
@@ -25,10 +26,11 @@ const servicesCollectionJsonLd = {
   mainEntity: {
     "@type": "ItemList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, item: { "@type": "Service", name: "SaaS Development", url: `${BASE}/services/saas` } },
-      { "@type": "ListItem", position: 2, item: { "@type": "Service", name: "Web & Digital Products", url: `${BASE}/services/web` } },
-      { "@type": "ListItem", position: 3, item: { "@type": "Service", name: "GovTech Solutions", url: `${BASE}/services/govtech` } },
-      { "@type": "ListItem", position: 4, item: { "@type": "Service", name: "AI & Data Platforms", url: `${BASE}/services/ai` } },
+      { "@type": "ListItem", position: 1, item: { "@type": "Service", name: "Done-With-You Coaching", url: `${BASE}/pricing#retainers` } },
+      { "@type": "ListItem", position: 2, item: { "@type": "Service", name: "SaaS Development", url: `${BASE}/services/saas` } },
+      { "@type": "ListItem", position: 3, item: { "@type": "Service", name: "Web & Digital Products", url: `${BASE}/services/web` } },
+      { "@type": "ListItem", position: 4, item: { "@type": "Service", name: "GovTech Solutions", url: `${BASE}/services/govtech` } },
+      { "@type": "ListItem", position: 5, item: { "@type": "Service", name: "AI & Data Platforms", url: `${BASE}/services/ai` } },
     ],
   },
 };
@@ -36,85 +38,97 @@ const servicesFaqJsonLd = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
   mainEntity: [
-    { "@type": "Question", name: "What services does Americurial offer?", acceptedAnswer: { "@type": "Answer", text: "Americurial offers four core service lines: SaaS Development (multi-tenant subscription software with Stripe billing), Web & Digital Products (high-performance Next.js sites and portals), GovTech Solutions (SAM.gov-integrated contractor platforms), and AI & Data Platforms (production ML pipelines and scoring engines). We also provide branding/design systems and ongoing engineering support on a retainer basis." } },
-    { "@type": "Question", name: "What tech stack does Americurial use?", acceptedAnswer: { "@type": "Answer", text: "We standardize on Next.js, React, TypeScript, and Tailwind CSS on the frontend, with Supabase (Postgres) for data and auth, Stripe for billing, Vercel for hosting, Python for data engineering, and OpenAI for AI features." } },
-    { "@type": "Question", name: "How long does a typical project take?", acceptedAnswer: { "@type": "Answer", text: "SaaS MVPs ship in roughly 12 weeks. Marketing websites take 6-8 weeks. GovTech platforms run 16 weeks due to federal data integration. AI builds run 12 weeks from data audit to production monitoring." } },
-    { "@type": "Question", name: "Does Americurial build GovTech platforms?", acceptedAnswer: { "@type": "Answer", text: "Yes — GovTech is a specialty. We built CapturePilot, a federal contract intelligence platform that ingests 37K+ SAM.gov opportunities daily, scores them with a 140-point algorithm, and serves 80K+ contractor profiles." } },
-    { "@type": "Question", name: "Do you offer ongoing support after launch?", acceptedAnswer: { "@type": "Answer", text: "Yes. Every project sprint includes 30 days of post-launch support. Most clients transition to a Growth Retainer ($5K-$15K/month) for dedicated engineering capacity, weekly sprint cycles, and feature development." } },
+    { "@type": "Question", name: "What services does Americurial offer?", acceptedAnswer: { "@type": "Answer", text: "Six service lines: Done-With-You Coaching (federal capture training for in-house teams), SaaS Development, Web & Digital Products, GovTech, AI & Data Platforms, and ongoing engineering retainers. We also run capture work directly for veteran-owned firms — that side is priced on the pricing page." } },
+    { "@type": "Question", name: "What tech stack does Americurial use?", acceptedAnswer: { "@type": "Answer", text: "Next.js, React, TypeScript, Tailwind on the front. Supabase (Postgres) for data and auth, Stripe for billing, Vercel for hosting. Python where we need to chew through data. OpenAI for the AI bits, with JSON-mode structured output so the results stay predictable." } },
+    { "@type": "Question", name: "How long does a typical project take?", acceptedAnswer: { "@type": "Answer", text: "SaaS MVPs are usually around twelve weeks. Marketing sites six to eight. GovTech platforms run longer — roughly sixteen weeks — because federal data integrations take what they take. AI builds we quote per dataset." } },
+    { "@type": "Question", name: "Does Americurial build GovTech platforms?", acceptedAnswer: { "@type": "Answer", text: "Yes — we built CapturePilot, which ingests over 37K SAM.gov opportunities daily and scores them for matching against 80K-plus contractor profiles. Same playbook works for other federal-data products." } },
+    { "@type": "Question", name: "Do you offer ongoing support after launch?", acceptedAnswer: { "@type": "Answer", text: "Yes. Every project ships with thirty days of post-launch fixes included. After that, most clients move to a retainer that covers Sentry alerts, dependency upkeep, and new features without re-scoping every time. Pricing scales with monthly engineering hours." } },
   ],
 };
 
 const SERVICES = [
   {
+    icon: Compass,
+    title: "Done-With-You Coaching",
+    href: "/pricing#retainers",
+    desc: "For founders who want to bring federal capture in-house instead of outsourcing it. Weekly calls, full template library, discounted CapturePilot — we coach, your team executes.",
+    bullets: [
+      "60-min weekly call with a senior capture lead",
+      "Full Starter Kit: Sources Sought, capability, teaming templates",
+      "CapturePilot software at 50% off",
+      "1 proposal review (Pink Team) per quarter",
+    ],
+  },
+  {
     icon: Code2,
     title: "SaaS Development",
     href: "/services/saas",
-    desc: "Full-stack product builds from zero to launch. We architect, design, and ship subscription software with the infrastructure to scale from day one.",
+    desc: "Subscription software builds, end to end. We've shipped CapturePilot — same playbook here: Next.js + Supabase + Stripe, real auth, real billing, no demo-ware.",
     bullets: [
-      "Multi-tenant architecture with role-based access",
-      "Stripe billing integration and subscription management",
-      "Admin dashboards, onboarding flows, and analytics",
-      "CI/CD pipelines with staging and production environments",
+      "Multi-tenant Postgres with row-level security",
+      "Stripe checkout, portal, webhooks, the lot",
+      "Admin dashboard you can hand to ops on day one",
+      "Staging + production on Vercel with preview URLs per PR",
     ],
   },
   {
     icon: Globe,
     title: "Web & Digital Products",
     href: "/services/web",
-    desc: "High-performance marketing sites, client portals, and internal tools. Conversion-focused design backed by bulletproof engineering.",
+    desc: "Marketing sites, client portals, internal tools. Built on the same stack we use for our own — so they actually load fast and rank.",
     bullets: [
-      "SEO-optimized Next.js sites with sub-second load times",
-      "Custom CMS integrations and dynamic content",
-      "Responsive design across all devices and browsers",
-      "Analytics, tracking, and conversion optimization",
+      "Next.js with sub-second LCP on the routes that matter",
+      "Headless CMS or MDX, depending on what your team writes in",
+      "Mobile-first, dark mode, accessible by default",
+      "GA4 + GSC wired so you can prove what works",
     ],
   },
   {
     icon: Shield,
     title: "GovTech Solutions",
     href: "/services/govtech",
-    desc: "Federal-grade platforms for government contractors and agencies. Compliance-ready, data-rich, and built to handle mission-critical workloads.",
+    desc: "Platforms that have to talk to SAM.gov, USASpending, or FPDS without falling over. We've built one. We know where the rate limits and dead fields are.",
     bullets: [
-      "SAM.gov, USASpending, and FPDS data integration",
-      "NAICS/PSC classification and opportunity matching",
-      "Contractor readiness and compliance scoring",
-      "FedRAMP-aware architecture and security hardening",
+      "SAM.gov, USASpending, FPDS ingestion that survives schema changes",
+      "NAICS/PSC mapping with sane fallbacks for missing codes",
+      "Per-tenant scoring and matching, not just keyword search",
+      "FedRAMP-aware patterns where the workload calls for it",
     ],
   },
   {
     icon: BarChart3,
     title: "AI & Data Platforms",
     href: "/services/ai",
-    desc: "Machine learning pipelines, intelligent matching engines, and AI-powered automation embedded directly into production-grade systems.",
+    desc: "OpenAI in production, not in a demo notebook. Document parsing, scoring, summarisation — wired in where it earns its cost.",
     bullets: [
-      "OpenAI and custom model integration",
-      "Data ingestion, ETL pipelines, and enrichment",
-      "Intelligent scoring and recommendation engines",
-      "Natural language processing and document analysis",
+      "OpenAI + structured output (JSON mode) for predictable results",
+      "Python or TypeScript ETL, whatever the data wants",
+      "Scoring engines you can actually debug",
+      "Attachment readers that pull requirements out of PDFs",
     ],
   },
   {
     icon: Palette,
     title: "Branding & Design Systems",
     href: null,
-    desc: "Cohesive visual identities and component libraries that scale across products. Every pixel intentional, every interaction considered.",
+    desc: "Tokens, components, and a Figma file your engineers can actually use. Less Pinterest, more reusable.",
     bullets: [
-      "Brand identity, logo, and visual language",
-      "Tailwind-based design system with reusable components",
-      "Dark and light theme support",
-      "Figma-to-code design handoff and implementation",
+      "Logo, type, and a colour system that survives dark mode",
+      "Tailwind-token + shadcn-style component library",
+      "Light + dark theme out of the gate",
+      "Figma handoff that maps 1:1 to the codebase",
     ],
   },
   {
     icon: RefreshCw,
     title: "Ongoing Support & Iteration",
     href: null,
-    desc: "Software is never finished. We provide dedicated engineering support, feature iteration, and performance optimization on a retainer basis.",
+    desc: "Retainer for the stuff that comes up after launch — Sentry alerts, dependency bumps, the feature your CFO suddenly wants in two weeks.",
     bullets: [
-      "Weekly sprint cycles with priority backlog",
-      "Performance monitoring and optimization",
-      "Security patches and dependency management",
-      "Feature development and A/B testing",
+      "Weekly sprint with a priority backlog you own",
+      "On-call for production incidents",
+      "Quarterly dependency + security pass",
+      "New features without re-quoting every time",
     ],
   },
 ];
@@ -155,9 +169,9 @@ export default function ServicesPage() {
           </h1>
 
           <p className="animate-fade-in-up-200 text-lg md:text-xl text-stone-400 max-w-2xl mx-auto leading-relaxed">
-            End-to-end software engineering for companies that need to ship
-            fast, scale smart, and stay ahead. From SaaS platforms to
-            federal-grade GovTech &mdash; we handle the full stack.
+            Software, websites, and the AI bits in between. We pick the work
+            we can finish, ship it on Vercel, and stick around to fix it when
+            it breaks.
           </p>
         </div>
       </section>
@@ -218,10 +232,11 @@ export default function ServicesPage() {
               <div className="h-px w-8 bg-emerald-500/40" />
             </div>
             <h2 className="text-4xl md:text-5xl font-black tracking-tighter text-white mb-6">
-              Battle-Tested <span className="gradient-text">Tools</span>
+              What we <span className="gradient-text">actually use</span>
             </h2>
             <p className="text-stone-400 max-w-2xl mx-auto">
-              We pick the stack that ships fastest and scales best. No resume-driven development &mdash; every tool earns its place.
+              The same stack that runs CapturePilot in production. Nothing
+              here is on the list because it looked good in a slide.
             </p>
           </Reveal>
 
@@ -248,11 +263,11 @@ export default function ServicesPage() {
         <Reveal className="max-w-3xl mx-auto px-6 text-center relative">
           <Zap className="w-10 h-10 text-emerald-400 mx-auto mb-6 animate-hero-float" />
           <h2 className="text-4xl md:text-5xl font-black tracking-tighter text-white mb-6">
-            Have a Project in Mind?
+            Got something half-built?
           </h2>
           <p className="text-stone-400 mb-10 text-lg">
-            Tell us what you&apos;re building. We&apos;ll scope it, price it,
-            and tell you exactly how fast we can deliver.
+            Send us a Loom, a Figma, or a half-written README. We&apos;ll come
+            back with a scope, a price, and a date that won&apos;t slip.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a

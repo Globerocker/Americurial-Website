@@ -5,7 +5,7 @@ import { BlogArticle, Callout, Section, CheckList } from "@/components/BlogArtic
 export const metadata: Metadata = {
   title: "The SAM.gov Registration Playbook for Veteran-Owned Firms",
   description:
-    "18 checkpoints, every gotcha, and the veteran-specific optimization moves most consultants skip. Clear your SAM.gov registration on the first pass.",
+    "Eighteen checkpoints, the IRS-validation gotcha that costs people a week, and the veteran-specific moves most consultants skip. Clear registration on the first pass.",
   alternates: {
     canonical: "https://www.americurial.com/blog/sam-gov-registration-for-veterans",
   },
@@ -24,7 +24,7 @@ export default function Post() {
   return (
     <BlogArticle
       title="The SAM.gov Registration Playbook for Veteran-Owned Firms"
-      subtitle="18 checkpoints, every gotcha, and the veteran-specific optimization moves most consultants skip. Built from 200+ real registrations."
+      subtitle="Eighteen checkpoints, the IRS-validation gotcha that costs people a week, and the veteran-specific moves most consultants skip."
       date="April 20, 2026"
       readTime="12 min read"
       category="SAM.gov"
@@ -35,17 +35,16 @@ export default function Post() {
       ]}
     >
       <p>
-        If you&apos;re a veteran-owned firm trying to sell to the federal government, your SAM.gov
-        registration is <strong>the front door</strong>. Without an active record, you can&apos;t
-        receive payment, can&apos;t be awarded contracts, and can&apos;t be discovered in the
-        government&apos;s supplier databases. The process is free, but it&apos;s also designed to
-        filter out people who don&apos;t take it seriously.
+        SAM.gov registration is the front door. No active record, no contract award, no payment,
+        and you don&apos;t show up in any supplier database a contracting officer searches. It&apos;s
+        free, which is the good news. The bad news is the process quietly filters out anyone who
+        rushes it.
       </p>
 
       <p>
-        This is the playbook we use internally at Americurial when we onboard a new client.
-        Follow it and you&apos;ll clear registration on the first pass — and more importantly,
-        you&apos;ll have a registration that evaluators can actually find.
+        This is the same checklist we walk through with new clients at Americurial. Follow it
+        and you&apos;ll clear registration on the first pass. More importantly, you&apos;ll have a
+        record that contracting officers can actually find when they search.
       </p>
 
       <Callout variant="vet" title="Veteran-specific reality check">
@@ -58,26 +57,26 @@ export default function Post() {
       <Section id="why-sam" title="Why SAM.gov matters" />
 
       <p>
-        SAM (System for Award Management) replaced CCR in 2012 and now consolidates six different
-        legacy government systems into one registration. Three things live there:
+        SAM (System for Award Management) replaced CCR back in 2012. It now folds six legacy
+        government systems into one registration. Three things live there:
       </p>
 
       <ul>
         <li>
-          <strong>Entity registration</strong> — so the government can pay you.
+          <strong>Entity registration</strong> — so the Treasury can actually pay you.
         </li>
         <li>
-          <strong>Reps &amp; Certs</strong> — answers to ~150 compliance questions that get baked
-          into every contract.
+          <strong>Reps &amp; Certs</strong> — answers to roughly 150 compliance questions that
+          get baked into every contract you win. These are legally binding.
         </li>
         <li>
-          <strong>Discovery</strong> — contracting officers search SAM daily looking for
-          small, veteran-owned, or HUBZone firms that match open needs.
+          <strong>Discovery</strong> — contracting officers run SAM searches every day, looking
+          for small, veteran-owned, or HUBZone firms in their NAICS.
         </li>
       </ul>
 
       <p>
-        The discovery layer is the most under-utilized. Contracting officers can&apos;t award you
+        Discovery is the part most firms ignore. A contracting officer can&apos;t award you
         something they can&apos;t find. A neglected SAM record is functionally the same as not
         being registered at all.
       </p>
@@ -85,9 +84,9 @@ export default function Post() {
       <Section id="pre-flight" title="Phase 1 — Pre-flight" />
 
       <p>
-        Before you touch SAM.gov, gather everything. Half the failed registrations we see fail
-        because people started without the paperwork ready and got stuck in a 72-hour IRS
-        validation loop. Here&apos;s the checklist:
+        Before you log into SAM.gov, get your paperwork ready. Most failed registrations we see
+        fail for the same reason: someone started without their EIN letter, the IRS validation
+        bounced, and they sat in an error queue for three days. The checklist:
       </p>
 
       <CheckList
@@ -112,35 +111,38 @@ export default function Post() {
 
       <h3>Step 1 — Login.gov</h3>
       <p>
-        SAM requires a login.gov account (the federal government&apos;s SSO). Set one up with your{" "}
-        <em>business email</em>, not personal. Enable MFA.
+        SAM uses login.gov (the federal SSO). Set up your account with a <em>business</em> email,
+        not personal. Turn on MFA. If you ever leave the company, you don&apos;t want SAM
+        access tied to a Gmail you used in 2017.
       </p>
 
       <h3>Step 2 — UEI assignment</h3>
       <p>
-        SAM.gov issues you a <strong>Unique Entity Identifier (UEI)</strong> — a 12-character ID
-        that replaced DUNS in 2022. Request it inside SAM.gov itself (don&apos;t go through a
-        third-party service — that&apos;s how people get scammed).
+        SAM.gov issues a <strong>Unique Entity Identifier (UEI)</strong> — a 12-character ID
+        that replaced DUNS in 2022. Request it from inside SAM.gov. Don&apos;t use a third-party
+        service; that&apos;s how registration scams work, and there are still firms charging
+        $500 for something that&apos;s free.
       </p>
 
       <h3>Step 3 — Core Data</h3>
-      <p>Enter everything:</p>
+      <p>Enter everything, slowly:</p>
       <ul>
-        <li>Legal business name (exactly as on IRS + state filings)</li>
+        <li>Legal business name — exactly as it appears on your IRS letter and state filings</li>
         <li>Physical + mailing address</li>
-        <li>Point of Contact: yours, backup, and alternate</li>
+        <li>Point of Contact: yours, a backup, and an alternate</li>
         <li>
-          Banking info for ACH: routing + account number
-          <em> — double-check this; wrong digits mean the Treasury rejects payments</em>
+          Banking info for ACH: routing and account number.
+          <em> Double-check it. One wrong digit and Treasury rejects every payment until you
+          fix it.</em>
         </li>
       </ul>
 
       <h3>Step 4 — Reps &amp; Certs</h3>
       <p>
-        This is where most people rush and regret it. You&apos;ll answer ~150 questions about
-        small business status, hazardous material handling, human trafficking policy, and more.
-        These answers flow into every contract you&apos;re awarded — <strong>they&apos;re legally
-        binding</strong>.
+        This is where most people rush and pay for it later. You&apos;ll answer about 150
+        questions — small business status, hazardous material handling, human trafficking
+        policy, the lot. Every answer here flows into every contract you win.
+        <strong> They&apos;re legally binding.</strong> Read each one.
       </p>
 
       <Callout variant="warn" title="Size standards">
@@ -154,60 +156,63 @@ export default function Post() {
 
       <h3>Step 5 — NAICS codes</h3>
       <p>
-        Add up to 20 NAICS codes. Your <strong>primary</strong> is the first one listed; it
-        drives default size-standard calculations and shows up as &ldquo;Primary NAICS&rdquo; in
-        contracting officer searches.
+        You can list up to 20 NAICS codes. The <strong>primary</strong> is the first one and it
+        does two things: drives default size-standard calculations, and shows up as &ldquo;Primary
+        NAICS&rdquo; in contracting officer searches.
       </p>
 
-      <p>Strategy:</p>
+      <p>How to think about the list:</p>
       <ul>
         <li>
-          <strong>Primary:</strong> your core service, the one you have the most past performance
-          in.
+          <strong>Primary:</strong> your real core service — the one you have past performance in.
         </li>
         <li>
-          <strong>Secondary:</strong> adjacent services where you could credibly bid.
+          <strong>Secondary:</strong> adjacent work you could credibly bid on tomorrow.
         </li>
         <li>
-          <strong>Stretch:</strong> NAICS you&apos;re actively building capacity in — add them,
-          but don&apos;t over-reach into areas you can&apos;t deliver.
+          <strong>Stretch:</strong> NAICS you&apos;re building capacity for. Fine to add, but
+          don&apos;t list anything you can&apos;t deliver on if a contracting officer calls.
         </li>
       </ul>
 
-      <Section id="veteran-moves" title="Phase 3 — Veteran-specific moves" />
+      <Section id="veteran-moves" title="Phase 3 — The veteran-specific moves most people skip" />
 
       <p>
-        This is where most SAM registrations for veterans leave 50% of the value on the table.
-        Four settings you must not skip:
+        This is where most veteran-owned firms leave half the value of their SAM record on
+        the table. Four settings, none of them optional:
       </p>
 
       <h3>Veteran-Owned flag</h3>
       <p>
         Under &ldquo;Assertions,&rdquo; tick the Veteran-Owned Small Business box. This is the
-        self-identification that shows up in contracting officer searches.
+        self-identification that shows up in contracting officer searches. No tick, no search
+        hit.
       </p>
 
       <h3>Service-Disabled flag</h3>
       <p>
-        If you&apos;re SDVOSB, tick Service-Disabled Veteran-Owned — and then go to the SBA
-        VetCert system separately to get <em>verified</em>. Self-identification in SAM is not the
-        same as SBA verification, and for SDVOSB set-aside contracts, verification is required.
+        If you&apos;re SDVOSB, tick Service-Disabled Veteran-Owned. Then — separately — go to
+        SBA VetCert and get <em>verified</em>. The two are not the same thing. Self-identifying
+        in SAM doesn&apos;t make you SDVOSB; SBA verification does, and for SDVOSB set-asides,
+        verification is mandatory.
       </p>
 
       <h3>HUBZone status</h3>
       <p>
-        If your principal office is in a HUBZone area (check{" "}
+        If your principal office sits in a HUBZone (check{" "}
         <a href="https://maps.certify.sba.gov/hubzone/map" target="_blank" rel="noopener noreferrer">
           the HUBZone map
         </a>
-        ), register separately on HUBZone.sba.gov. Then tick HUBZone in SAM.
+        ), register separately at HUBZone.sba.gov, then tick HUBZone in SAM. Two systems, two
+        records — yes, it&apos;s annoying.
       </p>
 
       <h3>Capability narrative</h3>
       <p>
-        SAM lets you paste a free-text capability narrative. <strong>Do not leave this blank.</strong>{" "}
-        Write 3-5 focused sentences naming your NAICS codes, set-aside certs, past performance,
-        and geographic reach. Contracting officers read this.
+        SAM gives you a free-text capability narrative field. <strong>Do not leave it blank.</strong>{" "}
+        Three to five tight sentences — your NAICS codes, certs, past performance highlights,
+        geographic reach. Contracting officers read this. It&apos;s the only place in the
+        record where you get to make a case in your own words.
       </p>
 
       <Callout variant="vet" title="Veteran-specific SAM optimization">
@@ -220,37 +225,38 @@ export default function Post() {
 
       <h3>IRS validation delay</h3>
       <p>
-        SAM calls the IRS in real-time to validate your EIN + legal business name. If they don&apos;t
-        match exactly, you&apos;ll sit in an error queue for days. <strong>Check your IRS
-        letter</strong> and copy the name field <em>verbatim</em> — including any commas, LLC
-        suffixes, etc.
+        SAM calls the IRS in real time to validate your EIN against your legal business name.
+        If they don&apos;t match character-for-character, you sit in an error queue for days.
+        <strong> Pull out your IRS letter</strong> and copy the name field <em>verbatim</em> —
+        commas, LLC suffixes, the lot. The IRS database doesn&apos;t do fuzzy matching.
       </p>
 
       <h3>CAGE validation delay</h3>
       <p>
-        After SAM submission, DoD&apos;s CAGE assigns you a code (or validates an existing one).
-        This takes 7-10 business days. You cannot rush it; don&apos;t plan to submit a proposal
-        response the week you register.
+        After SAM submission, DoD&apos;s CAGE office assigns your code (or validates an
+        existing one). Plan on 7–10 business days. There&apos;s no way to rush it, so
+        don&apos;t schedule a proposal submission for the week you register.
       </p>
 
-      <h3>&ldquo;Submitted&rdquo; vs &ldquo;Active&rdquo;</h3>
+      <h3>&ldquo;Submitted&rdquo; is not &ldquo;Active&rdquo;</h3>
       <p>
-        Submission is not registration. Watch for the green &ldquo;Active&rdquo; status — that&apos;s when
-        you can be awarded contracts. Expect 2-3 weeks from start to Active.
+        Submission is not registration. Watch for the green &ldquo;Active&rdquo; status — that
+        means you can actually be awarded contracts. Two to three weeks from start to Active
+        is normal. Plan around it.
       </p>
 
       <h3>Annual renewal</h3>
       <p>
-        SAM records expire annually on the 365th day from your last update. If it expires, you&apos;re
-        functionally un-registered until you renew — <em>and active contracts can freeze
-        payments</em>. Set a calendar reminder for day 330.
+        SAM records expire 365 days after your last update. If they lapse, you&apos;re
+        functionally un-registered until you renew — and any active contract can freeze
+        payments while you sort it out. Put a calendar reminder on day 330. Set two, actually.
       </p>
 
-      <Section id="after" title="Phase 4 — After Active" />
+      <Section id="after" title="Phase 4 — After you go Active" />
 
       <p>
         Now the real work starts. An active SAM record is the foundation, not the outcome.
-        Next moves:
+        What to do next:
       </p>
 
       <CheckList
@@ -274,18 +280,16 @@ export default function Post() {
         verified veterans.
       </Callout>
 
-      <h2>The bottom line</h2>
+      <h2>One way to think about it</h2>
       <p>
-        SAM.gov is free but unforgiving. The registration isn&apos;t the hard part — the
-        optimization is. A generic SAM record won&apos;t show up in contracting officer searches.
-        A tuned SAM record gets you found by people you&apos;ve never met, for contracts that
-        haven&apos;t been posted yet.
+        SAM.gov is free but unforgiving. The form isn&apos;t the hard part — the optimisation is.
+        A generic record won&apos;t surface in contracting-officer searches. A tuned one gets
+        you found by people you&apos;ve never met, for contracts that haven&apos;t been posted yet.
       </p>
 
       <p>
-        If you have to take one thing away: <strong>treat SAM.gov like SEO for the federal
-        market</strong>. Your NAICS, narrative, and set-aside flags are keywords. Rank well, and
-        the pipeline comes to you.
+        Treat SAM.gov like SEO for the federal market. Your NAICS, narrative, and set-aside
+        flags are the keywords. Rank well and the pipeline starts coming to you.
       </p>
     </BlogArticle>
   );

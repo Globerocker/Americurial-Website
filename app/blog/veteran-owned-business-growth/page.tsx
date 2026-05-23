@@ -27,196 +27,178 @@ export default function VeteranOwnedBusinessGrowthPost() {
             </div>
 
             <h1 className="text-4xl md:text-5xl font-black tracking-tighter text-white leading-tight mb-6">
-              Growing Your Veteran-Owned Business
+              The Veteran-Owned Growth Playbook
             </h1>
 
             <p className="text-lg text-stone-400 leading-relaxed">
-              The federal government is required to direct a percentage of
-              contract spending to veteran-owned small businesses. That
-              requirement creates a structural advantage &mdash; but only if you know
-              how to use it.
+              The federal government has to spend a fixed share of contract
+              dollars with veteran-owned firms. That&apos;s a real advantage
+              sitting on the table. You just have to set up to grab it.
             </p>
           </div>
 
           {/* Body */}
           <div className="space-y-8 text-stone-300 leading-relaxed">
             <h2 className="text-2xl font-bold text-white mt-12">
-              Understanding Your SDVOSB and VOSB Advantage
+              What SDVOSB and VOSB actually get you
             </h2>
 
             <p>
-              Service-Disabled Veteran-Owned Small Business and Veteran-Owned
-              Small Business designations are not just labels. They are access
-              keys to a contracting ecosystem specifically designed to channel
-              federal spending toward businesses owned by veterans. The
-              government&apos;s statutory goal is to award at least 3 percent of all
-              federal prime contracting dollars to SDVOSBs. In practice, agencies
-              that miss their targets face scrutiny from Congress and the Small
-              Business Administration, creating institutional pressure to find
-              and fund qualified veteran-owned contractors.
+              SDVOSB (Service-Disabled Veteran-Owned Small Business) and VOSB
+              (Veteran-Owned Small Business) aren&apos;t just labels next to
+              your name. They&apos;re access keys. The government has a
+              statutory floor: at least 3% of federal prime contracting dollars
+              go to SDVOSBs. Agencies that miss that floor get questioned by
+              the SBA and Congress, which is why most of them quietly hunt for
+              veteran-owned firms to fund.
             </p>
 
             <p>
-              The first step is ensuring your certifications are current and
-              properly registered. Your SDVOSB or VOSB certification must be
-              verified through the SBA&apos;s Veterans Small Business Certification
-              program. Your SAM.gov registration must be active and accurately
-              reflect your NAICS codes, capabilities, and socioeconomic
-              designations. These registrations are your storefront in the
-              federal marketplace. If they are incomplete or inaccurate, you are
-              invisible to the contracting officers searching for businesses
-              like yours.
+              Step one is making sure your paperwork is current and the cert
+              actually flows through to your SAM record. SDVOSB / VOSB
+              verification runs through SBA&apos;s VetCert programme. Your
+              SAM.gov entry has to be active, the NAICS list accurate, and the
+              socioeconomic flags set. If any of that&apos;s off, you&apos;re
+              invisible to the contracting officer searching for someone like
+              you.
             </p>
 
             <h2 className="text-2xl font-bold text-white mt-12">
-              Winning Federal Set-Asides
+              Winning set-aside contracts
             </h2>
 
             <p>
-              Set-aside contracts are opportunities reserved exclusively for
-              specific categories of small businesses. SDVOSB set-asides
-              eliminate competition from large contractors entirely and limit
-              your competition to other service-disabled veteran-owned
-              businesses. This dramatically improves your probability of win
-              compared to full and open competitions.
+              A set-aside is a contract where only certain firms can bid. An
+              SDVOSB set-aside removes the big contractors entirely — you&apos;re
+              only competing against other SDVOSBs. The math is meaningfully
+              better than open competition. Sometimes ten or twenty firms in
+              the pool instead of a hundred.
             </p>
 
             <p>
-              The key to winning set-asides consistently is targeting the right
-              ones. Not every set-aside is worth pursuing. Focus on
-              opportunities where your technical capabilities align closely with
-              the statement of work, where the contract value fits your current
-              capacity, and where you have relevant past performance or can
-              demonstrate equivalent experience. A focused pipeline of ten
-              well-qualified set-asides will produce more wins than a scattered
-              approach to fifty marginally relevant opportunities.
+              The trick is targeting the right ones. Not every set-aside is
+              worth chasing. Look for: the SOW lines up with what you actually
+              do, the dollar value fits your current capacity, and you can
+              show relevant past performance (or genuinely equivalent
+              experience). Ten well-qualified pursuits will beat fifty
+              scattered ones every time. We&apos;ve seen the same shop hit
+              50% win rate on the focused list and 5% on the scattershot.
             </p>
 
             <p>
-              The Department of Veterans Affairs, in particular, operates under
-              the Veterans First Contracting Program, which gives priority to
-              SDVOSBs and VOSBs for contracts at VA facilities. If your services
-              are applicable to healthcare, facilities management, IT, or
-              administrative support, the VA represents a concentrated market
-              opportunity worth significant attention.
+              One specific note on the VA: it runs the Veterans First
+              Contracting Program, which prioritises SDVOSBs and VOSBs for
+              work at VA facilities. If you do healthcare, facilities O&amp;M,
+              IT, or admin work, the VA is concentrated demand in your lane.
+              Worth its own column in your pipeline.
             </p>
 
             <h2 className="text-2xl font-bold text-white mt-12">
-              Building Past Performance From Zero
+              Building past performance from zero
             </h2>
 
             <p>
-              The most common barrier for new veteran-owned contractors is the
-              past performance paradox: you need past performance to win
-              contracts, but you need contracts to build past performance. The
-              solution is a deliberate progression strategy that builds your
-              record systematically.
+              Every new contractor hits the same wall: you need past
+              performance to win contracts, and you need contracts to build
+              past performance. The way through isn&apos;t magic, it&apos;s
+              just deliberate.
             </p>
 
             <p>
-              Start with micro-purchases. Federal agencies can buy goods and
-              services under $10,000 using simplified acquisition procedures
-              that do not require competitive bidding. Government purchase card
-              holders at every federal installation make these buys regularly.
-              They are small contracts, but they create documented past
-              performance records in federal databases. Every micro-purchase you
-              complete successfully is a reference point you can cite in future
-              proposals.
+              Start with micro-purchases. Federal agencies can buy anything
+              under $10K using simplified procedures — no competitive bid
+              required. Every base, every installation has government
+              purchase-card holders making these buys all day. Small dollars,
+              but every one of them shows up as documented past performance in
+              federal databases. Cite them in your next proposal.
             </p>
 
             <p>
-              Next, pursue Simplified Acquisition Procedure contracts in the
-              $10,000 to $250,000 range. These contracts have streamlined
-              evaluation processes and often weight past performance less
-              heavily than technical approach and price, making them accessible
-              to newer contractors. The 8(a) Business Development Program also
-              offers sole-source contract opportunities up to $4.5 million for
-              qualifying businesses, which can rapidly build your past
-              performance portfolio.
+              Next layer is Simplified Acquisition contracts, $10K to $250K.
+              Streamlined evaluations, and the score usually weights technical
+              approach and price more than past performance. Easier to get
+              into as a new contractor. If you qualify for 8(a), the
+              sole-source ceiling there is $4.5M and the SBA processes most of
+              them fast. That&apos;s how a year-old firm can have eight or
+              nine real past-performance citations.
             </p>
 
             <h2 className="text-2xl font-bold text-white mt-12">
-              Teaming Agreements: Strategic Partnerships That Win
+              Teaming agreements — when, with whom, and how not to get used
             </h2>
 
             <p>
-              Teaming is not a sign of weakness. It is a strategic tool that
-              the most successful contractors use deliberately. A well-structured
-              teaming agreement pairs your veteran-owned status and specific
-              capabilities with a partner who brings complementary strengths
-              &mdash; whether that is technical expertise in a domain you are
-              entering, facility clearances you do not yet hold, or past
-              performance on similar contracts that strengthens your proposal.
+              Teaming isn&apos;t a sign you&apos;re weak. The best contractors
+              team on purpose. A clean teaming agreement pairs your
+              veteran-owned status and specific skills with a partner who has
+              what you don&apos;t — deeper technical depth in a new domain, a
+              clearance level you haven&apos;t built up, past performance on
+              the kind of contract you&apos;re chasing.
             </p>
 
             <p>
-              The most effective teaming relationships are built on genuine
-              mutual benefit, not transactional pass-through arrangements. If
-              your teaming partner views you as a vehicle for their set-aside
-              eligibility rather than a contributor to the work, the
-              relationship will fail under performance pressure and may attract
-              regulatory scrutiny. Pursue partners who respect your
-              capabilities, share workload responsibility fairly, and have a
-              track record of successful teaming arrangements.
+              The relationships that work are built on real shared work. If
+              your &ldquo;partner&rdquo; just wants your set-aside eligibility
+              and plans to do all the work themselves, that&apos;s
+              pass-through — and pass-through arrangements collapse under
+              performance pressure and attract regulatory scrutiny. Find
+              partners who respect what you bring, split workload fairly, and
+              can show you previous teaming relationships that actually
+              shipped.
             </p>
 
             <p>
-              Mentor-protege programs, particularly the SBA Mentor-Protege
-              Program and agency-specific programs at the Department of Defense
-              and VA, formalize these relationships and provide additional
-              benefits including joint venture eligibility, access to the
-              mentor&apos;s past performance for proposals, and business
-              development support. For veteran-owned businesses in the growth
-              phase, a strong mentor-protege relationship can compress years of
-              organic growth into months.
+              Mentor-Protégé programmes (the SBA one, plus DoD and VA
+              equivalents) formalise these relationships and unlock real
+              benefits: joint-venture eligibility, the mentor&apos;s past
+              performance citable in your proposals, and BD support. For a
+              veteran-owned firm trying to scale, a year in the right MPP can
+              compress what would otherwise be three or four years of organic
+              growth.
             </p>
 
             <h2 className="text-2xl font-bold text-white mt-12">
-              From Subcontractor to Prime
+              Subcontractor to prime — the jump nobody warns you about
             </h2>
 
             <p>
-              Many veteran-owned businesses enter the federal market as
-              subcontractors and struggle to make the transition to prime
-              contractor status. The jump is not just about size or revenue. It
-              requires a fundamentally different approach to business
-              development, proposal management, and contract administration.
+              A lot of veteran-owned firms enter federal as subcontractors and
+              stall there. The move to prime isn&apos;t really about revenue
+              or headcount. It&apos;s a different job.
             </p>
 
             <p>
-              As a subcontractor, you execute a defined scope under someone
-              else&apos;s contract. As a prime, you own the customer relationship,
-              manage the full scope of work, handle all compliance and reporting
-              requirements, and assume the financial risk of performance. The
-              transition requires investing in proposal writing capability,
-              contract management systems, financial controls that meet DCAA
-              audit standards, and a business development function that
-              identifies and qualifies opportunities twelve to eighteen months
-              before they are solicited.
+              As a sub, you execute a defined scope under someone else&apos;s
+              contract. As a prime, you own the customer relationship, run the
+              full scope, handle all the compliance and reporting, and carry
+              the financial risk if anything slips. To make that work you need
+              real proposal capability, contract-management systems, financial
+              controls that survive a DCAA audit, and a BD function that&apos;s
+              looking at opportunities twelve to eighteen months before
+              they&apos;re solicited.
             </p>
 
             <p>
-              The most effective transition strategy is gradual escalation.
-              Start by priming small set-aside contracts while maintaining your
-              subcontracting revenue base. Use each small prime contract to
-              build systems, train your team, and establish the operational
-              maturity needed for larger opportunities. Within two to three
-              years of deliberate execution, a veteran-owned business can
-              transition from a subcontractor doing $500,000 annually to a
-              prime contractor managing $5 million or more in federal work.
+              Don&apos;t try to do it in one leap. Start priming small
+              set-asides while your subcontracting revenue covers payroll.
+              Every small prime contract teaches you something — what your
+              cost model is actually doing, where your reporting cadence
+              breaks, who on your team can run a kick-off meeting. Two or
+              three years of that and you can credibly move from $500K
+              subcontracting to $5M+ in prime federal work.
             </p>
 
             <h2 className="text-2xl font-bold text-white mt-12">
-              Key Takeaways
+              The short version
             </h2>
 
             <ul className="space-y-3">
               {[
-                "Keep your SDVOSB/VOSB certification and SAM.gov registration current and accurate. They are your access keys to the federal market.",
-                "Focus your pipeline on set-asides where your capabilities align tightly. Quality targeting beats volume every time.",
-                "Build past performance deliberately, starting with micro-purchases and SAP contracts before pursuing larger opportunities.",
-                "Use teaming agreements strategically to complement your capabilities. Pursue mentor-protege programs for accelerated growth.",
-                "Transition from subcontractor to prime gradually. Build the systems, financial controls, and BD capability before scaling up.",
+                "Keep your SDVOSB/VOSB cert and SAM.gov record current and accurate. They're your visibility in federal search.",
+                "Focus your pipeline. Ten well-qualified set-asides beat fifty marginal ones — every time we've seen it run.",
+                "Build past performance the boring way: micro-purchases, then SAP contracts, then bigger work.",
+                "Team on purpose, not out of desperation. Walk away from pass-through arrangements.",
+                "Move from sub to prime gradually. Get the systems in place before you scale.",
               ].map((item) => (
                 <li
                   key={item}
@@ -233,12 +215,13 @@ export default function VeteranOwnedBusinessGrowthPost() {
           <div className="mt-16 pt-12 border-t border-white/5">
             <div className="bg-gradient-to-br from-emerald-950/30 to-stone-900/40 border border-emerald-500/10 rounded-2xl p-8 text-center">
               <h3 className="text-2xl font-bold text-white mb-3">
-                Need help building your product?
+                Rather have us run this for you?
               </h3>
               <p className="text-stone-400 mb-6">
-                We are a veteran-owned agency that builds SaaS platforms and
-                GovTech solutions. We built CapturePilot to solve this exact
-                problem. Let&apos;s talk.
+                Americurial is veteran-owned. We run capture for other veteran-owned
+                firms, and we built CapturePilot to do the heavy lifting on
+                opportunity matching. Fifteen minutes on the phone — we&apos;ll
+                tell you which moves to make first.
               </p>
               <a
                 href="https://meetings-na2.hubspot.com/americurial/intro-call"

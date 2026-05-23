@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { SiteNav } from "@/components/SiteNav";
 import { SiteFooter } from "@/components/SiteFooter";
+import { TrustBar } from "@/components/TrustBar";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 
@@ -63,7 +64,11 @@ const orgJsonLd = {
     "Veteran-owned digital agency building SaaS platforms, GovTech solutions, and digital products.",
   foundingDate: "2024",
   founder: { "@type": "Person", name: "Andre Schuler" },
-  sameAs: ["https://www.capturepilot.com"],
+  sameAs: [
+    "https://www.capturepilot.com",
+    "https://www.linkedin.com/in/andre-sch%C3%BCler-35b439209/",
+    "https://www.linkedin.com/in/sergio-andre-gouveia-a122053b4/",
+  ],
   contactPoint: {
     "@type": "ContactPoint",
     contactType: "sales",
@@ -93,6 +98,7 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col font-sans bg-stone-950 text-stone-200 dot-grid-bg">
         <SiteNav />
         <main className="flex-1 pt-16">{children}</main>
+        <TrustBar />
         <SiteFooter />
       </body>
     </html>

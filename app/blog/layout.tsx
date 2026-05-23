@@ -1,15 +1,15 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Blog",
+  title: "Field Manual",
   description:
-    "Insights on SaaS development, GovTech, AI content marketing, and growing veteran-owned businesses. Expert perspectives from the Americurial team.",
+    "Federal contracting playbooks for veteran-owned firms. SAM.gov, capability statements, set-asides, Sources Sought, proposal writing, growth — the same plays we run for clients.",
   keywords:
-    "Americurial blog, SaaS development, GovTech, AI marketing, veteran-owned business, digital agency insights, government technology",
+    "federal contracting blog, SAM.gov, SDVOSB, capability statement, Sources Sought, proposal writing, set-asides, veteran-owned business",
   openGraph: {
-    title: "Blog | Americurial",
+    title: "Field Manual | Americurial",
     description:
-      "Expert insights on building SaaS products, navigating GovTech, and growing veteran-owned businesses.",
+      "Federal contracting playbooks for veteran-owned firms. The same plays we run for clients.",
     url: "https://www.americurial.com/blog",
   },
   alternates: { canonical: "https://www.americurial.com/blog" },

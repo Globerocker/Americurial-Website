@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import {
   ArrowRight,
   Shield,
@@ -415,14 +416,21 @@ export default function HomePage() {
                 <TiltCard max={6} className="col-span-2 bg-stone-900/50 border border-emerald-500/20 rounded-2xl p-6 relative overflow-hidden">
                   <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/5 to-transparent" />
                   <div className="relative flex items-center gap-4">
-                    <div className="w-14 h-14 rounded-2xl bg-emerald-500/15 border border-emerald-500/30 flex items-center justify-center flex-shrink-0">
-                      <Anchor className="w-7 h-7 text-emerald-300" />
+                    <div className="relative w-16 h-16 rounded-2xl overflow-hidden border border-emerald-500/30 flex-shrink-0">
+                      <Image
+                        src="/team/andre-headshot.jpg"
+                        alt="Andre Schuler, Co-Founder Americurial"
+                        fill
+                        sizes="64px"
+                        className="object-cover"
+                      />
                     </div>
                     <div>
                       <p className="text-white font-bold text-lg">Andre Schuler · Co-Founder</p>
                       <p className="text-sm text-stone-400">
-                        German Navy Marine Infantry → Boarding Team special unit.
-                        Two tours, Operation Atalanta, anti-piracy off the Horn of Africa.
+                        German Navy Boarding Team — two tours, Op Atalanta. Post-service
+                        a teacher in the German school system, then six years Head of
+                        Marketing. HubSpot + Microsoft Dynamics Partner.
                       </p>
                     </div>
                   </div>
@@ -431,14 +439,21 @@ export default function HomePage() {
                 <TiltCard max={6} className="col-span-2 bg-stone-900/50 border border-emerald-500/20 rounded-2xl p-6 relative overflow-hidden">
                   <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/5 to-transparent" />
                   <div className="relative flex items-center gap-4">
-                    <div className="w-14 h-14 rounded-2xl bg-emerald-500/15 border border-emerald-500/30 flex items-center justify-center flex-shrink-0">
-                      <Flag className="w-7 h-7 text-emerald-300" />
+                    <div className="relative w-16 h-16 rounded-2xl overflow-hidden border border-emerald-500/30 flex-shrink-0">
+                      <Image
+                        src="/team/sergio-headshot.jpg"
+                        alt="Sergio Gouveia, Co-Founder Americurial"
+                        fill
+                        sizes="64px"
+                        className="object-cover"
+                      />
                     </div>
                     <div>
-                      <p className="text-white font-bold text-lg">Sergio · Co-Founder</p>
+                      <p className="text-white font-bold text-lg">Sergio Gouveia · Co-Founder</p>
                       <p className="text-sm text-stone-400">
                         Canadian Army Infantry. Two combat tours in Afghanistan.
-                        Brings the ground-truth discipline into every capture plan.
+                        Runs capture, Black Hat reviews, and the awkward debrief
+                        questions before the agency asks them.
                       </p>
                     </div>
                   </div>
