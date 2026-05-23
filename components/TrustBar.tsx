@@ -1,4 +1,46 @@
-import { Award, ShieldCheck, Workflow, Boxes } from "lucide-react";
+type Badge = {
+  src: string;
+  alt: string;
+  title: string;
+  href?: string;
+  /** Tailwind height class — control display size individually */
+  heightClass: string;
+};
+
+const BADGES: Badge[] = [
+  {
+    src: "https://www.gstatic.com/partners/badge/images/2026/PartnerBadgeClickable.svg",
+    alt: "Google Partner",
+    title: "Google Partner — Americurial",
+    href: "https://www.google.com/partners/agency?id=1587930644",
+    heightClass: "h-14",
+  },
+  {
+    src: "/badges/hubspot-partner.png",
+    alt: "HubSpot Solutions Partner",
+    title: "HubSpot Solutions Partner",
+    heightClass: "h-14",
+  },
+  {
+    src: "/badges/microsoft-partner.png",
+    alt: "Microsoft Gold Partner",
+    title: "Microsoft Gold Partner",
+    heightClass: "h-12",
+  },
+  {
+    src: "/badges/sam-gov.jpg",
+    alt: "SAM.gov Registered",
+    title: "Registered on SAM.gov",
+    href: "https://sam.gov",
+    heightClass: "h-12",
+  },
+  {
+    src: "/badges/veteran-owned.png",
+    alt: "U.S. Veteran-Owned Business",
+    title: "U.S. Veteran-Owned Business",
+    heightClass: "h-12",
+  },
+];
 
 export function TrustBar() {
   return (
@@ -6,72 +48,40 @@ export function TrustBar() {
       aria-label="Certifications and Partners"
       className="border-y border-white/5 bg-stone-950"
     >
-      <div className="max-w-7xl mx-auto px-6 py-5 flex flex-wrap items-center justify-center gap-x-8 gap-y-4 text-stone-400">
-        <a
-          href="https://www.google.com/partners/agency?id=1587930644"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Google Partner — Americurial"
-          className="opacity-80 hover:opacity-100 transition-opacity"
-        >
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src="https://www.gstatic.com/partners/badge/images/2026/PartnerBadgeClickable.svg"
-            alt="Google Partner"
-            width={120}
-            height={120}
-            loading="lazy"
-            className="h-12 w-auto"
-          />
-        </a>
+      <div className="max-w-7xl mx-auto px-6 py-6 flex flex-wrap items-center justify-center gap-x-10 gap-y-6">
+        {BADGES.map((b) => {
+          const img = (
+            // eslint-disable-next-line @next/next/no-img-element
+            <img
+              src={b.src}
+              alt={b.alt}
+              title={b.title}
+              loading="lazy"
+              className={`${b.heightClass} w-auto opacity-85 hover:opacity-100 transition-opacity`}
+            />
+          );
 
-        <div className="h-8 w-px bg-white/10 hidden sm:block" />
+          if (b.href) {
+            return (
+              <a
+                key={b.alt}
+                href={b.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={b.title}
+              >
+                {img}
+              </a>
+            );
+          }
 
-        <TrustChip
-          icon={ShieldCheck}
-          label="SAM.gov Registered"
-          sub="Active CAGE Code"
-        />
-        <TrustChip
-          icon={Award}
-          label="Veteran-Owned"
-          sub="SDVOSB Pending"
-        />
-        <TrustChip
-          icon={Workflow}
-          label="HubSpot Partner"
-          sub="Ex-Diamond Agency"
-        />
-        <TrustChip
-          icon={Boxes}
-          label="Microsoft Partner"
-          sub="Dynamics 365"
-        />
+          return (
+            <div key={b.alt} aria-label={b.title}>
+              {img}
+            </div>
+          );
+        })}
       </div>
     </section>
-  );
-}
-
-function TrustChip({
-  icon: Icon,
-  label,
-  sub,
-}: {
-  icon: typeof Award;
-  label: string;
-  sub: string;
-}) {
-  return (
-    <div className="flex items-center gap-3">
-      <div className="w-9 h-9 rounded-lg bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400">
-        <Icon className="w-4 h-4" />
-      </div>
-      <div>
-        <p className="text-xs font-bold uppercase tracking-widest text-stone-200 leading-tight">
-          {label}
-        </p>
-        <p className="text-[10px] text-stone-500 leading-tight mt-0.5">{sub}</p>
-      </div>
-    </div>
   );
 }
