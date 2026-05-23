@@ -48,13 +48,13 @@ const BADGES: Badge[] = [
 function BadgeCard({ b }: { b: Badge }) {
   const inner = (
     <div className="flex items-center gap-5 bg-stone-900/50 border border-white/10 hover:border-emerald-500/30 rounded-2xl pl-4 pr-7 py-4 transition-colors min-w-max">
-      <div className="w-20 h-20 rounded-2xl bg-white/95 flex items-center justify-center flex-shrink-0 overflow-hidden p-2">
+      <div className="w-20 h-20 rounded-2xl bg-white/95 flex items-center justify-center flex-shrink-0 overflow-hidden">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src={b.src}
           alt={b.alt}
           loading="lazy"
-          className="max-w-full max-h-full object-contain"
+          className="w-full h-full object-contain scale-110"
         />
       </div>
       <div className="text-left">
