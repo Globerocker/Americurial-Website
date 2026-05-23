@@ -23,11 +23,11 @@ import {
 import { Reveal, AnimatedCounter } from "@/components/Reveal";
 import {
   TiltCard,
-  Marquee,
   LiveTicker,
   RadarRings,
   Eyebrow,
 } from "@/components/Interactive";
+import { TrustBar } from "@/components/TrustBar";
 
 const SERVICES = [
   {
@@ -61,18 +61,6 @@ const MISSION = [
   { phase: "02", title: "Position", desc: "Capability statement, SDVOSB/VOSB cert path, teaming shortlist — all inside CapturePilot." },
   { phase: "03", title: "Capture", desc: "Daily match feed, Sources Sought responses, intel on incumbents. Quiet 6-month lead on competitors." },
   { phase: "04", title: "Win", desc: "Proposal team mobilizes. 5% success fee aligns our incentives with yours. No win → no fee." },
-];
-
-const CERTS = [
-  "SDVOSB",
-  "VOSB",
-  "HUBZone",
-  "8(a)",
-  "WOSB",
-  "EDWOSB",
-  "SDB",
-  "Veteran-Owned",
-  "Tribal 8(a)",
 ];
 
 const LIVE_FEED = [
@@ -208,23 +196,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── Cert marquee ── */}
-      <section className="border-y border-white/5 bg-stone-950/80 py-8 relative overflow-hidden">
-        <div className="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-stone-950 to-transparent z-10 pointer-events-none" />
-        <div className="absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-stone-950 to-transparent z-10 pointer-events-none" />
-        <Marquee speed="slow">
-          {CERTS.concat(CERTS).map((c, i) => (
-            <span
-              key={`${c}-${i}`}
-              className="flex items-center gap-2 text-stone-500 whitespace-nowrap"
-            >
-              <Award className="w-4 h-4 text-emerald-500/60" />
-              <span className="text-sm font-bold tracking-widest">{c}</span>
-              <span className="text-emerald-500/20 ml-4">◆</span>
-            </span>
-          ))}
-        </Marquee>
-      </section>
+      {/* ── Partner badges (was: text-only cert marquee) ── */}
+      <TrustBar />
 
       {/* ── Stats bar ── */}
       <section className="border-b border-white/5 bg-stone-900/30 shimmer-bg">
