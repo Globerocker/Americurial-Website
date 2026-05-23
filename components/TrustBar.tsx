@@ -1,87 +1,106 @@
+"use client";
+
+import { Marquee } from "@/components/Interactive";
+
 type Badge = {
   src: string;
   alt: string;
   title: string;
+  sub: string;
   href?: string;
-  /** Tailwind height class — control display size individually */
-  heightClass: string;
 };
 
 const BADGES: Badge[] = [
   {
     src: "https://www.gstatic.com/partners/badge/images/2026/PartnerBadgeClickable.svg",
     alt: "Google Partner",
-    title: "Google Partner — Americurial",
+    title: "Google Partner",
+    sub: "Ads · Search · Display",
     href: "https://www.google.com/partners/agency?id=1587930644",
-    heightClass: "h-14",
   },
   {
     src: "/badges/hubspot-partner.png",
     alt: "HubSpot Solutions Partner",
     title: "HubSpot Solutions Partner",
-    heightClass: "h-14",
+    sub: "Ex-Diamond Agency · CRM + Marketing",
   },
   {
     src: "/badges/microsoft-partner.png",
     alt: "Microsoft Gold Partner",
     title: "Microsoft Gold Partner",
-    heightClass: "h-12",
+    sub: "Dynamics 365 + Cloud Solutions",
   },
   {
     src: "/badges/sam-gov.jpg",
     alt: "SAM.gov Registered",
-    title: "Registered on SAM.gov",
+    title: "SAM.gov Registered",
+    sub: "Active CAGE Code · Federal-ready",
     href: "https://sam.gov",
-    heightClass: "h-12",
   },
   {
     src: "/badges/veteran-owned.png",
     alt: "U.S. Veteran-Owned Business",
-    title: "U.S. Veteran-Owned Business",
-    heightClass: "h-12",
+    title: "U.S. Veteran-Owned",
+    sub: "Two combat-tour founders",
   },
 ];
+
+function BadgeCard({ b }: { b: Badge }) {
+  const inner = (
+    <div className="flex items-center gap-4 bg-stone-900/50 border border-white/10 hover:border-emerald-500/30 rounded-2xl pl-3 pr-5 py-2.5 transition-colors min-w-max">
+      <div className="w-12 h-12 rounded-xl bg-white/95 flex items-center justify-center flex-shrink-0 overflow-hidden">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src={b.src}
+          alt={b.alt}
+          loading="lazy"
+          className="max-w-[80%] max-h-[80%] object-contain"
+        />
+      </div>
+      <div className="text-left">
+        <p className="text-xs font-bold uppercase tracking-widest text-stone-200 leading-tight whitespace-nowrap">
+          {b.title}
+        </p>
+        <p className="text-[10px] text-stone-500 leading-tight mt-1 whitespace-nowrap">
+          {b.sub}
+        </p>
+      </div>
+    </div>
+  );
+
+  if (b.href) {
+    return (
+      <a
+        href={b.href}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label={b.title}
+      >
+        {inner}
+      </a>
+    );
+  }
+
+  return <div aria-label={b.title}>{inner}</div>;
+}
 
 export function TrustBar() {
   return (
     <section
       aria-label="Certifications and Partners"
-      className="border-y border-white/5 bg-stone-950"
+      className="border-y border-white/5 bg-stone-950 py-5 relative overflow-hidden"
     >
-      <div className="max-w-7xl mx-auto px-6 py-6 flex flex-wrap items-center justify-center gap-x-10 gap-y-6">
-        {BADGES.map((b) => {
-          const img = (
-            // eslint-disable-next-line @next/next/no-img-element
-            <img
-              src={b.src}
-              alt={b.alt}
-              title={b.title}
-              loading="lazy"
-              className={`${b.heightClass} w-auto opacity-85 hover:opacity-100 transition-opacity`}
-            />
-          );
+      {/* Edge fades */}
+      <div className="absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-stone-950 to-transparent z-10 pointer-events-none" />
+      <div className="absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-stone-950 to-transparent z-10 pointer-events-none" />
 
-          if (b.href) {
-            return (
-              <a
-                key={b.alt}
-                href={b.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label={b.title}
-              >
-                {img}
-              </a>
-            );
-          }
-
-          return (
-            <div key={b.alt} aria-label={b.title}>
-              {img}
-            </div>
-          );
-        })}
-      </div>
+      <Marquee speed="slow">
+        {[...BADGES, ...BADGES].map((b, i) => (
+          <div key={`${b.alt}-${i}`} className="mx-3">
+            <BadgeCard b={b} />
+          </div>
+        ))}
+      </Marquee>
     </section>
   );
 }
