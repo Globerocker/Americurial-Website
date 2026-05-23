@@ -106,13 +106,13 @@ export default function AboutPage() {
                   <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/5 via-transparent to-transparent" />
                   <div className="relative">
                     <div className="flex items-center gap-4 mb-6">
-                      <div className="relative w-20 h-20 rounded-2xl overflow-hidden border border-emerald-500/30 flex-shrink-0">
+                      <div className="relative w-32 h-32 rounded-2xl overflow-hidden border border-emerald-500/30 flex-shrink-0">
                         <Image
                           src="/team/andre-headshot.jpg"
                           alt="Andre Schuler, Co-Founder Americurial"
                           fill
-                          sizes="80px"
-                          className="object-cover"
+                          sizes="128px"
+                          className="object-cover object-top"
                         />
                       </div>
                       <div>
@@ -206,13 +206,13 @@ export default function AboutPage() {
                   <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/5 via-transparent to-transparent" />
                   <div className="relative">
                     <div className="flex items-center gap-4 mb-6">
-                      <div className="relative w-20 h-20 rounded-2xl overflow-hidden border border-emerald-500/30 flex-shrink-0">
+                      <div className="relative w-32 h-32 rounded-2xl overflow-hidden border border-emerald-500/30 flex-shrink-0">
                         <Image
                           src="/team/sergio-headshot.jpg"
-                          alt="Sergio, Co-Founder Americurial"
+                          alt="Sergio Gouveia, Co-Founder Americurial"
                           fill
-                          sizes="80px"
-                          className="object-cover"
+                          sizes="128px"
+                          className="object-cover object-top"
                         />
                       </div>
                       <div>

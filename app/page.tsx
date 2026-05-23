@@ -415,14 +415,14 @@ export default function HomePage() {
               <div className="grid grid-cols-2 gap-4">
                 <TiltCard max={6} className="col-span-2 bg-stone-900/50 border border-emerald-500/20 rounded-2xl p-6 relative overflow-hidden">
                   <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/5 to-transparent" />
-                  <div className="relative flex items-center gap-4">
-                    <div className="relative w-16 h-16 rounded-2xl overflow-hidden border border-emerald-500/30 flex-shrink-0">
+                  <div className="relative flex items-center gap-5">
+                    <div className="relative w-28 h-28 rounded-2xl overflow-hidden border border-emerald-500/30 flex-shrink-0">
                       <Image
                         src="/team/andre-headshot.jpg"
                         alt="Andre Schuler, Co-Founder Americurial"
                         fill
-                        sizes="64px"
-                        className="object-cover"
+                        sizes="112px"
+                        className="object-cover object-top"
                       />
                     </div>
                     <div>
@@ -438,14 +438,14 @@ export default function HomePage() {
 
                 <TiltCard max={6} className="col-span-2 bg-stone-900/50 border border-emerald-500/20 rounded-2xl p-6 relative overflow-hidden">
                   <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/5 to-transparent" />
-                  <div className="relative flex items-center gap-4">
-                    <div className="relative w-16 h-16 rounded-2xl overflow-hidden border border-emerald-500/30 flex-shrink-0">
+                  <div className="relative flex items-center gap-5">
+                    <div className="relative w-28 h-28 rounded-2xl overflow-hidden border border-emerald-500/30 flex-shrink-0">
                       <Image
                         src="/team/sergio-headshot.jpg"
                         alt="Sergio Gouveia, Co-Founder Americurial"
                         fill
-                        sizes="64px"
-                        className="object-cover"
+                        sizes="112px"
+                        className="object-cover object-top"
                       />
                     </div>
                     <div>
