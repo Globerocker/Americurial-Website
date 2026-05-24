@@ -50,6 +50,11 @@ export const metadata: Metadata = {
     },
   },
   alternates: { canonical: "https://www.americurial.com" },
+  verification: {
+    other: {
+      "facebook-domain-verification": "p7ecwwi5x9ut9vt8z8gys9tvy0gnyi",
+    },
+  },
 };
 
 const orgJsonLd = {
