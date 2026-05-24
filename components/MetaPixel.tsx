@@ -11,6 +11,8 @@ import { useEffect } from "react";
  *   intro-call CTA — any anchor whose href starts with the HubSpot meetings
  *   URL — so we don't have to touch the 17+ buttons scattered across pages.
  * - Contact-form `Lead` events are fired locally in app/contact/page.tsx.
+ * - Facebook JS SDK (App ID 2029987627586940) loaded for App Events
+ *   analytics — fires logPageView on every page.
  */
 export default function MetaPixel() {
   useEffect(() => {
@@ -51,6 +53,19 @@ export default function MetaPixel() {
           alt=""
         />
       </noscript>
+      <Script id="fb-sdk" strategy="afterInteractive">{`
+        window.fbAsyncInit = function() {
+          FB.init({ appId: '2029987627586940', cookie: true, xfbml: true, version: 'v22.0' });
+          FB.AppEvents.logPageView();
+        };
+        (function(d, s, id){
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return;
+          js = d.createElement(s); js.id = id;
+          js.src = "https://connect.facebook.net/en_US/sdk.js";
+          fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+      `}</Script>
     </>
   );
 }
