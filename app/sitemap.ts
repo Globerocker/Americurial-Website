@@ -49,6 +49,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }));
 
+  const downloads = [
+    "downloads",
+    "downloads/win-your-first-government-contract",
+  ].map((p) => ({
+    url: `${base}/${p}`,
+    lastModified: now,
+    changeFrequency: "monthly" as const,
+    priority: 0.85,
+  }));
+
   const blogIndex = {
     url: `${base}/blog`,
     lastModified: now,
@@ -77,5 +87,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.3,
   }));
 
-  return [...core, ...services, ...audiences, ...tools, blogIndex, ...blogPosts, ...legal];
+  return [...core, ...services, ...audiences, ...tools, ...downloads, blogIndex, ...blogPosts, ...legal];
 }
