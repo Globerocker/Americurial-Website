@@ -1,34 +1,151 @@
 "use client";
 
 import Script from "next/script";
+import { usePathname } from "next/navigation";
 import { useEffect } from "react";
 
 /**
- * Meta (Facebook) Pixel for americurial.com.
+ * Meta Pixel + FB SDK for americurial.com — env-driven, full instrumentation.
  *
- * - Fires PageView on mount (Pixel ID 973809792061593).
- * - Delegated click listener fires `Schedule` (standard event) for every
- *   intro-call CTA — any anchor whose href starts with the HubSpot meetings
- *   URL — so we don't have to touch the 17+ buttons scattered across pages.
- * - Contact-form `Lead` events are fired locally in app/contact/page.tsx.
- * - Facebook JS SDK (App ID 2029987627586940) loaded for App Events
- *   analytics — fires logPageView on every page.
+ * Pulls IDs from env (NEXT_PUBLIC_META_PIXEL_ID + NEXT_PUBLIC_FB_APP_ID)
+ * with fallback to the historical hardcoded values so the site never
+ * loses tracking if env vars get blanked.
+ *
+ * What this component fires:
+ *   - PageView on initial load (inline script) + every route change (hook)
+ *   - Schedule on HubSpot-meetings link click (preserves prior behavior)
+ *   - ButtonClick custom event for every button / link / [data-cp-track]
+ *   - ScrollDepth at 25/50/75/100% page-scroll
+ *   - TimeOnPage at 30 / 60 / 120 / 240 s
+ *   - FormSubmit on every <form> submission
+ *   - EngagedUser custom event when the visitor crosses 5 button-clicks
+ *     in a single session — strong soft-conversion signal worth its
+ *     own event for ad-account optimization
+ *
+ * PII-bearing Standard Events (Lead, Contact, CompleteRegistration) are
+ * fired from form-handler components — they pass a Pixel event_id and
+ * dual-fire server-side via /api/meta/capi-track for dedup.
  */
+const PIXEL_ID = process.env.NEXT_PUBLIC_META_PIXEL_ID || "973809792061593";
+const FB_APP_ID = process.env.NEXT_PUBLIC_FB_APP_ID || "2029987627586940";
+const ENGAGEMENT_CLICK_THRESHOLD = 5;
+
 export default function MetaPixel() {
+  const pathname = usePathname();
+
+  // Route-change PageView. The inline init below fires the first one on
+  // load; subsequent SPA navigations need this hook.
   useEffect(() => {
+    if (typeof window === "undefined") return;
+    const w = window as Window & { fbq?: (...args: unknown[]) => void; __cp_pv_fired?: boolean };
+    if (!w.fbq) return;
+    if (!w.__cp_pv_fired) {
+      w.__cp_pv_fired = true;
+      return;
+    }
+    w.fbq("track", "PageView", { page_path: pathname });
+  }, [pathname]);
+
+  // Instrumentation: click delegation, scroll-depth, time-on-page,
+  // form-submit, engagement threshold. Rebinds on route change so per-page
+  // counters reset; the engagement click-counter is session-scoped via
+  // sessionStorage so it survives navigation within the same tab.
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    const w = window as Window & { fbq?: (...args: unknown[]) => void };
+    if (!w.fbq) return;
+
+    const SESSION_KEY = "cp_click_count";
+    const ENGAGED_KEY = "cp_engaged_fired";
+    const getCount = () => parseInt(sessionStorage.getItem(SESSION_KEY) || "0", 10);
+
     const onClick = (e: MouseEvent) => {
-      const target = e.target as HTMLElement | null;
-      const anchor = target?.closest("a");
-      if (!anchor) return;
-      const href = anchor.getAttribute("href") || "";
+      const target = (e.target as HTMLElement | null)?.closest?.("a, button, [data-cp-track]") as HTMLElement | null;
+      if (!target) return;
+      const href = (target as HTMLAnchorElement).href || "";
+      const label = (target.getAttribute("data-cp-track")
+        || target.getAttribute("aria-label")
+        || target.textContent
+        || "").trim().slice(0, 80);
+
+      // Special-case: HubSpot meetings link → Standard Event "Schedule"
+      // for ad-account optimization. Preserves the prior behavior.
       if (href.startsWith("https://meetings-na2.hubspot.com/americurial/")) {
-        const w = window as Window & { fbq?: (...args: unknown[]) => void };
-        w.fbq?.("track", "Schedule", { source: window.location.pathname });
+        w.fbq!("track", "Schedule", { source: window.location.pathname, content_name: label });
+      }
+      // Special-case: any link to /contact or labeled "Contact" → fire
+      // Standard Event "Contact" so the ad account learns this CTA.
+      if (/^\/?contact(\/|$)/i.test(href.replace(/^https?:\/\/[^/]+/, ""))
+        || /^contact/i.test(label)) {
+        w.fbq!("track", "Contact", { source: window.location.pathname, content_name: label });
+      }
+
+      // Always also emit a custom ButtonClick for Meta's pattern learning.
+      w.fbq!("trackCustom", "ButtonClick", {
+        content_name: label,
+        element: target.tagName.toLowerCase(),
+        href,
+        page_path: window.location.pathname,
+      });
+
+      // Engagement threshold: 5+ clicks in this session → emit
+      // "EngagedUser" once. Strong soft-conversion signal — these are
+      // the people most likely to come back and convert.
+      const next = getCount() + 1;
+      sessionStorage.setItem(SESSION_KEY, String(next));
+      if (next === ENGAGEMENT_CLICK_THRESHOLD && !sessionStorage.getItem(ENGAGED_KEY)) {
+        sessionStorage.setItem(ENGAGED_KEY, "1");
+        w.fbq!("trackCustom", "EngagedUser", {
+          click_count: next,
+          page_path: window.location.pathname,
+        });
       }
     };
-    document.addEventListener("click", onClick);
-    return () => document.removeEventListener("click", onClick);
-  }, []);
+
+    const scrollHits = new Set<number>();
+    const onScroll = () => {
+      const doc = document.documentElement;
+      const scrollable = doc.scrollHeight - doc.clientHeight;
+      if (scrollable <= 0) return;
+      const pct = Math.round((doc.scrollTop / scrollable) * 100);
+      const fire = (m: number) => {
+        if (scrollHits.has(m)) return;
+        scrollHits.add(m);
+        w.fbq!("trackCustom", "ScrollDepth", { depth_pct: m, page_path: window.location.pathname });
+      };
+      if (pct >= 25) fire(25);
+      if (pct >= 50) fire(50);
+      if (pct >= 75) fire(75);
+      if (pct >= 95) fire(100);
+    };
+
+    const timers: ReturnType<typeof setTimeout>[] = [];
+    const dwell = (secs: number) => () => w.fbq!("trackCustom", "TimeOnPage", { seconds: secs, page_path: window.location.pathname });
+    timers.push(setTimeout(dwell(30), 30_000));
+    timers.push(setTimeout(dwell(60), 60_000));
+    timers.push(setTimeout(dwell(120), 120_000));
+    timers.push(setTimeout(dwell(240), 240_000));
+
+    const onSubmit = (e: SubmitEvent) => {
+      const form = e.target as HTMLFormElement | null;
+      if (!form) return;
+      w.fbq!("trackCustom", "FormSubmit", {
+        form_id: form.getAttribute("id") || "",
+        form_name: form.getAttribute("name") || "",
+        page_path: window.location.pathname,
+      });
+    };
+
+    document.addEventListener("click", onClick, { passive: true });
+    document.addEventListener("submit", onSubmit, { passive: true });
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => {
+      document.removeEventListener("click", onClick);
+      document.removeEventListener("submit", onSubmit);
+      window.removeEventListener("scroll", onScroll);
+      timers.forEach(clearTimeout);
+    };
+  }, [pathname]);
 
   return (
     <>
@@ -41,7 +158,7 @@ export default function MetaPixel() {
         t.src=v;s=b.getElementsByTagName(e)[0];
         s.parentNode.insertBefore(t,s)}(window,document,'script',
         'https://connect.facebook.net/en_US/fbevents.js');
-        fbq('init', '973809792061593');
+        fbq('init', '${PIXEL_ID}');
         fbq('track', 'PageView');
       `}</Script>
       <noscript>
@@ -49,13 +166,13 @@ export default function MetaPixel() {
           height="1"
           width="1"
           style={{ display: "none" }}
-          src="https://www.facebook.com/tr?id=973809792061593&ev=PageView&noscript=1"
+          src={`https://www.facebook.com/tr?id=${PIXEL_ID}&ev=PageView&noscript=1`}
           alt=""
         />
       </noscript>
       <Script id="fb-sdk" strategy="afterInteractive">{`
         window.fbAsyncInit = function() {
-          FB.init({ appId: '2029987627586940', cookie: true, xfbml: true, version: 'v22.0' });
+          FB.init({ appId: '${FB_APP_ID}', cookie: true, xfbml: true, version: 'v22.0' });
           FB.AppEvents.logPageView();
         };
         (function(d, s, id){
