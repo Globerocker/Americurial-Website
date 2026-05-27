@@ -25,8 +25,11 @@ import { useEffect } from "react";
  * fired from form-handler components — they pass a Pixel event_id and
  * dual-fire server-side via /api/meta/capi-track for dedup.
  */
-const PIXEL_ID = process.env.NEXT_PUBLIC_META_PIXEL_ID || "973809792061593";
-const FB_APP_ID = process.env.NEXT_PUBLIC_FB_APP_ID || "2029987627586940";
+// .trim() guards against `echo "..." | vercel env add` leaving a trailing
+// newline in the value, which would land inside fbq('init', '...') and
+// silently break the Pixel.
+const PIXEL_ID = process.env.NEXT_PUBLIC_META_PIXEL_ID?.trim() || "973809792061593";
+const FB_APP_ID = process.env.NEXT_PUBLIC_FB_APP_ID?.trim() || "2029987627586940";
 const ENGAGEMENT_CLICK_THRESHOLD = 5;
 
 export default function MetaPixel() {
