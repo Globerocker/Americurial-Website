@@ -1,6 +1,5 @@
 "use client";
 
-import Script from "next/script";
 import { usePathname } from "next/navigation";
 import { useEffect } from "react";
 
@@ -149,18 +148,16 @@ export default function MetaPixel() {
 
   return (
     <>
-      <Script id="meta-pixel" strategy="afterInteractive">{`
-        !function(f,b,e,v,n,t,s)
-        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-        n.queue=[];t=b.createElement(e);t.async=!0;
-        t.src=v;s=b.getElementsByTagName(e)[0];
-        s.parentNode.insertBefore(t,s)}(window,document,'script',
-        'https://connect.facebook.net/en_US/fbevents.js');
-        fbq('init', '${PIXEL_ID}');
-        fbq('track', 'PageView');
-      `}</Script>
+      {/*
+       * Raw <script> (not next/script) so the snippet lands in the SSR HTML.
+       * Meta's Event Setup Tool and domain crawler don't execute JS, so
+       * <Script strategy="afterInteractive"> is invisible to them.
+       */}
+      <script
+        dangerouslySetInnerHTML={{
+          __html: `!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init','${PIXEL_ID}');fbq('track','PageView');`,
+        }}
+      />
       <noscript>
         <img
           height="1"
@@ -170,19 +167,11 @@ export default function MetaPixel() {
           alt=""
         />
       </noscript>
-      <Script id="fb-sdk" strategy="afterInteractive">{`
-        window.fbAsyncInit = function() {
-          FB.init({ appId: '${FB_APP_ID}', cookie: true, xfbml: true, version: 'v22.0' });
-          FB.AppEvents.logPageView();
-        };
-        (function(d, s, id){
-          var js, fjs = d.getElementsByTagName(s)[0];
-          if (d.getElementById(id)) return;
-          js = d.createElement(s); js.id = id;
-          js.src = "https://connect.facebook.net/en_US/sdk.js";
-          fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));
-      `}</Script>
+      <script
+        dangerouslySetInnerHTML={{
+          __html: `window.fbAsyncInit=function(){FB.init({appId:'${FB_APP_ID}',cookie:true,xfbml:true,version:'v22.0'});FB.AppEvents.logPageView();};(function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(d.getElementById(id))return;js=d.createElement(s);js.id=id;js.src="https://connect.facebook.net/en_US/sdk.js";fjs.parentNode.insertBefore(js,fjs);}(document,'script','facebook-jssdk'));`,
+        }}
+      />
     </>
   );
 }
