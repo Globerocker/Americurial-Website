@@ -5,6 +5,7 @@ import { SiteNav } from "@/components/SiteNav";
 import { SiteFooter } from "@/components/SiteFooter";
 import MetaPixel from "@/components/MetaPixel";
 import FbclidCapture from "@/components/FbclidCapture";
+import ClarityScript from "@/components/ClarityScript";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 
@@ -103,6 +104,7 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col font-sans bg-stone-950 text-stone-200 dot-grid-bg">
         <FbclidCapture />
         <MetaPixel />
+        <ClarityScript />
         <SiteNav />
         <main className="flex-1 pt-16">{children}</main>
         <SiteFooter />
