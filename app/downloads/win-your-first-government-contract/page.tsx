@@ -127,10 +127,10 @@ export default function FieldManualPage() {
                   <div>
                     <p className="text-sm font-bold text-white">Who runs this</p>
                     <p className="text-sm text-stone-400 mt-1.5 leading-relaxed">
-                      We're Americurial. We build software and capture pipelines
+                      We&apos;re Americurial. We build software and capture pipelines
                       for small federal contractors — and we built this PDF for
                       every agency, consultant, and first-time bidder asking us
-                      the same questions on the discovery call. If you'd rather
+                      the same questions on the discovery call. If you&apos;d rather
                       hand the whole thing off,{" "}
                       <Link
                         href="/contact"
@@ -269,14 +269,14 @@ export default function FieldManualPage() {
             <div className="relative">
               <div className="inline-flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.3em] text-emerald-400 mb-4">
                 <Sparkles className="w-3 h-3" />
-                After you've read it
+                After you&apos;ve read it
               </div>
               <h2 className="font-black text-3xl sm:text-4xl text-white">
                 Want us to run the playbook for you?
               </h2>
               <p className="text-stone-400 text-base mt-3 max-w-xl mx-auto">
                 We work with a small roster of agencies and first-time bidders
-                each quarter. Book a 30-min capture call and we'll walk through
+                each quarter. Book a 30-min capture call and we&apos;ll walk through
                 one of your live opportunities together — free.
               </p>
               <Link

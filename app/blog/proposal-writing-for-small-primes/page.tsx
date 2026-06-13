@@ -144,7 +144,7 @@ export default function Post() {
       <p>Good win themes are specific and proof-backed:</p>
       <ul>
         <li>
-          &ldquo;Proven performance in this exact agency — 3 consecutive CPARS 'exceptional'
+          &ldquo;Proven performance in this exact agency — 3 consecutive CPARS &lsquo;exceptional&rsquo;
           ratings&rdquo;
         </li>
         <li>&ldquo;100% W-2 workforce — no 1099 subcontractor risk&rdquo;</li>
