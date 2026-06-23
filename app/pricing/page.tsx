@@ -30,6 +30,10 @@ type Tier = {
   tagline: string;
   price: number;
   period: string;
+  /** when true, no published price — scoped on a call */
+  custom?: boolean;
+  /** commitment terms shown under the CTA */
+  term: string;
   successFee: string;
   scope: string;
   scopeLine: { label: string; value: string }[];
@@ -40,97 +44,53 @@ type Tier = {
 const TIERS: Tier[] = [
   {
     icon: Compass,
-    name: "Co-Pilot Coaching",
-    tagline: "Build federal capture in-house instead of outsourcing it. We coach, your team executes.",
+    name: "Co-Pilot Program",
+    tagline: "Build federal capture in-house with us in your corner. We coach and review, your team runs the pursuits.",
     price: 1500,
     period: "/month",
-    successFee: "No success fee — your team owns the wins",
-    scope: "Solo founder or 1–2 person team · DIY with weekly guidance",
+    term: "3-month minimum, then month-to-month. Cancel anytime after.",
+    successFee: "No success fee. Your team owns the wins.",
+    scope: "For a founder or small team that wants to run capture themselves, with a senior lead guiding it.",
     scopeLine: [
-      { label: "Team Size", value: "1–2" },
+      { label: "Term", value: "3-mo min" },
       { label: "Calls", value: "Weekly" },
-      { label: "Match Review", value: "Self-serve" },
+      { label: "Review", value: "6-mo workshop" },
     ],
     features: [
-      "Weekly 60-min Co-Pilot call with a capture lead",
-      "Full Starter Kit access (Sources Sought, capability, teaming templates)",
-      "CapturePilot software at 50% off ($99/mo instead of $199)",
-      "Shared Slack channel for between-call questions",
-      "Monthly office hours with the full Americurial team",
+      "Weekly 60-min call with a capture lead",
+      "Full Starter Kit (Sources Sought, capability, teaming templates)",
+      "CapturePilot Pro included (normally $89/mo)",
+      "Shared Slack channel for questions between calls",
       "1 proposal review (Pink Team) per quarter",
-      "Upgrade credit: 100% of your first 3 months apply to any retainer",
-    ],
-  },
-  {
-    icon: Rocket,
-    name: "Starter Capture",
-    tagline: "1 location, a clear niche, and you want your first federal contracts in the next 6–12 months.",
-    price: 2500,
-    period: "/month",
-    successFee: "5% success fee on awarded contracts",
-    scope: "1 location · 1–3 NAICS · 1 primary certification path",
-    scopeLine: [
-      { label: "Locations", value: "1" },
-      { label: "NAICS Codes", value: "Up to 3" },
-      { label: "Match Review", value: "Monthly" },
-    ],
-    features: [
-      "SAM.gov health check + optimization",
-      "Capability statement (branded PDF + editable)",
-      "Monthly hot-match review (top 10 opps)",
-      "1 Sources Sought response per quarter",
-      "1 proposal support engagement per quarter",
-      "CapturePilot software — agency tier (included)",
-      "Shared task board + priority Slack channel",
-    ],
-  },
-  {
-    icon: TrendingUp,
-    name: "Growth Capture",
-    tagline: "Two locations or two distinct service lines. You want a predictable pipeline.",
-    price: 4500,
-    period: "/month",
-    successFee: "5% success fee on awarded contracts",
-    scope: "Up to 2 locations · 3–6 NAICS · Multiple cert paths",
-    scopeLine: [
-      { label: "Locations", value: "Up to 2" },
-      { label: "NAICS Codes", value: "3–6" },
-      { label: "Match Review", value: "Weekly" },
-    ],
-    features: [
-      "Everything in Starter, plus:",
-      "Weekly hot-match review + pipeline scoring",
-      "Up to 2 proposals per month (managed writing)",
-      "Sources Sought responses — unlimited",
-      "Teaming partner shortlist + intro orchestration",
-      "Competitor & incumbent intelligence reports",
-      "Quarterly capability statement refresh",
-      "Dedicated capture lead (named on your account)",
+      "Every 6 months: a 3-hour deep-dive workshop on what worked and what's next",
+      "Book it directly. No qualification call needed.",
     ],
     highlight: true,
   },
   {
     icon: Layers,
-    name: "Full Capture",
-    tagline: "Multi-location, multi-vertical operator ready to scale aggressively.",
-    price: 8500,
-    period: "/month",
-    successFee: "5% success fee on awarded contracts",
-    scope: "3–5 locations · Unlimited NAICS · High-complexity pursuits",
+    name: "Custom Capture Retainer",
+    tagline: "Done-with-you or done-for-you capture, scoped to your business. The retainer flexes with how much work there actually is.",
+    price: 0,
+    custom: true,
+    period: "",
+    term: "Flexible term. Month-to-month after the initial period.",
+    successFee: "5% success fee on awarded contracts. No win, no fee.",
+    scope: "Priced to your size, NAICS codes, locations, and how many pursuits we run. We scope it on a call, not off a rate card.",
     scopeLine: [
-      { label: "Locations", value: "3–5" },
-      { label: "NAICS Codes", value: "Unlimited" },
-      { label: "Match Review", value: "Daily" },
+      { label: "Locations", value: "Flexible" },
+      { label: "NAICS", value: "Flexible" },
+      { label: "Scope", value: "Custom" },
     ],
     features: [
-      "Everything in Growth, plus:",
-      "Daily hot-match review + capture manager",
-      "Unlimited proposal writing (our full team)",
-      "Price-to-Win + Black Hat review on major pursuits",
-      "Executive briefings + monthly pipeline strategy call",
-      "GWAC / IDIQ / MAC positioning (OASIS+, etc.)",
-      "CPARS optimization + post-award compliance",
-      "Custom CapturePilot workflows + API access",
+      "SAM.gov + certifications handled (SDVOSB, VOSB, HUBZone, 8(a))",
+      "Sources Sought and proposal writing by our team",
+      "Hot-match review and pipeline scoring (cadence scales with the work)",
+      "Teaming partner shortlist + intro orchestration",
+      "Competitor and incumbent intelligence",
+      "A free website refresh, optimized and built by us, included",
+      "CapturePilot agency tier included",
+      "A dedicated capture lead, named on your account",
     ],
   },
 ];
@@ -233,8 +193,8 @@ const FAQS = [
     a: "After you book, we ask for a DD-214 (member copy), a VA benefits letter, or equivalent proof of service. Verified once, applied for life — across every retainer and every productized offer. Upload happens in a secure portal; we delete the file after verification.",
   },
   {
-    q: "Can I cancel my retainer anytime?",
-    a: "Yes. Month-to-month, no minimum term. We earn the retainer every month or you leave. The only commitment you sign is the success-fee agreement, which survives cancellation for any contracts we helped capture while active.",
+    q: "Can I cancel anytime?",
+    a: "The Co-Pilot Program runs a 3-month minimum, then it’s month-to-month. Full capture retainers are month-to-month after the initial period. We earn it every month or you leave. The only thing that survives cancellation is the 5% success fee on contracts we helped capture while you were active.",
   },
   {
     q: "Do you work with non-veteran small businesses?",
@@ -306,8 +266,9 @@ export default function PricingPage() {
           </h1>
 
           <p className="text-lg md:text-xl text-stone-400 max-w-3xl mx-auto leading-relaxed animate-fade-in-up-200 mb-10">
-            80% of GovCon consultants hide their prices. We don&apos;t. Retainers pay for the work —
-            our real profit is the <strong className="text-white">5% success fee</strong> when you win.
+            Most GovCon consultants hide every number behind a sales call. We publish what we can.
+            The Co-Pilot Program is a flat $1,500/mo. Full capture retainers we scope to your work,
+            and our real profit is the <strong className="text-white">5% success fee</strong> when you win.
           </p>
 
           {/* Veteran toggle */}
@@ -337,15 +298,15 @@ export default function PricingPage() {
           <Reveal className="text-center mb-12">
             <Eyebrow align="center">Retainers</Eyebrow>
             <h2 className="text-3xl md:text-4xl font-black tracking-tighter text-white mb-4">
-              Pick your <span className="gradient-text">mission scope.</span>
+              Two ways to <span className="gradient-text">work with us.</span>
             </h2>
             <p className="text-stone-400 max-w-2xl mx-auto text-sm">
-              Tiers scale by number of operating locations and NAICS breadth — because that&apos;s
-              what drives real complexity, not headcount.
+              Start with the Co-Pilot Program at a flat rate, or go full capture on a retainer we
+              scope to your work. Both are month-to-month once you&apos;re past the first term.
             </p>
           </Reveal>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
             {TIERS.map((tier, i) => {
               const Icon = tier.icon;
               const finalPrice = isVet ? discounted(tier.price) : tier.price;
@@ -377,21 +338,32 @@ export default function PricingPage() {
                       </p>
 
                       <div className="mb-5">
-                        {isVet && (
-                          <p className="text-xs font-bold text-amber-400 uppercase tracking-widest mb-1">
-                            Veteran Price
-                          </p>
-                        )}
-                        <div className="flex items-baseline gap-2">
-                          <span className="text-4xl font-black text-emerald-400 tabular-nums">
-                            {formatUSD(finalPrice)}
-                          </span>
-                          <span className="text-stone-500 text-sm">{tier.period}</span>
-                        </div>
-                        {isVet && (
-                          <p className="text-xs text-stone-500 line-through mt-1 tabular-nums">
-                            {formatUSD(tier.price)} standard
-                          </p>
+                        {tier.custom ? (
+                          <>
+                            <div className="flex items-baseline gap-2">
+                              <span className="text-4xl font-black text-emerald-400">Custom</span>
+                            </div>
+                            <p className="text-xs text-stone-500 mt-1">Scoped on a call, not off a rate card</p>
+                          </>
+                        ) : (
+                          <>
+                            {isVet && (
+                              <p className="text-xs font-bold text-amber-400 uppercase tracking-widest mb-1">
+                                Veteran Price
+                              </p>
+                            )}
+                            <div className="flex items-baseline gap-2">
+                              <span className="text-4xl font-black text-emerald-400 tabular-nums">
+                                {formatUSD(finalPrice)}
+                              </span>
+                              <span className="text-stone-500 text-sm">{tier.period}</span>
+                            </div>
+                            {isVet && (
+                              <p className="text-xs text-stone-500 line-through mt-1 tabular-nums">
+                                {formatUSD(tier.price)} standard
+                              </p>
+                            )}
+                          </>
                         )}
                         <p className="text-xs text-emerald-300/80 mt-2 flex items-center gap-1.5">
                           <TrendingUp className="w-3 h-3" /> {tier.successFee}
@@ -431,10 +403,10 @@ export default function PricingPage() {
                             : "bg-white/5 hover:bg-white/10 border border-white/10 text-white"
                         }`}
                       >
-                        Book Scoping Call <ArrowRight className="w-4 h-4" />
+                        {tier.custom ? "Book a Scoping Call" : "Book the Co-Pilot Program"} <ArrowRight className="w-4 h-4" />
                       </a>
                       <p className="text-[10px] text-stone-500 text-center mt-3 uppercase tracking-widest font-bold">
-                        Month-to-month · Cancel anytime
+                        {tier.term}
                       </p>
                     </div>
                   </TiltCard>
@@ -447,9 +419,9 @@ export default function PricingPage() {
             <div className="max-w-3xl mx-auto bg-emerald-500/5 border border-emerald-500/20 rounded-2xl p-5 flex gap-4">
               <Info className="w-5 h-5 text-emerald-400 flex-shrink-0 mt-0.5" />
               <div className="text-sm text-stone-300 leading-relaxed">
-                <strong className="text-white">How we think about pricing.</strong> Our retainer
-                covers labor and software — breaking even on the month. We make our real
-                margin when you win. If that feels unusual, it&apos;s because 80% of the market
+                <strong className="text-white">How we think about pricing.</strong> The retainer
+                covers labor and software, roughly breaking even on the month. We make our real
+                margin when you win. If that feels unusual, it&apos;s because most of the market
                 bills by the hour whether you win or not. We don&apos;t.
               </div>
             </div>
@@ -574,14 +546,16 @@ export default function PricingPage() {
               <Eyebrow>Why we publish prices</Eyebrow>
               <p className="text-stone-300 leading-relaxed text-lg">
                 We audited 20+ GovCon consulting agencies. <strong className="text-white">
-                Only 3 of them publish prices.</strong> Shipley, OST Global, RSM Federal. The
-                other 80% hide their rates behind &ldquo;book a demo&rdquo; — because their
-                pricing depends on how deep your pockets look.
+                Only 3 of them publish any prices at all.</strong> The rest hide every number
+                behind &ldquo;book a demo,&rdquo; because their pricing depends on how deep your
+                pockets look.
               </p>
               <p className="text-stone-300 leading-relaxed text-lg mt-4">
-                That&apos;s not how veterans should be treated. You get the same number whether
-                you&apos;re a 5-person shop or a 50-person firm. The scope flexes; the rate
-                card doesn&apos;t.
+                We publish what we honestly can. The Co-Pilot Program is a flat $1,500 a month,
+                and every fixed-scope service below has a price on it. The full capture retainer
+                we scope to your work, because a one-location shop chasing a single NAICS and a
+                five-location operator running ten pursuits aren&apos;t the same job. You get the
+                real number on the first call, no games.
               </p>
             </div>
           </Reveal>
